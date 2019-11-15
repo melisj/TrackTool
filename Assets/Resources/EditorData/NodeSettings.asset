@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eede77b2f8e0b2746a9b194b2d203940, type: 3}
+  m_Name: NodeSettings
+  m_EditorClassIdentifier: 
+  renderNodes: 1
+  renderLines: 1
+  renderCurves: 1
+  renderCurveAdjustmentNodes: 1
+  curveAccuracy: 1000
+  curveResolution: 1
+  curvePreviewResolution: 10
+  adjustmentNodePrefab: {fileID: 2948931495715058067, guid: 3a8f0eaaeaa95584181ab443cb5ace8e,
+    type: 3}
+  curvePointMesh: {fileID: -5495902117074765545, guid: 466b809559bd08a48b7c831474de7d68,
+    type: 3}
+  nodeSize: 0.5
+  adjustmentNodeSize: 0.2
+  selectedTab: 0
+  tabStatus: 00000000000000000000000000000000
+  nodeInfo:
+    completionTime: 0
+    nodeCount: 3
+    pointCount: 70
+    totalLength: 71.03739
