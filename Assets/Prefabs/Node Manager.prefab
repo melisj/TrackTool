@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82037648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 104.2, y: 0, z: -46.6}
+  m_LocalPosition: {x: 46.20108, y: 0, z: -31.062805}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2134342107}
@@ -69,7 +69,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225615398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.78, y: 0, z: -29.96}
+  m_LocalPosition: {x: 9.291421, y: 0, z: -35.411934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1465315570}
@@ -88,6 +88,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentNode: {fileID: 2134342106}
+--- !u!1 &227806558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 227806559}
+  - component: {fileID: 227806560}
+  m_Layer: 0
+  m_Name: AdjustmentNode(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &227806559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227806558}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15.1, y: 0, z: 32.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6477259906966708998}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &227806560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227806558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06411262a5469240a0cdaa7edad3e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNode: {fileID: 614366876844696557}
 --- !u!1 &259662813
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,218 +182,229 @@ MonoBehaviour:
   endNode: 0
   startNode: 0
   resetCurves: 0
+  connected: 0
   typeColor: {r: 0, g: 0, b: 1, a: 1}
-  adjustmentNodePrefab: {fileID: 2948931495715058067, guid: 3a8f0eaaeaa95584181ab443cb5ace8e,
-    type: 3}
   curvePoints:
   - position: {x: 79.1, y: 0, z: -6.4}
-    direction: {x: -0.78679436, y: 0, z: 0.61721516}
-    perpendicular: {x: -0.61721516, y: 0, z: -0.78679436}
-  - position: {x: 78.32056, y: 0, z: -5.743169}
-    direction: {x: -0.74112344, y: 0, z: 0.6713687}
-    perpendicular: {x: -0.6713687, y: 0, z: -0.74112344}
-  - position: {x: 77.59881, y: 0, z: -5.0392227}
-    direction: {x: -0.6892007, y: 0, z: 0.7245705}
-    perpendicular: {x: -0.7245705, y: 0, z: -0.6892007}
-  - position: {x: 76.92874, y: 0, z: -4.277661}
-    direction: {x: -0.6305996, y: 0, z: 0.7761083}
-    perpendicular: {x: -0.7761083, y: 0, z: -0.6305996}
-  - position: {x: 76.32515, y: 0, z: -3.4716244}
-    direction: {x: -0.5671223, y: 0, z: 0.8236336}
-    perpendicular: {x: -0.8236336, y: 0, z: -0.5671223}
-  - position: {x: 75.78506, y: 0, z: -2.6158779}
-    direction: {x: -0.4995698, y: 0, z: 0.86627364}
-    perpendicular: {x: -0.86627364, y: 0, z: -0.4995698}
-  - position: {x: 75.314835, y: 0, z: -1.7208352}
-    direction: {x: -0.43022993, y: 0, z: 0.9027193}
-    perpendicular: {x: -0.9027193, y: 0, z: -0.43022993}
-  - position: {x: 74.91507, y: 0, z: -0.79293597}
-    direction: {x: -0.36109188, y: 0, z: 0.9325302}
-    perpendicular: {x: -0.9325302, y: 0, z: -0.36109188}
-  - position: {x: 74.58472, y: 0, z: 0.16059268}
-    direction: {x: -0.29398054, y: 0, z: 0.9558114}
-    perpendicular: {x: -0.9558114, y: 0, z: -0.29398054}
-  - position: {x: 74.319725, y: 0, z: 1.1378391}
-    direction: {x: -0.22999929, y: 0, z: 0.97319084}
-    perpendicular: {x: -0.97319084, y: 0, z: -0.22999929}
-  - position: {x: 74.11834, y: 0, z: 2.124592}
-    direction: {x: -0.17062551, y: 0, z: 0.98533595}
-    perpendicular: {x: -0.98533595, y: 0, z: -0.17062551}
-  - position: {x: 73.97404, y: 0, z: 3.1244423}
-    direction: {x: -0.115833074, y: 0, z: 0.99326867}
-    perpendicular: {x: -0.99326867, y: 0, z: -0.115833074}
-  - position: {x: 73.88229, y: 0, z: 4.1352487}
-    direction: {x: -0.06573336, y: 0, z: 0.99783725}
-    perpendicular: {x: -0.99783725, y: 0, z: -0.06573336}
-  - position: {x: 73.8391, y: 0, z: 5.141765}
-    direction: {x: -0.02080633, y: 0, z: 0.99978346}
-    perpendicular: {x: -0.99978346, y: 0, z: -0.02080633}
-  - position: {x: 73.83896, y: 0, z: 6.1547546}
-    direction: {x: 0.019806312, y: 0, z: 0.9998038}
-    perpendicular: {x: -0.9998038, y: 0, z: 0.019806312}
-  - position: {x: 73.877716, y: 0, z: 7.165584}
-    direction: {x: 0.056141615, y: 0, z: 0.99842274}
-    perpendicular: {x: -0.99842274, y: 0, z: 0.056141615}
-  - position: {x: 73.95106, y: 0, z: 8.172229}
-    direction: {x: 0.08856676, y: 0, z: 0.99607027}
-    perpendicular: {x: -0.99607027, y: 0, z: 0.08856676}
-  - position: {x: 74.055786, y: 0, z: 9.179848}
-    direction: {x: 0.11764135, y: 0, z: 0.9930561}
-    perpendicular: {x: -0.9930561, y: 0, z: 0.11764135}
-  - position: {x: 74.18774, y: 0, z: 10.179819}
-    direction: {x: 0.14348832, y: 0, z: 0.98965204}
-    perpendicular: {x: -0.98965204, y: 0, z: 0.14348832}
-  - position: {x: 74.34457, y: 0, z: 11.177711}
-    direction: {x: 0.16659668, y: 0, z: 0.98602515}
-    perpendicular: {x: -0.98602515, y: 0, z: 0.16659668}
-  - position: {x: 74.52353, y: 0, z: 12.17222}
-    direction: {x: 0.18722306, y: 0, z: 0.98231745}
-    perpendicular: {x: -0.98231745, y: 0, z: 0.18722306}
-  - position: {x: 74.72201, y: 0, z: 13.162118}
-    direction: {x: 0.20560157, y: 0, z: 0.9786358}
-    perpendicular: {x: -0.9786358, y: 0, z: 0.20560157}
-  - position: {x: 74.93755, y: 0, z: 14.146253}
-    direction: {x: 0.22194357, y: 0, z: 0.97505945}
-    perpendicular: {x: -0.97505945, y: 0, z: 0.22194357}
-  - position: {x: 75.16963, y: 0, z: 15.131024}
-    direction: {x: 0.23654322, y: 0, z: 0.9716209}
-    perpendicular: {x: -0.9716209, y: 0, z: 0.23654322}
-  - position: {x: 75.41645, y: 0, z: 16.115574}
-    direction: {x: 0.2495364, y: 0, z: 0.9683655}
-    perpendicular: {x: -0.9683655, y: 0, z: 0.2495364}
-  - position: {x: 75.67421, y: 0, z: 17.091484}
-    direction: {x: 0.26096135, y: 0, z: 0.96534926}
-    perpendicular: {x: -0.96534926, y: 0, z: 0.26096135}
-  - position: {x: 75.94309, y: 0, z: 18.065462}
-    direction: {x: 0.27102908, y: 0, z: 0.96257114}
-    perpendicular: {x: -0.96257114, y: 0, z: 0.27102908}
-  - position: {x: 76.2215, y: 0, z: 19.036762}
-    direction: {x: 0.2798339, y: 0, z: 0.9600484}
-    perpendicular: {x: -0.9600484, y: 0, z: 0.2798339}
-  - position: {x: 76.5079, y: 0, z: 20.004658}
-    direction: {x: 0.28745925, y: 0, z: 0.9577928}
-    perpendicular: {x: -0.9577928, y: 0, z: 0.28745925}
-  - position: {x: 76.80322, y: 0, z: 20.976192}
-    direction: {x: 0.29402623, y: 0, z: 0.9557973}
-    perpendicular: {x: -0.9557973, y: 0, z: 0.29402623}
-  - position: {x: 77.10136, y: 0, z: 21.935266}
-    direction: {x: 0.29949516, y: 0, z: 0.9540978}
-    perpendicular: {x: -0.9540978, y: 0, z: 0.29949516}
-  - position: {x: 77.408226, y: 0, z: 22.904472}
-    direction: {x: 0.3040432, y: 0, z: 0.95265824}
-    perpendicular: {x: -0.95265824, y: 0, z: 0.3040432}
-  - position: {x: 77.715225, y: 0, z: 23.859959}
-    direction: {x: 0.30759883, y: 0, z: 0.95151615}
-    perpendicular: {x: -0.95151615, y: 0, z: 0.30759883}
-  - position: {x: 78.028595, y: 0, z: 24.824438}
-    direction: {x: 0.31028032, y: 0, z: 0.9506451}
-    perpendicular: {x: -0.9506451, y: 0, z: 0.31028032}
-  - position: {x: 78.34215, y: 0, z: 25.781794}
-    direction: {x: 0.3120587, y: 0, z: 0.9500628}
-    perpendicular: {x: -0.9500628, y: 0, z: 0.3120587}
-  - position: {x: 78.65979, y: 0, z: 26.747034}
-    direction: {x: 0.31297204, y: 0, z: 0.94976234}
-    perpendicular: {x: -0.94976234, y: 0, z: 0.31297204}
-  - position: {x: 78.975235, y: 0, z: 27.704023}
-    direction: {x: 0.31300926, y: 0, z: 0.94975007}
-    perpendicular: {x: -0.94975007, y: 0, z: 0.31300926}
-  - position: {x: 79.292465, y: 0, z: 28.667763}
-    direction: {x: 0.31216893, y: 0, z: 0.9500266}
-    perpendicular: {x: -0.9500266, y: 0, z: 0.31216893}
-  - position: {x: 79.605194, y: 0, z: 29.622152}
-    direction: {x: 0.31045735, y: 0, z: 0.95058733}
-    perpendicular: {x: -0.95058733, y: 0, z: 0.31045735}
-  - position: {x: 79.917336, y: 0, z: 30.58213}
-    direction: {x: 0.30783367, y: 0, z: 0.95144016}
-    perpendicular: {x: -0.95144016, y: 0, z: 0.30783367}
-  - position: {x: 80.22764, y: 0, z: 31.547085}
-    direction: {x: 0.304257, y: 0, z: 0.95259}
-    perpendicular: {x: -0.95259, y: 0, z: 0.304257}
-  - position: {x: 80.53235, y: 0, z: 32.508675}
-    direction: {x: 0.29971933, y: 0, z: 0.9540274}
-    perpendicular: {x: -0.9540274, y: 0, z: 0.29971933}
-  - position: {x: 80.832596, y: 0, z: 33.47396}
-    direction: {x: 0.29414028, y: 0, z: 0.95576227}
-    perpendicular: {x: -0.95576227, y: 0, z: 0.29414028}
-  - position: {x: 81.127, y: 0, z: 34.442245}
-    direction: {x: 0.28745568, y: 0, z: 0.95779395}
-    perpendicular: {x: -0.95779395, y: 0, z: 0.28745568}
-  - position: {x: 81.41406, y: 0, z: 35.412792}
-    direction: {x: 0.27959156, y: 0, z: 0.960119}
-    perpendicular: {x: -0.960119, y: 0, z: 0.27959156}
-  - position: {x: 81.692245, y: 0, z: 36.38485}
-    direction: {x: 0.2704629, y: 0, z: 0.96273035}
-    perpendicular: {x: -0.96273035, y: 0, z: 0.2704629}
-  - position: {x: 81.95995, y: 0, z: 37.357628}
-    direction: {x: 0.25997296, y: 0, z: 0.96561587}
-    perpendicular: {x: -0.96561587, y: 0, z: 0.25997296}
-  - position: {x: 82.21742, y: 0, z: 38.3377}
-    direction: {x: 0.24791451, y: 0, z: 0.9687819}
-    perpendicular: {x: -0.9687819, y: 0, z: 0.24791451}
-  - position: {x: 82.46076, y: 0, z: 39.316677}
-    direction: {x: 0.23423551, y: 0, z: 0.9721799}
-    perpendicular: {x: -0.9721799, y: 0, z: 0.23423551}
-  - position: {x: 82.689766, y: 0, z: 40.30092}
-    direction: {x: 0.21867016, y: 0, z: 0.97579885}
-    perpendicular: {x: -0.97579885, y: 0, z: 0.21867016}
-  - position: {x: 82.902084, y: 0, z: 41.289253}
-    direction: {x: 0.20101449, y: 0, z: 0.9795882}
-    perpendicular: {x: -0.9795882, y: 0, z: 0.20101449}
-  - position: {x: 83.095184, y: 0, z: 42.280422}
-    direction: {x: 0.1810377, y: 0, z: 0.9834762}
-    perpendicular: {x: -0.9834762, y: 0, z: 0.1810377}
-  - position: {x: 83.26643, y: 0, z: 43.27311}
-    direction: {x: 0.1584802, y: 0, z: 0.9873622}
-    perpendicular: {x: -0.9873622, y: 0, z: 0.1584802}
-  - position: {x: 83.41391, y: 0, z: 44.27281}
-    direction: {x: 0.13286601, y: 0, z: 0.991134}
-    perpendicular: {x: -0.991134, y: 0, z: 0.13286601}
-  - position: {x: 83.534, y: 0, z: 45.277706}
-    direction: {x: 0.10381547, y: 0, z: 0.99459654}
-    perpendicular: {x: -0.99459654, y: 0, z: 0.10381547}
-  - position: {x: 83.62276, y: 0, z: 46.285854}
-    direction: {x: 0.070911825, y: 0, z: 0.9974826}
-    perpendicular: {x: -0.9974826, y: 0, z: 0.070911825}
-  - position: {x: 83.6758, y: 0, z: 47.288643}
-    direction: {x: 0.033964697, y: 0, z: 0.999423}
-    perpendicular: {x: -0.999423, y: 0, z: 0.033964697}
-  - position: {x: 83.689285, y: 0, z: 48.303436}
-    direction: {x: -0.008250507, y: 0, z: 0.99996597}
-    perpendicular: {x: -0.99996597, y: 0, z: -0.008250507}
-  - position: {x: 83.657394, y: 0, z: 49.314507}
-    direction: {x: -0.05571797, y: 0, z: 0.9984465}
-    perpendicular: {x: -0.9984465, y: 0, z: -0.05571797}
-  - position: {x: 83.57495, y: 0, z: 50.31928}
-    direction: {x: -0.10881384, y: 0, z: 0.9940621}
-    perpendicular: {x: -0.9940621, y: 0, z: -0.10881384}
-  - position: {x: 83.4354, y: 0, z: 51.32094}
-    direction: {x: -0.16813831, y: 0, z: 0.9857634}
-    perpendicular: {x: -0.9857634, y: 0, z: -0.16813831}
-  - position: {x: 83.23314, y: 0, z: 52.31028}
-    direction: {x: -0.23335826, y: 0, z: 0.97239083}
-    perpendicular: {x: -0.97239083, y: 0, z: -0.23335826}
-  - position: {x: 82.96182, y: 0, z: 53.28419}
-    direction: {x: -0.3040691, y: 0, z: 0.95264995}
-    perpendicular: {x: -0.95264995, y: 0, z: -0.3040691}
-  - position: {x: 82.61692, y: 0, z: 54.23404}
-    direction: {x: -0.37891868, y: 0, z: 0.92543}
-    perpendicular: {x: -0.92543, y: 0, z: -0.37891868}
-  - position: {x: 82.195244, y: 0, z: 55.151875}
-    direction: {x: -0.4559359, y: 0, z: 0.8900126}
-    perpendicular: {x: -0.8900126, y: 0, z: -0.4559359}
-  - position: {x: 81.69827, y: 0, z: 56.02566}
-    direction: {x: -0.5322354, y: 0, z: 0.8465964}
-    perpendicular: {x: -0.8465964, y: 0, z: -0.5322354}
-  - position: {x: 81.120514, y: 0, z: 56.85911}
-    direction: {x: -0.60605824, y: 0, z: 0.7954203}
-    perpendicular: {x: -0.7954203, y: 0, z: -0.60605824}
-  - position: {x: 80.47473, y: 0, z: 57.633026}
-    direction: {x: -0.6737744, y: 0, z: 0.7389371}
-    perpendicular: {x: -0.7389371, y: 0, z: -0.6737744}
-  - position: {x: 79.76359, y: 0, z: 58.34877}
-    direction: {x: -0.73410106, y: 0, z: 0.6790402}
-    perpendicular: {x: -0.6790402, y: 0, z: -0.73410106}
-  curveLength: 69.727135
+    direction: {x: 0.77330893, y: 0, z: 0.6340294}
+    perpendicular: {x: -0.6340294, y: 0, z: 0.77330893}
+  - position: {x: 79.93559, y: 0, z: -5.6922345}
+    direction: {x: 0.75261986, y: 0, z: 0.6584552}
+    perpendicular: {x: -0.6584552, y: 0, z: 0.75261986}
+  - position: {x: 80.68648, y: 0, z: -5.015463}
+    direction: {x: 0.7328349, y: 0, z: 0.6804066}
+    perpendicular: {x: -0.6804066, y: 0, z: 0.7328349}
+  - position: {x: 81.41337, y: 0, z: -4.320419}
+    direction: {x: 0.712549, y: 0, z: 0.70162237}
+    perpendicular: {x: -0.70162237, y: 0, z: 0.712549}
+  - position: {x: 82.11645, y: 0, z: -3.6076562}
+    direction: {x: 0.69181365, y: 0, z: 0.72207606}
+    perpendicular: {x: -0.72207606, y: 0, z: 0.69181365}
+  - position: {x: 82.79584, y: 0, z: -2.8777235}
+    direction: {x: 0.67068064, y: 0, z: 0.7417463}
+    perpendicular: {x: -0.7417463, y: 0, z: 0.67068064}
+  - position: {x: 83.50116, y: 0, z: -2.0730736}
+    direction: {x: 0.64753616, y: 0, z: 0.7620348}
+    perpendicular: {x: -0.7620348, y: 0, z: 0.64753616}
+  - position: {x: 84.13183, y: 0, z: -1.3092432}
+    direction: {x: 0.6257404, y: 0, z: 0.7800313}
+    perpendicular: {x: -0.7800313, y: 0, z: 0.6257404}
+  - position: {x: 84.73925, y: 0, z: -0.52993894}
+    direction: {x: 0.60370207, y: 0, z: 0.7972099}
+    perpendicular: {x: -0.7972099, y: 0, z: 0.60370207}
+  - position: {x: 85.323586, y: 0, z: 0.26428834}
+    direction: {x: 0.58146846, y: 0, z: 0.81356895}
+    perpendicular: {x: -0.81356895, y: 0, z: 0.58146846}
+  - position: {x: 85.884995, y: 0, z: 1.0728865}
+    direction: {x: 0.5590847, y: 0, z: 0.82911056}
+    perpendicular: {x: -0.82911056, y: 0, z: 0.5590847}
+  - position: {x: 86.46407, y: 0, z: 1.9591252}
+    direction: {x: 0.5348601, y: 0, z: 0.8449406}
+    perpendicular: {x: -0.8449406, y: 0, z: 0.5348601}
+  - position: {x: 86.9783, y: 0, z: 2.7958117}
+    direction: {x: 0.5122978, y: 0, z: 0.8588078}
+    perpendicular: {x: -0.8588078, y: 0, z: 0.5122978}
+  - position: {x: 87.47001, y: 0, z: 3.6451755}
+    direction: {x: 0.4897079, y: 0, z: 0.8718865}
+    perpendicular: {x: -0.8718865, y: 0, z: 0.4897079}
+  - position: {x: 87.974556, y: 0, z: 4.573417}
+    direction: {x: 0.46538812, y: 0, z: 0.88510674}
+    perpendicular: {x: -0.88510674, y: 0, z: 0.46538812}
+  - position: {x: 88.420006, y: 0, z: 5.447347}
+    direction: {x: 0.44284514, y: 0, z: 0.8965981}
+    perpendicular: {x: -0.8965981, y: 0, z: 0.44284514}
+  - position: {x: 88.84341, y: 0, z: 6.3322563}
+    direction: {x: 0.42036855, y: 0, z: 0.90735346}
+    perpendicular: {x: -0.90735346, y: 0, z: 0.42036855}
+  - position: {x: 89.274895, y: 0, z: 7.296885}
+    direction: {x: 0.39626515, y: 0, z: 0.9181362}
+    perpendicular: {x: -0.9181362, y: 0, z: 0.39626515}
+  - position: {x: 89.65298, y: 0, z: 8.20284}
+    direction: {x: 0.37400058, y: 0, z: 0.9274284}
+    perpendicular: {x: -0.9274284, y: 0, z: 0.37400058}
+  - position: {x: 90.00945, y: 0, z: 9.118081}
+    direction: {x: 0.35186753, y: 0, z: 0.9360498}
+    perpendicular: {x: -0.9360498, y: 0, z: 0.35186753}
+  - position: {x: 90.36935, y: 0, z: 10.113478}
+    direction: {x: 0.3281964, y: 0, z: 0.9446095}
+    perpendicular: {x: -0.9446095, y: 0, z: 0.3281964}
+  - position: {x: 90.68142, y: 0, z: 11.046242}
+    direction: {x: 0.30638227, y: 0, z: 0.9519086}
+    perpendicular: {x: -0.9519086, y: 0, z: 0.30638227}
+  - position: {x: 90.97234, y: 0, z: 11.986596}
+    direction: {x: 0.28473827, y: 0, z: 0.9586053}
+    perpendicular: {x: -0.9586053, y: 0, z: 0.28473827}
+  - position: {x: 91.24225, y: 0, z: 12.9339905}
+    direction: {x: 0.26327205, y: 0, z: 0.9647216}
+    perpendicular: {x: -0.9647216, y: 0, z: 0.26327205}
+  - position: {x: 91.50959, y: 0, z: 13.961499}
+    direction: {x: 0.24035949, y: 0, z: 0.97068393}
+    perpendicular: {x: -0.97068393, y: 0, z: 0.24035949}
+  - position: {x: 91.73632, y: 0, z: 14.921747}
+    direction: {x: 0.21927729, y: 0, z: 0.9756626}
+    perpendicular: {x: -0.9756626, y: 0, z: 0.21927729}
+  - position: {x: 91.942505, y: 0, z: 15.887344}
+    direction: {x: 0.19838308, y: 0, z: 0.9801246}
+    perpendicular: {x: -0.9801246, y: 0, z: 0.19838308}
+  - position: {x: 92.128265, y: 0, z: 16.857733}
+    direction: {x: 0.17767648, y: 0, z: 0.9840889}
+    perpendicular: {x: -0.9840889, y: 0, z: 0.17767648}
+  - position: {x: 92.305664, y: 0, z: 17.907494}
+    direction: {x: 0.15558478, y: 0, z: 0.98782253}
+    perpendicular: {x: -0.98782253, y: 0, z: 0.15558478}
+  - position: {x: 92.44948, y: 0, z: 18.886068}
+    direction: {x: 0.1352603, y: 0, z: 0.99081016}
+    perpendicular: {x: -0.99081016, y: 0, z: 0.1352603}
+  - position: {x: 92.573326, y: 0, z: 19.867746}
+    direction: {x: 0.11511313, y: 0, z: 0.99335235}
+    perpendicular: {x: -0.99335235, y: 0, z: 0.11511313}
+  - position: {x: 92.67737, y: 0, z: 20.85197}
+    direction: {x: 0.09513764, y: 0, z: 0.99546415}
+    perpendicular: {x: -0.99546415, y: 0, z: 0.09513764}
+  - position: {x: 92.7617, y: 0, z: 21.838184}
+    direction: {x: 0.075326905, y: 0, z: 0.99715894}
+    perpendicular: {x: -0.99715894, y: 0, z: 0.075326905}
+  - position: {x: 92.83072, y: 0, z: 22.901863}
+    direction: {x: 0.05416772, y: 0, z: 0.9985319}
+    perpendicular: {x: -0.9985319, y: 0, z: 0.05416772}
+  - position: {x: 92.87467, y: 0, z: 23.890465}
+    direction: {x: 0.03467357, y: 0, z: 0.99939865}
+    perpendicular: {x: -0.99939865, y: 0, z: 0.03467357}
+  - position: {x: 92.89938, y: 0, z: 24.87936}
+    direction: {x: 0.015317903, y: 0, z: 0.99988264}
+    perpendicular: {x: -0.99988264, y: 0, z: 0.015317903}
+  - position: {x: 92.905014, y: 0, z: 25.868006}
+    direction: {x: -0.0039092535, y: 0, z: 0.9999924}
+    perpendicular: {x: -0.9999924, y: 0, z: -0.0039092535}
+  - position: {x: 92.8917, y: 0, z: 26.855852}
+    direction: {x: -0.023018332, y: 0, z: 0.99973506}
+    perpendicular: {x: -0.99973506, y: 0, z: -0.023018332}
+  - position: {x: 92.85636, y: 0, z: 27.918156}
+    direction: {x: -0.04347785, y: 0, z: 0.9990544}
+    perpendicular: {x: -0.9990544, y: 0, z: -0.04347785}
+  - position: {x: 92.80418, y: 0, z: 28.902573}
+    direction: {x: -0.06237719, y: 0, z: 0.99805266}
+    perpendicular: {x: -0.99805266, y: 0, z: -0.06237719}
+  - position: {x: 92.733505, y: 0, z: 29.884483}
+    direction: {x: -0.08119334, y: 0, z: 0.9966984}
+    perpendicular: {x: -0.9966984, y: 0, z: -0.08119334}
+  - position: {x: 92.64447, y: 0, z: 30.86335}
+    direction: {x: -0.09993843, y: 0, z: 0.9949936}
+    perpendicular: {x: -0.9949936, y: 0, z: -0.09993843}
+  - position: {x: 92.52826, y: 0, z: 31.913475}
+    direction: {x: -0.12005989, y: 0, z: 0.9927667}
+    perpendicular: {x: -0.9927667, y: 0, z: -0.12005989}
+  - position: {x: 92.401596, y: 0, z: 32.88425}
+    direction: {x: -0.13869648, y: 0, z: 0.990335}
+    perpendicular: {x: -0.990335, y: 0, z: -0.13869648}
+  - position: {x: 92.25703, y: 0, z: 33.85028}
+    direction: {x: -0.15730003, y: 0, z: 0.98755085}
+    perpendicular: {x: -0.98755085, y: 0, z: -0.15730003}
+  - position: {x: 92.08149, y: 0, z: 34.884686}
+    direction: {x: -0.17731208, y: 0, z: 0.9841547}
+    perpendicular: {x: -0.9841547, y: 0, z: -0.17731208}
+  - position: {x: 91.90021, y: 0, z: 35.8391}
+    direction: {x: -0.1958872, y: 0, z: 0.9806264}
+    perpendicular: {x: -0.9806264, y: 0, z: -0.1958872}
+  - position: {x: 91.68548, y: 0, z: 36.85971}
+    direction: {x: -0.21589777, y: 0, z: 0.976416}
+    perpendicular: {x: -0.976416, y: 0, z: -0.21589777}
+  - position: {x: 91.468124, y: 0, z: 37.800137}
+    direction: {x: -0.23449847, y: 0, z: 0.97211653}
+    perpendicular: {x: -0.97211653, y: 0, z: -0.23449847}
+  - position: {x: 91.21486, y: 0, z: 38.8044}
+    direction: {x: -0.25456527, y: 0, z: 0.96705556}
+    perpendicular: {x: -0.96705556, y: 0, z: -0.25456527}
+  - position: {x: 90.9419, y: 0, z: 39.799183}
+    direction: {x: -0.27468327, y: 0, z: 0.96153474}
+    perpendicular: {x: -0.96153474, y: 0, z: -0.27468327}
+  - position: {x: 90.67094, y: 0, z: 40.713806}
+    direction: {x: -0.2934228, y: 0, z: 0.9559828}
+    perpendicular: {x: -0.9559828, y: 0, z: -0.2934228}
+  - position: {x: 90.36048, y: 0, z: 41.688354}
+    direction: {x: -0.31368014, y: 0, z: 0.94952863}
+    perpendicular: {x: -0.94952863, y: 0, z: -0.31368014}
+  - position: {x: 90.03084, y: 0, z: 42.651398}
+    direction: {x: -0.33402964, y: 0, z: 0.9425626}
+    perpendicular: {x: -0.9425626, y: 0, z: -0.33402964}
+  - position: {x: 89.6822, y: 0, z: 43.602257}
+    direction: {x: -0.3544838, y: 0, z: 0.9350621}
+    perpendicular: {x: -0.9350621, y: 0, z: -0.3544838}
+  - position: {x: 89.31475, y: 0, z: 44.54024}
+    direction: {x: -0.37505406, y: 0, z: 0.927003}
+    perpendicular: {x: -0.927003, y: 0, z: -0.37505406}
+  - position: {x: 88.928665, y: 0, z: 45.464657}
+    direction: {x: -0.39575067, y: 0, z: 0.918358}
+    perpendicular: {x: -0.918358, y: 0, z: -0.39575067}
+  - position: {x: 88.52413, y: 0, z: 46.374817}
+    direction: {x: -0.41658244, y: 0, z: 0.9090979}
+    perpendicular: {x: -0.9090979, y: 0, z: -0.41658244}
+  - position: {x: 88.101326, y: 0, z: 47.27004}
+    direction: {x: -0.43755665, y: 0, z: 0.89919084}
+    perpendicular: {x: -0.89919084, y: 0, z: -0.43755665}
+  - position: {x: 87.66043, y: 0, z: 48.14963}
+    direction: {x: -0.45867833, y: 0, z: 0.8886024}
+    perpendicular: {x: -0.8886024, y: 0, z: -0.45867833}
+  - position: {x: 87.16818, y: 0, z: 49.073925}
+    direction: {x: -0.4814755, y: 0, z: 0.87645954}
+    perpendicular: {x: -0.87645954, y: 0, z: -0.4814755}
+  - position: {x: 86.6904, y: 0, z: 49.918953}
+    direction: {x: -0.50290865, y: 0, z: 0.8643396}
+    perpendicular: {x: -0.8643396, y: 0, z: -0.50290865}
+  - position: {x: 86.15904, y: 0, z: 50.804634}
+    direction: {x: -0.5260359, y: 0, z: 0.8504624}
+    perpendicular: {x: -0.8504624, y: 0, z: -0.5260359}
+  - position: {x: 85.64516, y: 0, z: 51.61214}
+    direction: {x: -0.54776627, y: 0, z: 0.8366315}
+    perpendicular: {x: -0.8366315, y: 0, z: -0.54776627}
+  - position: {x: 85.07552, y: 0, z: 52.45604}
+    direction: {x: -0.5711912, y: 0, z: 0.82081705}
+    perpendicular: {x: -0.82081705, y: 0, z: -0.5711912}
+  - position: {x: 84.48642, y: 0, z: 53.27709}
+    direction: {x: -0.5947445, y: 0, z: 0.8039148}
+    perpendicular: {x: -0.8039148, y: 0, z: -0.5947445}
+  - position: {x: 83.87808, y: 0, z: 54.07444}
+    direction: {x: -0.6183993, y: 0, z: 0.785864}
+    perpendicular: {x: -0.785864, y: 0, z: -0.6183993}
+  - position: {x: 83.25072, y: 0, z: 54.847248}
+    direction: {x: -0.6421219, y: 0, z: 0.7666026}
+    perpendicular: {x: -0.7666026, y: 0, z: -0.6421219}
+  - position: {x: 82.56081, y: 0, z: 55.643566}
+    direction: {x: -0.6674525, y: 0, z: 0.74465233}
+    perpendicular: {x: -0.74465233, y: 0, z: -0.6674525}
+  - position: {x: 81.894844, y: 0, z: 56.36297}
+    direction: {x: -0.69116956, y: 0, z: 0.72269267}
+    perpendicular: {x: -0.72269267, y: 0, z: -0.69116956}
+  - position: {x: 81.21053, y: 0, z: 57.05522}
+    direction: {x: -0.7147934, y: 0, z: 0.69933563}
+    perpendicular: {x: -0.69933563, y: 0, z: -0.7147934}
+  - position: {x: 80.46064, y: 0, z: 57.762764}
+    direction: {x: -0.73980683, y: 0, z: 0.67281944}
+    perpendicular: {x: -0.67281944, y: 0, z: -0.73980683}
+  - position: {x: 79.690414, y: 0, z: 58.437435}
+    direction: {x: -0.76452744, y: 0, z: 0.64459115}
+    perpendicular: {x: -0.64459115, y: 0, z: -0.76452744}
+  curveLength: 73.37019
   adjustmentNodes:
   - {fileID: 1838864540}
   - {fileID: 325233064}
@@ -422,7 +477,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 470757940}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.24, y: 0, z: -11.49}
+  m_LocalPosition: {x: 18.838047, y: 0, z: -11.863155}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1465315570}
@@ -466,7 +521,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582802883}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.5, y: 0, z: 0.25999832}
+  m_LocalPosition: {x: 22.458115, y: 0, z: 22.21418}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1790104166}
@@ -510,7 +565,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690933228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66, y: 0, z: 21.4}
+  m_LocalPosition: {x: 52.07011, y: 0, z: 11.633003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1790104166}
@@ -554,7 +609,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176701176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.4, y: 0, z: -70}
+  m_LocalPosition: {x: 22.28002, y: 0, z: -16.192417}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2134342107}
@@ -573,6 +628,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentNode: {fileID: 2134342106}
+--- !u!1 &1261875547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1261875549}
+  - component: {fileID: 1261875548}
+  m_Layer: 0
+  m_Name: AdjustmentNode(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1261875549
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261875547}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.869339, y: 0, z: 26.213484}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6477259906966708998}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1261875548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261875547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06411262a5469240a0cdaa7edad3e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNode: {fileID: 1630193047843946524}
 --- !u!1 &1465315568
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,179 +722,181 @@ MonoBehaviour:
   endNode: 0
   startNode: 0
   resetCurves: 0
+  connected: 0
   typeColor: {r: 0, g: 0, b: 1, a: 1}
-  adjustmentNodePrefab: {fileID: 2948931495715058067, guid: 3a8f0eaaeaa95584181ab443cb5ace8e,
-    type: 3}
   curvePoints:
   - position: {x: -15.7, y: 0, z: 55.7}
-    direction: {x: 0.626678, y: 0, z: -0.7792783}
-    perpendicular: {x: 0.7792783, y: -0, z: 0.626678}
-  - position: {x: -15.05671, y: 0, z: 54.906822}
-    direction: {x: 0.6328587, y: 0, z: -0.7742673}
-    perpendicular: {x: 0.7742673, y: -0, z: 0.6328587}
-  - position: {x: -14.410702, y: 0, z: 54.12159}
-    direction: {x: 0.6375816, y: 0, z: -0.7703829}
-    perpendicular: {x: 0.7703829, y: -0, z: 0.6375816}
-  - position: {x: -13.763294, y: 0, z: 53.34318}
-    direction: {x: 0.641125, y: 0, z: -0.76743644}
-    perpendicular: {x: 0.76743644, y: -0, z: 0.641125}
-  - position: {x: -13.108603, y: 0, z: 52.562344}
-    direction: {x: 0.6437169, y: 0, z: -0.7652638}
-    perpendicular: {x: 0.7652638, y: -0, z: 0.6437169}
-  - position: {x: -12.455768, y: 0, z: 51.788166}
-    direction: {x: 0.6454689, y: 0, z: -0.76378655}
-    perpendicular: {x: 0.76378655, y: -0, z: 0.6454689}
-  - position: {x: -11.797602, y: 0, z: 51.010563}
-    direction: {x: 0.6465147, y: 0, z: -0.76290154}
-    perpendicular: {x: 0.76290154, y: -0, z: 0.6465147}
-  - position: {x: -11.142894, y: 0, z: 50.238514}
-    direction: {x: 0.64692736, y: 0, z: -0.7625516}
-    perpendicular: {x: 0.7625516, y: -0, z: 0.64692736}
-  - position: {x: -10.486917, y: 0, z: 49.465233}
-    direction: {x: 0.64678144, y: 0, z: -0.7626754}
-    perpendicular: {x: 0.7626754, y: -0, z: 0.64678144}
-  - position: {x: -9.827845, y: 0, z: 48.687466}
-    direction: {x: 0.64612335, y: 0, z: -0.763233}
-    perpendicular: {x: 0.763233, y: -0, z: 0.64612335}
-  - position: {x: -9.174235, y: 0, z: 47.914318}
-    direction: {x: 0.6450035, y: 0, z: -0.7641796}
-    perpendicular: {x: 0.7641796, y: -0, z: 0.6450035}
-  - position: {x: -8.520488, y: 0, z: 47.138252}
-    direction: {x: 0.643447, y: 0, z: -0.76549065}
-    perpendicular: {x: 0.76549065, y: -0, z: 0.643447}
-  - position: {x: -7.8678675, y: 0, z: 46.359894}
-    direction: {x: 0.6414787, y: 0, z: -0.7671408}
-    perpendicular: {x: 0.7671408, y: -0, z: 0.6414787}
-  - position: {x: -7.2175565, y: 0, z: 45.579823}
-    direction: {x: 0.6391195, y: 0, z: -0.7691074}
-    perpendicular: {x: 0.7691074, y: -0, z: 0.6391195}
-  - position: {x: -6.5706844, y: 0, z: 44.798634}
-    direction: {x: 0.6363871, y: 0, z: -0.7713699}
-    perpendicular: {x: 0.7713699, y: -0, z: 0.6363871}
-  - position: {x: -5.924626, y: 0, z: 44.012386}
-    direction: {x: 0.63327754, y: 0, z: -0.77392477}
-    perpendicular: {x: 0.77392477, y: -0, z: 0.63327754}
-  - position: {x: -5.2840323, y: 0, z: 43.226006}
-    direction: {x: 0.62981755, y: 0, z: -0.7767431}
-    perpendicular: {x: 0.7767431, y: -0, z: 0.62981755}
-  - position: {x: -4.6461596, y: 0, z: 42.43543}
-    direction: {x: 0.6259946, y: 0, z: -0.7798274}
-    perpendicular: {x: 0.7798274, y: -0, z: 0.6259946}
-  - position: {x: -4.011898, y: 0, z: 41.641014}
-    direction: {x: 0.62181085, y: 0, z: -0.7831675}
-    perpendicular: {x: 0.7831675, y: -0, z: 0.62181085}
-  - position: {x: -3.3821054, y: 0, z: 40.843124}
-    direction: {x: 0.6172664, y: 0, z: -0.78675413}
-    perpendicular: {x: 0.78675413, y: -0, z: 0.6172664}
-  - position: {x: -2.761275, y: 0, z: 40.04682}
-    direction: {x: 0.6123906, y: 0, z: -0.79055536}
-    perpendicular: {x: 0.79055536, y: -0, z: 0.6123906}
-  - position: {x: -2.13921, y: 0, z: 39.238274}
-    direction: {x: 0.6070908, y: 0, z: -0.79463243}
-    perpendicular: {x: 0.79463243, y: -0, z: 0.6070908}
-  - position: {x: -1.5276754, y: 0, z: 38.431984}
-    direction: {x: 0.6014533, y: 0, z: -0.79890794}
-    perpendicular: {x: 0.79890794, y: -0, z: 0.6014533}
-  - position: {x: -0.92014915, y: 0, z: 37.61871}
-    direction: {x: 0.59540623, y: 0, z: -0.80342484}
-    perpendicular: {x: 0.80342484, y: -0, z: 0.59540623}
-  - position: {x: -0.31743145, y: 0, z: 36.798615}
-    direction: {x: 0.58893573, y: 0, z: -0.8081799}
-    perpendicular: {x: 0.8081799, y: -0, z: 0.58893573}
-  - position: {x: 0.27613258, y: 0, z: 35.976864}
-    direction: {x: 0.58206934, y: 0, z: -0.8131392}
-    perpendicular: {x: 0.8131392, y: -0, z: 0.58206934}
-  - position: {x: 0.86335635, y: 0, z: 35.148785}
-    direction: {x: 0.5747532, y: 0, z: -0.8183268}
-    perpendicular: {x: 0.8183268, y: -0, z: 0.5747532}
-  - position: {x: 1.4434478, y: 0, z: 34.31455}
-    direction: {x: 0.5669696, y: 0, z: -0.8237388}
-    perpendicular: {x: 0.8237388, y: -0, z: 0.5669696}
-  - position: {x: 2.015616, y: 0, z: 33.474365}
-    direction: {x: 0.55869883, y: 0, z: -0.8293706}
-    perpendicular: {x: 0.8293706, y: -0, z: 0.55869883}
-  - position: {x: 2.5757225, y: 0, z: 32.633507}
-    direction: {x: 0.54997396, y: 0, z: -0.83518183}
-    perpendicular: {x: 0.83518183, y: -0, z: 0.54997396}
-  - position: {x: 3.129726, y: 0, z: 31.782043}
-    direction: {x: 0.5406674, y: 0, z: -0.8412364}
-    perpendicular: {x: 0.8412364, y: -0, z: 0.5406674}
-  - position: {x: 3.673438, y: 0, z: 30.925201}
-    direction: {x: 0.5308057, y: 0, z: -0.8474935}
-    perpendicular: {x: 0.8474935, y: -0, z: 0.5308057}
-  - position: {x: 4.209219, y: 0, z: 30.05801}
-    direction: {x: 0.5202987, y: 0, z: -0.8539843}
-    perpendicular: {x: 0.8539843, y: -0, z: 0.5202987}
-  - position: {x: 4.729894, y: 0, z: 29.190977}
-    direction: {x: 0.5092438, y: 0, z: -0.86062235}
-    perpendicular: {x: 0.86062235, y: -0, z: 0.5092438}
-  - position: {x: 5.2409024, y: 0, z: 28.313923}
-    direction: {x: 0.49747887, y: 0, z: -0.8674761}
-    perpendicular: {x: 0.8674761, y: -0, z: 0.49747887}
-  - position: {x: 5.7411957, y: 0, z: 27.426952}
-    direction: {x: 0.48496115, y: 0, z: -0.87453574}
-    perpendicular: {x: 0.87453574, y: -0, z: 0.48496115}
-  - position: {x: 6.226877, y: 0, z: 26.535475}
-    direction: {x: 0.47172514, y: 0, z: -0.8817457}
-    perpendicular: {x: 0.8817457, y: -0, z: 0.47172514}
-  - position: {x: 6.697126, y: 0, z: 25.639688}
-    direction: {x: 0.4577362, y: 0, z: -0.8890881}
-    perpendicular: {x: 0.8890881, y: -0, z: 0.4577362}
-  - position: {x: 7.156393, y: 0, z: 24.729122}
-    direction: {x: 0.44277838, y: 0, z: -0.89663106}
-    perpendicular: {x: 0.89663106, y: -0, z: 0.44277838}
-  - position: {x: 7.5981693, y: 0, z: 23.81456}
-    direction: {x: 0.42697453, y: 0, z: -0.9042636}
-    perpendicular: {x: 0.9042636, y: -0, z: 0.42697453}
-  - position: {x: 8.021607, y: 0, z: 22.896208}
-    direction: {x: 0.4102852, y: 0, z: -0.91195726}
-    perpendicular: {x: 0.91195726, y: -0, z: 0.4102852}
-  - position: {x: 8.430465, y: 0, z: 21.96347}
-    direction: {x: 0.39245945, y: 0, z: -0.91976935}
-    perpendicular: {x: 0.91976935, y: -0, z: 0.39245945}
-  - position: {x: 8.818804, y: 0, z: 21.027279}
-    direction: {x: 0.3736459, y: 0, z: -0.9275714}
-    perpendicular: {x: 0.9275714, y: -0, z: 0.3736459}
-  - position: {x: 9.187799, y: 0, z: 20.082409}
-    direction: {x: 0.3536867, y: 0, z: -0.93536395}
-    perpendicular: {x: 0.93536395, y: -0, z: 0.3536867}
-  - position: {x: 9.536174, y: 0, z: 19.129028}
-    direction: {x: 0.33252406, y: 0, z: -0.94309473}
-    perpendicular: {x: 0.94309473, y: -0, z: 0.33252406}
-  - position: {x: 9.86262, y: 0, z: 18.167307}
-    direction: {x: 0.3101013, y: 0, z: -0.9507035}
-    perpendicular: {x: 0.9507035, y: -0, z: 0.3101013}
-  - position: {x: 10.165794, y: 0, z: 17.197418}
-    direction: {x: 0.28636378, y: 0, z: -0.958121}
-    perpendicular: {x: 0.958121, y: -0, z: 0.28636378}
-  - position: {x: 10.444319, y: 0, z: 16.219555}
-    direction: {x: 0.26126084, y: 0, z: -0.9652682}
-    perpendicular: {x: 0.9652682, y: -0, z: 0.26126084}
-  - position: {x: 10.695452, y: 0, z: 15.239418}
-    direction: {x: 0.23489882, y: 0, z: -0.9720198}
-    perpendicular: {x: 0.9720198, y: -0, z: 0.23489882}
-  - position: {x: 10.92057, y: 0, z: 14.246198}
-    direction: {x: 0.20694433, y: 0, z: -0.9783527}
-    perpendicular: {x: 0.9783527, y: -0, z: 0.20694433}
-  - position: {x: 11.115706, y: 0, z: 13.251139}
-    direction: {x: 0.17768097, y: 0, z: -0.9840882}
-    perpendicular: {x: 0.9840882, y: -0, z: 0.17768097}
-  - position: {x: 11.280691, y: 0, z: 12.248934}
-    direction: {x: 0.1469422, y: 0, z: -0.9891451}
-    perpendicular: {x: 0.9891451, y: -0, z: 0.1469422}
-  - position: {x: 11.41335, y: 0, z: 11.245356}
-    direction: {x: 0.11490984, y: 0, z: -0.9933759}
-    perpendicular: {x: 0.9933759, y: -0, z: 0.11490984}
-  - position: {x: 11.513129, y: 0, z: 10.235102}
-    direction: {x: 0.08143652, y: 0, z: -0.99667853}
-    perpendicular: {x: 0.99667853, y: -0, z: 0.08143652}
-  - position: {x: 11.57818, y: 0, z: 9.223958}
-    direction: {x: 0.046755742, y: 0, z: -0.9989064}
-    perpendicular: {x: 0.9989064, y: -0, z: 0.046755742}
-  - position: {x: 11.607539, y: 0, z: 8.206614}
-    direction: {x: 0.010749005, y: 0, z: -0.99994224}
-    perpendicular: {x: 0.99994224, y: -0, z: 0.010749005}
-  curveLength: 56.85073
+    direction: {x: 0.8461891, y: 0, z: -0.53288287}
+    perpendicular: {x: 0.53288287, y: -0, z: 0.8461891}
+  - position: {x: -14.763593, y: 0, z: 55.084953}
+    direction: {x: 0.82500345, y: 0, z: -0.5651278}
+    perpendicular: {x: 0.5651278, y: -0, z: 0.82500345}
+  - position: {x: -13.976912, y: 0, z: 54.525967}
+    direction: {x: 0.8049648, y: 0, z: -0.59332263}
+    perpendicular: {x: 0.59332263, y: -0, z: 0.8049648}
+  - position: {x: -13.177331, y: 0, z: 53.91339}
+    direction: {x: 0.78226835, y: 0, z: -0.62294155}
+    perpendicular: {x: 0.62294155, y: -0, z: 0.78226835}
+  - position: {x: -12.41722, y: 0, z: 53.284485}
+    direction: {x: 0.7583062, y: 0, z: -0.6518985}
+    perpendicular: {x: 0.6518985, y: -0, z: 0.7583062}
+  - position: {x: -11.651323, y: 0, z: 52.599022}
+    direction: {x: 0.73160577, y: 0, z: -0.68172795}
+    perpendicular: {x: 0.68172795, y: -0, z: 0.73160577}
+  - position: {x: -10.926783, y: 0, z: 51.89639}
+    direction: {x: 0.7038138, y: 0, z: -0.7103845}
+    perpendicular: {x: 0.7103845, y: -0, z: 0.7038138}
+  - position: {x: -10.241957, y: 0, z: 51.177265}
+    direction: {x: 0.6751502, y: 0, z: -0.7376803}
+    perpendicular: {x: 0.7376803, y: -0, z: 0.6751502}
+  - position: {x: -9.595198, y: 0, z: 50.4423}
+    direction: {x: 0.64585847, y: 0, z: -0.7634571}
+    perpendicular: {x: 0.7634571, y: -0, z: 0.64585847}
+  - position: {x: -8.9500475, y: 0, z: 49.647552}
+    direction: {x: 0.6144466, y: 0, z: -0.7889585}
+    perpendicular: {x: 0.7889585, y: -0, z: 0.6144466}
+  - position: {x: -8.343765, y: 0, z: 48.83654}
+    direction: {x: 0.5829357, y: 0, z: -0.81251824}
+    perpendicular: {x: 0.81251824, y: -0, z: 0.5829357}
+  - position: {x: -7.7743936, y: 0, z: 48.01004}
+    direction: {x: 0.55163884, y: 0, z: -0.8340831}
+    perpendicular: {x: 0.8340831, y: -0, z: 0.55163884}
+  - position: {x: -7.239974, y: 0, z: 47.168842}
+    direction: {x: 0.5208564, y: 0, z: -0.8536443}
+    perpendicular: {x: 0.8536443, y: -0, z: 0.5208564}
+  - position: {x: -6.73855, y: 0, z: 46.313705}
+    direction: {x: 0.49086782, y: 0, z: -0.8712341}
+    perpendicular: {x: 0.8712341, y: -0, z: 0.49086782}
+  - position: {x: -6.268164, y: 0, z: 45.445404}
+    direction: {x: 0.46192572, y: 0, z: -0.8869186}
+    perpendicular: {x: 0.8869186, y: -0, z: 0.46192572}
+  - position: {x: -5.803156, y: 0, z: 44.51545}
+    direction: {x: 0.4327555, y: 0, z: -0.9015113}
+    perpendicular: {x: 0.9015113, y: -0, z: 0.4327555}
+  - position: {x: -5.390423, y: 0, z: 43.622536}
+    direction: {x: 0.4066247, y: 0, z: -0.9135953}
+    perpendicular: {x: 0.9135953, y: -0, z: 0.4066247}
+  - position: {x: -4.9819045, y: 0, z: 42.668324}
+    direction: {x: 0.38080403, y: 0, z: -0.92465574}
+    perpendicular: {x: 0.92465574, y: -0, z: 0.38080403}
+  - position: {x: -4.618554, y: 0, z: 41.75407}
+    direction: {x: 0.35814086, y: 0, z: -0.9336676}
+    perpendicular: {x: 0.9336676, y: -0, z: 0.35814086}
+  - position: {x: -4.276237, y: 0, z: 40.830616}
+    direction: {x: 0.33732477, y: 0, z: -0.9413883}
+    perpendicular: {x: 0.9413883, y: -0, z: 0.33732477}
+  - position: {x: -3.9355576, y: 0, z: 39.846745}
+    direction: {x: 0.31743437, y: 0, z: -0.9482802}
+    perpendicular: {x: 0.9482802, y: -0, z: 0.31743437}
+  - position: {x: -3.6303284, y: 0, z: 38.906822}
+    direction: {x: 0.30061588, y: 0, z: -0.9537453}
+    perpendicular: {x: 0.9537453, y: -0, z: 0.30061588}
+  - position: {x: -3.340151, y: 0, z: 37.960064}
+    direction: {x: 0.28580174, y: 0, z: -0.9582888}
+    perpendicular: {x: 0.9582888, y: -0, z: 0.28580174}
+  - position: {x: -3.0630677, y: 0, z: 37.00725}
+    direction: {x: 0.27301252, y: 0, z: -0.9620105}
+    perpendicular: {x: 0.9620105, y: -0, z: 0.27301252}
+  - position: {x: -2.7971222, y: 0, z: 36.049156}
+    direction: {x: 0.2622587, y: 0, z: -0.9649976}
+    perpendicular: {x: 0.9649976, y: -0, z: 0.2622587}
+  - position: {x: -2.526321, y: 0, z: 35.03296}
+    direction: {x: 0.2531199, y: 0, z: -0.96743494}
+    perpendicular: {x: 0.96743494, y: -0, z: 0.2531199}
+  - position: {x: -2.2771206, y: 0, z: 34.066444}
+    direction: {x: 0.24655716, y: 0, z: -0.96912825}
+    perpendicular: {x: 0.96912825, y: -0, z: 0.24655716}
+  - position: {x: -2.0330782, y: 0, z: 33.097023}
+    direction: {x: 0.24202932, y: 0, z: -0.9702689}
+    perpendicular: {x: 0.9702689, y: -0, z: 0.24202932}
+  - position: {x: -1.7922331, y: 0, z: 32.125458}
+    direction: {x: 0.23953135, y: 0, z: -0.9708886}
+    perpendicular: {x: 0.9708886, y: -0, z: 0.23953135}
+  - position: {x: -1.5526292, y: 0, z: 31.15253}
+    direction: {x: 0.23905824, y: 0, z: -0.9710052}
+    perpendicular: {x: 0.9710052, y: -0, z: 0.23905824}
+  - position: {x: -1.3123093, y: 0, z: 30.179016}
+    direction: {x: 0.24060483, y: 0, z: -0.97062314}
+    perpendicular: {x: 0.97062314, y: -0, z: 0.24060483}
+  - position: {x: -1.0693154, y: 0, z: 29.205687}
+    direction: {x: 0.2441664, y: 0, z: -0.96973336}
+    perpendicular: {x: 0.96973336, y: -0, z: 0.2441664}
+  - position: {x: -0.82169056, y: 0, z: 28.23332}
+    direction: {x: 0.2497382, y: 0, z: -0.9683134}
+    perpendicular: {x: 0.9683134, y: -0, z: 0.2497382}
+  - position: {x: -0.56747746, y: 0, z: 27.262691}
+    direction: {x: 0.2573147, y: 0, z: -0.96632767}
+    perpendicular: {x: 0.96632767, y: -0, z: 0.2573147}
+  - position: {x: -0.30471897, y: 0, z: 26.294577}
+    direction: {x: 0.2668885, y: 0, z: -0.9637274}
+    perpendicular: {x: 0.9637274, y: -0, z: 0.2668885}
+  - position: {x: -0.031456232, y: 0, z: 25.329746}
+    direction: {x: 0.27844867, y: 0, z: -0.9604511}
+    perpendicular: {x: 0.9604511, y: -0, z: 0.27844867}
+  - position: {x: 0.25426722, y: 0, z: 24.368977}
+    direction: {x: 0.29197928, y: 0, z: -0.95642465}
+    perpendicular: {x: 0.95642465, y: -0, z: 0.29197928}
+  - position: {x: 0.5544095, y: 0, z: 23.413046}
+    direction: {x: 0.3074566, y: 0, z: -0.9515621}
+    perpendicular: {x: 0.9515621, y: -0, z: 0.3074566}
+  - position: {x: 0.8709271, y: 0, z: 22.462727}
+    direction: {x: 0.32484668, y: 0, z: -0.94576675}
+    perpendicular: {x: 0.94576675, y: -0, z: 0.32484668}
+  - position: {x: 1.2057784, y: 0, z: 21.518793}
+    direction: {x: 0.34410223, y: 0, z: -0.9389322}
+    perpendicular: {x: 0.9389322, y: -0, z: 0.34410223}
+  - position: {x: 1.5609202, y: 0, z: 20.58202}
+    direction: {x: 0.36515987, y: 0, z: -0.93094486}
+    perpendicular: {x: 0.93094486, y: -0, z: 0.36515987}
+  - position: {x: 1.9383101, y: 0, z: 19.653185}
+    direction: {x: 0.38793635, y: 0, z: -0.9216862}
+    perpendicular: {x: 0.9216862, y: -0, z: 0.38793635}
+  - position: {x: 2.3399057, y: 0, z: 18.73306}
+    direction: {x: 0.4123261, y: 0, z: -0.9110364}
+    perpendicular: {x: 0.9110364, y: -0, z: 0.4123261}
+  - position: {x: 2.7676632, y: 0, z: 17.822426}
+    direction: {x: 0.43819815, y: 0, z: -0.8988784}
+    perpendicular: {x: 0.8988784, y: -0, z: 0.43819815}
+  - position: {x: 3.2235422, y: 0, z: 16.922049}
+    direction: {x: 0.46539468, y: 0, z: -0.8851032}
+    perpendicular: {x: 0.8851032, y: -0, z: 0.46539468}
+  - position: {x: 3.7094994, y: 0, z: 16.03271}
+    direction: {x: 0.49372944, y: 0, z: -0.86961555}
+    perpendicular: {x: 0.86961555, y: -0, z: 0.49372944}
+  - position: {x: 4.197841, y: 0, z: 15.203608}
+    direction: {x: 0.521343, y: 0, z: -0.8533472}
+    perpendicular: {x: 0.8533472, y: -0, z: 0.521343}
+  - position: {x: 4.7478867, y: 0, z: 14.337946}
+    direction: {x: 0.5512566, y: 0, z: -0.83433574}
+    perpendicular: {x: 0.83433574, y: -0, z: 0.5512566}
+  - position: {x: 5.300249, y: 0, z: 13.532594}
+    direction: {x: 0.57991695, y: 0, z: -0.8146756}
+    perpendicular: {x: 0.8146756, y: -0, z: 0.57991695}
+  - position: {x: 5.9217844, y: 0, z: 12.693539}
+    direction: {x: 0.61043346, y: 0, z: -0.7920676}
+    perpendicular: {x: 0.7920676, y: -0, z: 0.61043346}
+  - position: {x: 6.5451612, y: 0, z: 11.914697}
+    direction: {x: 0.63916415, y: 0, z: -0.76907027}
+    perpendicular: {x: 0.76907027, y: -0, z: 0.63916415}
+  - position: {x: 7.205552, y: 0, z: 11.149732}
+    direction: {x: 0.6675625, y: 0, z: -0.7445538}
+    perpendicular: {x: 0.7445538, y: -0, z: 0.6675625}
+  - position: {x: 7.862383, y: 0, z: 10.4430275}
+    direction: {x: 0.69377744, y: 0, z: -0.7201895}
+    perpendicular: {x: 0.7201895, y: -0, z: 0.69377744}
+  - position: {x: 8.599332, y: 0, z: 9.7068615}
+    direction: {x: 0.7208763, y: 0, z: -0.69306374}
+    perpendicular: {x: 0.69306374, y: -0, z: 0.7208763}
+  - position: {x: 9.331141, y: 0, z: 9.02842}
+    direction: {x: 0.7454944, y: 0, z: -0.6665119}
+    perpendicular: {x: 0.6665119, y: -0, z: 0.7454944}
+  - position: {x: 10.101413, y: 0, z: 8.364513}
+    direction: {x: 0.76910216, y: 0, z: -0.63912594}
+    perpendicular: {x: 0.63912594, y: -0, z: 0.76910216}
+  - position: {x: 10.85969, y: 0, z: 7.755789}
+    direction: {x: 0.79020584, y: 0, z: -0.6128414}
+    perpendicular: {x: 0.6128414, y: -0, z: 0.79020584}
+  curveLength: 57.193806
   adjustmentNodes:
   - {fileID: 470757941}
   - {fileID: 225615399}
@@ -824,7 +925,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790104164}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -98.2, y: 0, z: 54.4}
+  m_LocalPosition: {x: -94.5, y: 0, z: 60.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 582802885}
@@ -849,266 +950,268 @@ MonoBehaviour:
   endNode: 0
   startNode: 0
   resetCurves: 0
+  connected: 0
   typeColor: {r: 0, g: 0, b: 1, a: 1}
-  adjustmentNodePrefab: {fileID: 2948931495715058067, guid: 3a8f0eaaeaa95584181ab443cb5ace8e,
-    type: 3}
   curvePoints:
-  - position: {x: -98.2, y: 0, z: 54.4}
-    direction: {x: 0.99987584, y: 0, z: 0.015755517}
-    perpendicular: {x: -0.015755517, y: 0, z: 0.99987584}
-  - position: {x: -97.1816, y: 0, z: 54.439518}
-    direction: {x: 0.99821943, y: 0, z: 0.05964826}
-    perpendicular: {x: -0.05964826, y: 0, z: 0.99821943}
-  - position: {x: -96.17399, y: 0, z: 54.517212}
-    direction: {x: 0.9956964, y: 0, z: 0.09267517}
-    perpendicular: {x: -0.09267517, y: 0, z: 0.9956964}
-  - position: {x: -95.17106, y: 0, z: 54.624187}
-    direction: {x: 0.99296135, y: 0, z: 0.118438676}
-    perpendicular: {x: -0.118438676, y: 0, z: 0.99296135}
-  - position: {x: -94.16624, y: 0, z: 54.755054}
-    direction: {x: 0.99027765, y: 0, z: 0.13910492}
-    perpendicular: {x: -0.13910492, y: 0, z: 0.99027765}
-  - position: {x: -93.16805, y: 0, z: 54.90416}
-    direction: {x: 0.9877867, y: 0, z: 0.15581259}
-    perpendicular: {x: -0.15581259, y: 0, z: 0.9877867}
-  - position: {x: -92.170746, y: 0, z: 55.06884}
-    direction: {x: 0.9855178, y: 0, z: 0.16957182}
-    perpendicular: {x: -0.16957182, y: 0, z: 0.9855178}
-  - position: {x: -91.17998, y: 0, z: 55.245388}
-    direction: {x: 0.98349327, y: 0, z: 0.18094456}
-    perpendicular: {x: -0.18094456, y: 0, z: 0.98349327}
-  - position: {x: -90.18654, y: 0, z: 55.433304}
-    direction: {x: 0.98168856, y: 0, z: 0.19049294}
-    perpendicular: {x: -0.19049294, y: 0, z: 0.98168856}
-  - position: {x: -89.19403, y: 0, z: 55.630226}
-    direction: {x: 0.98009926, y: 0, z: 0.1985078}
-    perpendicular: {x: -0.1985078, y: 0, z: 0.98009926}
-  - position: {x: -88.20578, y: 0, z: 55.834007}
-    direction: {x: 0.978715, y: 0, z: 0.20522404}
-    perpendicular: {x: -0.20522404, y: 0, z: 0.978715}
-  - position: {x: -87.21716, y: 0, z: 56.044373}
-    direction: {x: 0.97751325, y: 0, z: 0.21087398}
-    perpendicular: {x: -0.21087398, y: 0, z: 0.97751325}
-  - position: {x: -86.230576, y: 0, z: 56.259796}
-    direction: {x: 0.9764822, y: 0, z: 0.21559797}
-    perpendicular: {x: -0.21559797, y: 0, z: 0.9764822}
-  - position: {x: -85.240166, y: 0, z: 56.48063}
-    direction: {x: 0.97560287, y: 0, z: 0.21954295}
-    perpendicular: {x: -0.21954295, y: 0, z: 0.97560287}
-  - position: {x: -84.255844, y: 0, z: 56.70391}
-    direction: {x: 0.9748712, y: 0, z: 0.22276945}
-    perpendicular: {x: -0.22276945, y: 0, z: 0.9748712}
-  - position: {x: -83.27123, y: 0, z: 56.93034}
-    direction: {x: 0.9742702, y: 0, z: 0.22538328}
-    perpendicular: {x: -0.22538328, y: 0, z: 0.9742702}
-  - position: {x: -82.28784, y: 0, z: 57.158985}
-    direction: {x: 0.9737907, y: 0, z: 0.2274459}
-    perpendicular: {x: -0.2274459, y: 0, z: 0.9737907}
-  - position: {x: -81.307045, y: 0, z: 57.388935}
-    direction: {x: 0.9734239, y: 0, z: 0.22901067}
-    perpendicular: {x: -0.22901067, y: 0, z: 0.9734239}
-  - position: {x: -80.321465, y: 0, z: 57.621437}
-    direction: {x: 0.9731594, y: 0, z: 0.23013206}
-    perpendicular: {x: -0.23013206, y: 0, z: 0.9731594}
-  - position: {x: -79.340836, y: 0, z: 57.85374}
-    direction: {x: 0.97299266, y: 0, z: 0.23083612}
-    perpendicular: {x: -0.23083612, y: 0, z: 0.97299266}
-  - position: {x: -78.35747, y: 0, z: 58.08725}
-    direction: {x: 0.9729156, y: 0, z: 0.2311607}
-    perpendicular: {x: -0.2311607, y: 0, z: 0.9729156}
-  - position: {x: -77.37219, y: 0, z: 58.32136}
-    direction: {x: 0.97292316, y: 0, z: 0.23112893}
-    perpendicular: {x: -0.23112893, y: 0, z: 0.97292316}
-  - position: {x: -76.394905, y: 0, z: 58.55336}
-    direction: {x: 0.9730092, y: 0, z: 0.23076603}
-    perpendicular: {x: -0.23076603, y: 0, z: 0.9730092}
-  - position: {x: -75.40829, y: 0, z: 58.787018}
-    direction: {x: 0.97317094, y: 0, z: 0.2300834}
-    perpendicular: {x: -0.2300834, y: 0, z: 0.97317094}
-  - position: {x: -74.42211, y: 0, z: 59.019672}
-    direction: {x: 0.9734032, y: 0, z: 0.22909875}
-    perpendicular: {x: -0.22909875, y: 0, z: 0.9734032}
-  - position: {x: -73.44641, y: 0, z: 59.248672}
-    direction: {x: 0.9736987, y: 0, z: 0.22783966}
-    perpendicular: {x: -0.22783966, y: 0, z: 0.9736987}
-  - position: {x: -72.453896, y: 0, z: 59.480095}
-    direction: {x: 0.97406256, y: 0, z: 0.22627872}
-    perpendicular: {x: -0.22627872, y: 0, z: 0.97406256}
-  - position: {x: -71.47322, y: 0, z: 59.706985}
-    direction: {x: 0.97448164, y: 0, z: 0.22446725}
-    perpendicular: {x: -0.22446725, y: 0, z: 0.97448164}
-  - position: {x: -70.48614, y: 0, z: 59.93325}
-    direction: {x: 0.97495997, y: 0, z: 0.22238038}
-    perpendicular: {x: -0.22238038, y: 0, z: 0.97495997}
-  - position: {x: -69.50273, y: 0, z: 60.156353}
-    direction: {x: 0.9754901, y: 0, z: 0.22004336}
-    perpendicular: {x: -0.22004336, y: 0, z: 0.9754901}
-  - position: {x: -68.52357, y: 0, z: 60.375893}
-    direction: {x: 0.9760683, y: 0, z: 0.21746409}
-    perpendicular: {x: -0.21746409, y: 0, z: 0.9760683}
-  - position: {x: -67.52985, y: 0, z: 60.59577}
-    direction: {x: 0.97670394, y: 0, z: 0.21459147}
-    perpendicular: {x: -0.21459147, y: 0, z: 0.97670394}
-  - position: {x: -66.54132, y: 0, z: 60.811325}
-    direction: {x: 0.97738236, y: 0, z: 0.21147972}
-    perpendicular: {x: -0.21147972, y: 0, z: 0.97738236}
-  - position: {x: -65.558525, y: 0, z: 61.022236}
-    direction: {x: 0.9781002, y: 0, z: 0.20813458}
-    perpendicular: {x: -0.20813458, y: 0, z: 0.9781002}
-  - position: {x: -64.57222, y: 0, z: 61.230247}
-    direction: {x: 0.9788615, y: 0, z: 0.20452403}
-    perpendicular: {x: -0.20452403, y: 0, z: 0.9788615}
-  - position: {x: -63.58277, y: 0, z: 61.434963}
-    direction: {x: 0.9796641, y: 0, z: 0.20064445}
-    perpendicular: {x: -0.20064445, y: 0, z: 0.9796641}
-  - position: {x: -62.59061, y: 0, z: 61.635998}
-    direction: {x: 0.9805055, y: 0, z: 0.19649163}
-    perpendicular: {x: -0.19649163, y: 0, z: 0.9805055}
-  - position: {x: -61.596146, y: 0, z: 61.832977}
-    direction: {x: 0.9813831, y: 0, z: 0.19206052}
-    perpendicular: {x: -0.19206052, y: 0, z: 0.9813831}
-  - position: {x: -60.609653, y: 0, z: 62.02363}
-    direction: {x: 0.9822849, y: 0, z: 0.18739362}
-    perpendicular: {x: -0.18739362, y: 0, z: 0.9822849}
-  - position: {x: -59.611813, y: 0, z: 62.21138}
-    direction: {x: 0.98322606, y: 0, z: 0.18239123}
-    perpendicular: {x: -0.18239123, y: 0, z: 0.98322606}
-  - position: {x: -58.622776, y: 0, z: 62.39215}
-    direction: {x: 0.9841847, y: 0, z: 0.17714538}
-    perpendicular: {x: -0.17714538, y: 0, z: 0.9841847}
-  - position: {x: -57.63308, y: 0, z: 62.56744}
-    direction: {x: 0.98516667, y: 0, z: 0.17160036}
-    perpendicular: {x: -0.17160036, y: 0, z: 0.98516667}
-  - position: {x: -56.633194, y: 0, z: 62.73854}
-    direction: {x: 0.98617834, y: 0, z: 0.16568771}
-    perpendicular: {x: -0.16568771, y: 0, z: 0.98617834}
-  - position: {x: -55.633453, y: 0, z: 62.903294}
-    direction: {x: 0.9872057, y: 0, z: 0.15945199}
-    perpendicular: {x: -0.15945199, y: 0, z: 0.9872057}
-  - position: {x: -54.634243, y: 0, z: 63.061302}
-    direction: {x: 0.9882443, y: 0, z: 0.15288296}
-    perpendicular: {x: -0.15288296, y: 0, z: 0.9882443}
-  - position: {x: -53.63598, y: 0, z: 63.212196}
-    direction: {x: 0.98928905, y: 0, z: 0.14596976}
-    perpendicular: {x: -0.14596976, y: 0, z: 0.98928905}
-  - position: {x: -52.63906, y: 0, z: 63.35559}
-    direction: {x: 0.9903344, y: 0, z: 0.13870046}
-    perpendicular: {x: -0.13870046, y: 0, z: 0.9903344}
-  - position: {x: -51.64392, y: 0, z: 63.49108}
-    direction: {x: 0.99137414, y: 0, z: 0.13106254}
-    perpendicular: {x: -0.13106254, y: 0, z: 0.99137414}
-  - position: {x: -50.64112, y: 0, z: 63.619534}
-    direction: {x: 0.9924115, y: 0, z: 0.122960925}
-    perpendicular: {x: -0.122960925, y: 0, z: 0.9924115}
-  - position: {x: -49.63116, y: 0, z: 63.740265}
-    direction: {x: 0.9934383, y: 0, z: 0.1143692}
-    perpendicular: {x: -0.1143692, y: 0, z: 0.9934383}
-  - position: {x: -48.634075, y: 0, z: 63.85056}
-    direction: {x: 0.99442583, y: 0, z: 0.10543817}
-    perpendicular: {x: -0.10543817, y: 0, z: 0.99442583}
-  - position: {x: -47.630753, y: 0, z: 63.952156}
-    direction: {x: 0.9953837, y: 0, z: 0.095975555}
-    perpendicular: {x: -0.095975555, y: 0, z: 0.9953837}
-  - position: {x: -46.621723, y: 0, z: 64.04437}
-    direction: {x: 0.9962995, y: 0, z: 0.08594986}
-    perpendicular: {x: -0.08594986, y: 0, z: 0.9962995}
-  - position: {x: -45.617195, y: 0, z: 64.12575}
-    direction: {x: 0.997151, y: 0, z: 0.07543082}
-    perpendicular: {x: -0.07543082, y: 0, z: 0.997151}
-  - position: {x: -44.608025, y: 0, z: 64.196465}
-    direction: {x: 0.9979313, y: 0, z: 0.06428872}
-    perpendicular: {x: -0.06428872, y: 0, z: 0.9979313}
-  - position: {x: -43.594826, y: 0, z: 64.25578}
-    direction: {x: 0.99862164, y: 0, z: 0.0524857}
-    perpendicular: {x: -0.0524857, y: 0, z: 0.99862164}
-  - position: {x: -42.587708, y: 0, z: 64.30251}
-    direction: {x: 0.99919564, y: 0, z: 0.040100943}
-    perpendicular: {x: -0.040100943, y: 0, z: 0.99919564}
-  - position: {x: -41.57773, y: 0, z: 64.336464}
-    direction: {x: 0.9996359, y: 0, z: 0.026983313}
-    perpendicular: {x: -0.026983313, y: 0, z: 0.9996359}
-  - position: {x: -40.574905, y: 0, z: 64.35669}
-    direction: {x: 0.99991256, y: 0, z: 0.013219639}
-    perpendicular: {x: -0.013219639, y: 0, z: 0.99991256}
-  - position: {x: -39.561214, y: 0, z: 64.3627}
-    direction: {x: 0.99999887, y: 0, z: -0.0014945073}
-    perpendicular: {x: 0.0014945073, y: -0, z: 0.99999887}
-  - position: {x: -38.546772, y: 0, z: 64.353355}
-    direction: {x: 0.999854, y: 0, z: -0.017084021}
-    perpendicular: {x: 0.017084021, y: -0, z: 0.999854}
-  - position: {x: -37.541466, y: 0, z: 64.328026}
-    direction: {x: 0.99944043, y: 0, z: -0.03344903}
-    perpendicular: {x: 0.03344903, y: -0, z: 0.99944043}
-  - position: {x: -36.536808, y: 0, z: 64.28577}
-    direction: {x: 0.9987098, y: 0, z: -0.050781872}
-    perpendicular: {x: 0.050781872, y: -0, z: 0.9987098}
-  - position: {x: -35.524704, y: 0, z: 64.22497}
-    direction: {x: 0.9975954, y: 0, z: -0.06930626}
-    perpendicular: {x: 0.06930626, y: -0, z: 0.9975954}
-  - position: {x: -34.51512, y: 0, z: 64.14494}
-    direction: {x: 0.996038, y: 0, z: -0.088928096}
-    perpendicular: {x: 0.088928096, y: -0, z: 0.996038}
-  - position: {x: -33.508953, y: 0, z: 64.04462}
-    direction: {x: 0.993964, y: 0, z: -0.10970652}
-    perpendicular: {x: 0.10970652, y: -0, z: 0.993964}
-  - position: {x: -32.507126, y: 0, z: 63.922913}
-    direction: {x: 0.9912896, y: 0, z: -0.13170028}
-    perpendicular: {x: 0.13170028, y: -0, z: 0.9912896}
-  - position: {x: -31.51062, y: 0, z: 63.7787}
-    direction: {x: 0.98791975, y: 0, z: -0.15496628}
-    perpendicular: {x: 0.15496628, y: -0, z: 0.98791975}
-  - position: {x: -30.5121, y: 0, z: 63.609314}
-    direction: {x: 0.9837083, y: 0, z: -0.179772}
-    perpendicular: {x: 0.179772, y: -0, z: 0.9837083}
-  - position: {x: -29.521202, y: 0, z: 63.414665}
-    direction: {x: 0.9785578, y: 0, z: -0.20597218}
-    perpendicular: {x: 0.20597218, y: -0, z: 0.9785578}
-  - position: {x: -28.539024, y: 0, z: 63.19351}
-    direction: {x: 0.97233105, y: 0, z: -0.23360722}
-    perpendicular: {x: 0.23360722, y: -0, z: 0.97233105}
-  - position: {x: -27.558807, y: 0, z: 62.94241}
-    direction: {x: 0.96480966, y: 0, z: -0.2629494}
-    perpendicular: {x: 0.2629494, y: -0, z: 0.96480966}
-  - position: {x: -26.589933, y: 0, z: 62.661736}
-    direction: {x: 0.95587075, y: 0, z: -0.29378754}
-    perpendicular: {x: 0.29378754, y: -0, z: 0.95587075}
-  - position: {x: -25.633633, y: 0, z: 62.350105}
-    direction: {x: 0.9453309, y: 0, z: -0.3261126}
-    perpendicular: {x: 0.3261126, y: -0, z: 0.9453309}
-  - position: {x: -24.683786, y: 0, z: 62.00323}
-    direction: {x: 0.9328902, y: 0, z: -0.36016107}
-    perpendicular: {x: 0.36016107, y: -0, z: 0.9328902}
-  - position: {x: -23.749474, y: 0, z: 61.622}
-    direction: {x: 0.9184195, y: 0, z: -0.39560795}
-    perpendicular: {x: 0.39560795, y: -0, z: 0.9184195}
-  - position: {x: -22.82506, y: 0, z: 61.201523}
-    direction: {x: 0.90157133, y: 0, z: -0.43263054}
-    perpendicular: {x: 0.43263054, y: -0, z: 0.90157133}
-  - position: {x: -21.926193, y: 0, z: 60.746666}
-    direction: {x: 0.8823995, y: 0, z: -0.47050092}
-    perpendicular: {x: 0.47050092, y: -0, z: 0.8823995}
-  - position: {x: -21.047148, y: 0, z: 60.252716}
-    direction: {x: 0.8605936, y: 0, z: -0.5092922}
-    perpendicular: {x: 0.5092922, y: -0, z: 0.8605936}
-  - position: {x: -20.189426, y: 0, z: 59.717995}
-    direction: {x: 0.8359904, y: 0, z: -0.548744}
-    perpendicular: {x: 0.548744, y: -0, z: 0.8359904}
-  - position: {x: -19.360764, y: 0, z: 59.145294}
-    direction: {x: 0.80868363, y: 0, z: -0.5882438}
-    perpendicular: {x: 0.5882438, y: -0, z: 0.80868363}
-  - position: {x: -18.556133, y: 0, z: 58.528954}
-    direction: {x: 0.7784269, y: 0, z: -0.6277353}
-    perpendicular: {x: 0.6277353, y: -0, z: 0.7784269}
-  - position: {x: -17.788551, y: 0, z: 57.877388}
-    direction: {x: 0.7457297, y: 0, z: -0.66624856}
-    perpendicular: {x: 0.66624856, y: -0, z: 0.7457297}
-  - position: {x: -17.052765, y: 0, z: 57.185257}
-    direction: {x: 0.71049774, y: 0, z: -0.70369947}
-    perpendicular: {x: 0.70369947, y: -0, z: 0.71049774}
-  - position: {x: -16.354883, y: 0, z: 56.457417}
-    direction: {x: 0.6732157, y: 0, z: -0.7394461}
-    perpendicular: {x: 0.7394461, y: -0, z: 0.6732157}
-  curveLength: 85.84982
+  - position: {x: -94.5, y: 0, z: 60.9}
+    direction: {x: 0.71095735, y: 0, z: 0.7032351}
+    perpendicular: {x: -0.7032351, y: 0, z: 0.71095735}
+  - position: {x: -93.68844, y: 0, z: 61.68559}
+    direction: {x: 0.7260565, y: 0, z: 0.687635}
+    perpendicular: {x: -0.687635, y: 0, z: 0.7260565}
+  - position: {x: -92.939156, y: 0, z: 62.381054}
+    direction: {x: 0.7397973, y: 0, z: 0.6728298}
+    perpendicular: {x: -0.6728298, y: 0, z: 0.7397973}
+  - position: {x: -92.18487, y: 0, z: 63.053165}
+    direction: {x: 0.75341576, y: 0, z: 0.65754443}
+    perpendicular: {x: -0.65754443, y: 0, z: 0.75341576}
+  - position: {x: -91.42561, y: 0, z: 63.702103}
+    direction: {x: 0.7668855, y: 0, z: 0.641784}
+    perpendicular: {x: -0.641784, y: 0, z: 0.7668855}
+  - position: {x: -90.66149, y: 0, z: 64.32811}
+    direction: {x: 0.78017956, y: 0, z: 0.62555575}
+    perpendicular: {x: -0.62555575, y: 0, z: 0.78017956}
+  - position: {x: -89.89259, y: 0, z: 64.93137}
+    direction: {x: 0.79327077, y: 0, z: 0.60886896}
+    perpendicular: {x: -0.60886896, y: 0, z: 0.79327077}
+  - position: {x: -89.118996, y: 0, z: 65.51214}
+    direction: {x: 0.80613214, y: 0, z: 0.59173554}
+    perpendicular: {x: -0.59173554, y: 0, z: 0.80613214}
+  - position: {x: -88.269775, y: 0, z: 66.12025}
+    direction: {x: 0.81986856, y: 0, z: 0.5725517}
+    perpendicular: {x: -0.5725517, y: 0, z: 0.81986856}
+  - position: {x: -87.415184, y: 0, z: 66.7021}
+    direction: {x: 0.8332646, y: 0, z: 0.5528745}
+    perpendicular: {x: -0.5528745, y: 0, z: 0.8332646}
+  - position: {x: -86.627144, y: 0, z: 67.212616}
+    direction: {x: 0.8452162, y: 0, z: 0.53442454}
+    perpendicular: {x: -0.53442454, y: 0, z: 0.8452162}
+  - position: {x: -85.76247, y: 0, z: 67.74487}
+    direction: {x: 0.8578663, y: 0, z: 0.5138729}
+    perpendicular: {x: -0.5138729, y: 0, z: 0.8578663}
+  - position: {x: -84.89271, y: 0, z: 68.25168}
+    direction: {x: 0.87008125, y: 0, z: 0.49290833}
+    perpendicular: {x: -0.49290833, y: 0, z: 0.87008125}
+  - position: {x: -84.01796, y: 0, z: 68.73327}
+    direction: {x: 0.88183194, y: 0, z: 0.47156388}
+    perpendicular: {x: -0.47156388, y: 0, z: 0.88183194}
+  - position: {x: -83.1383, y: 0, z: 69.18996}
+    direction: {x: 0.8930914, y: 0, z: 0.4498754}
+    perpendicular: {x: -0.4498754, y: 0, z: 0.8930914}
+  - position: {x: -82.25388, y: 0, z: 69.622}
+    direction: {x: 0.903835, y: 0, z: 0.42788106}
+    perpendicular: {x: -0.42788106, y: 0, z: 0.903835}
+  - position: {x: -81.290474, y: 0, z: 70.06255}
+    direction: {x: 0.9148671, y: 0, z: 0.40375507}
+    perpendicular: {x: -0.40375507, y: 0, z: 0.9148671}
+  - position: {x: -80.3964, y: 0, z: 70.44413}
+    direction: {x: 0.92447037, y: 0, z: 0.38125387}
+    perpendicular: {x: -0.38125387, y: 0, z: 0.92447037}
+  - position: {x: -79.49788, y: 0, z: 70.80193}
+    direction: {x: 0.93350095, y: 0, z: 0.35857484}
+    perpendicular: {x: -0.35857484, y: 0, z: 0.93350095}
+  - position: {x: -78.519554, y: 0, z: 71.16301}
+    direction: {x: 0.94262415, y: 0, z: 0.33385587}
+    perpendicular: {x: -0.33385587, y: 0, z: 0.94262415}
+  - position: {x: -77.61205, y: 0, z: 71.47211}
+    direction: {x: 0.9504273, y: 0, z: 0.310947}
+    perpendicular: {x: -0.310947, y: 0, z: 0.9504273}
+  - position: {x: -76.62426, y: 0, z: 71.781075}
+    direction: {x: 0.95820504, y: 0, z: 0.28608248}
+    perpendicular: {x: -0.28608248, y: 0, z: 0.95820504}
+  - position: {x: -75.70825, y: 0, z: 72.042694}
+    direction: {x: 0.9647593, y: 0, z: 0.26313412}
+    perpendicular: {x: -0.26313412, y: 0, z: 0.9647593}
+  - position: {x: -74.71148, y: 0, z: 72.30086}
+    direction: {x: 0.9711848, y: 0, z: 0.23832765}
+    perpendicular: {x: -0.23832765, y: 0, z: 0.9711848}
+  - position: {x: -73.710236, y: 0, z: 72.53313}
+    direction: {x: 0.97691494, y: 0, z: 0.21362877}
+    perpendicular: {x: -0.21362877, y: 0, z: 0.97691494}
+  - position: {x: -72.78216, y: 0, z: 72.724846}
+    direction: {x: 0.9815961, y: 0, z: 0.19096863}
+    perpendicular: {x: -0.19096863, y: 0, z: 0.9815961}
+  - position: {x: -71.772675, y: 0, z: 72.90827}
+    direction: {x: 0.986022, y: 0, z: 0.16661528}
+    perpendicular: {x: -0.16661528, y: 0, z: 0.986022}
+  - position: {x: -70.7591, y: 0, z: 73.06681}
+    direction: {x: 0.98979354, y: 0, z: 0.14250824}
+    perpendicular: {x: -0.14250824, y: 0, z: 0.98979354}
+  - position: {x: -69.81999, y: 0, z: 73.191376}
+    direction: {x: 0.992712, y: 0, z: 0.12051045}
+    perpendicular: {x: -0.12051045, y: 0, z: 0.992712}
+  - position: {x: -68.79892, y: 0, z: 73.30306}
+    direction: {x: 0.9952853, y: 0, z: 0.09699134}
+    perpendicular: {x: -0.09699134, y: 0, z: 0.9952853}
+  - position: {x: -67.774155, y: 0, z: 73.39088}
+    direction: {x: 0.99727076, y: 0, z: 0.073830515}
+    perpendicular: {x: -0.073830515, y: 0, z: 0.99727076}
+  - position: {x: -66.82505, y: 0, z: 73.45105}
+    direction: {x: 0.9986054, y: 0, z: 0.05279627}
+    perpendicular: {x: -0.05279627, y: 0, z: 0.9986054}
+  - position: {x: -65.79354, y: 0, z: 73.49397}
+    direction: {x: 0.9995375, y: 0, z: 0.03040901}
+    perpendicular: {x: -0.03040901, y: 0, z: 0.9995375}
+  - position: {x: -64.758705, y: 0, z: 73.51404}
+    direction: {x: 0.99996424, y: 0, z: 0.008460857}
+    perpendicular: {x: -0.008460857, y: 0, z: 0.99996424}
+  - position: {x: -63.800648, y: 0, z: 73.512596}
+    direction: {x: 0.9999351, y: 0, z: -0.0113912225}
+    perpendicular: {x: 0.0113912225, y: -0, z: 0.9999351}
+  - position: {x: -62.75981, y: 0, z: 73.48973}
+    direction: {x: 0.9994737, y: 0, z: -0.03243982}
+    perpendicular: {x: 0.03243982, y: -0, z: 0.9994737}
+  - position: {x: -61.796436, y: 0, z: 73.44925}
+    direction: {x: 0.99867636, y: 0, z: -0.051434737}
+    perpendicular: {x: 0.051434737, y: -0, z: 0.99867636}
+  - position: {x: -60.830677, y: 0, z: 73.39046}
+    direction: {x: 0.9975468, y: 0, z: -0.07000343}
+    perpendicular: {x: 0.07000343, y: -0, z: 0.9975468}
+  - position: {x: -59.781853, y: 0, z: 73.30642}
+    direction: {x: 0.995975, y: 0, z: -0.08963096}
+    perpendicular: {x: 0.08963096, y: -0, z: 0.995975}
+  - position: {x: -58.81145, y: 0, z: 73.21038}
+    direction: {x: 0.99422747, y: 0, z: -0.10729287}
+    perpendicular: {x: 0.10729287, y: -0, z: 0.99422747}
+  - position: {x: -57.838963, y: 0, z: 73.09685}
+    direction: {x: 0.99221784, y: 0, z: -0.124514416}
+    perpendicular: {x: 0.124514416, y: -0, z: 0.99221784}
+  - position: {x: -56.78322, y: 0, z: 72.954475}
+    direction: {x: 0.9897698, y: 0, z: -0.14267315}
+    perpendicular: {x: 0.14267315, y: -0, z: 0.9897698}
+  - position: {x: -55.806755, y: 0, z: 72.80544}
+    direction: {x: 0.98728245, y: 0, z: -0.15897605}
+    perpendicular: {x: 0.15897605, y: -0, z: 0.98728245}
+  - position: {x: -54.82855, y: 0, z: 72.63982}
+    direction: {x: 0.9845968, y: 0, z: -0.17484047}
+    perpendicular: {x: 0.17484047, y: -0, z: 0.9845968}
+  - position: {x: -53.84868, y: 0, z: 72.457825}
+    direction: {x: 0.9817319, y: 0, z: -0.1902696}
+    perpendicular: {x: 0.1902696, y: -0, z: 0.9817319}
+  - position: {x: -52.86728, y: 0, z: 72.25978}
+    direction: {x: 0.9787058, y: 0, z: -0.20526779}
+    perpendicular: {x: 0.20526779, y: -0, z: 0.9787058}
+  - position: {x: -51.88444, y: 0, z: 72.045944}
+    direction: {x: 0.9755358, y: 0, z: -0.21984047}
+    perpendicular: {x: 0.21984047, y: -0, z: 0.9755358}
+  - position: {x: -50.90027, y: 0, z: 71.8166}
+    direction: {x: 0.9722381, y: 0, z: -0.23399357}
+    perpendicular: {x: 0.23399357, y: -0, z: 0.9722381}
+  - position: {x: -49.914864, y: 0, z: 71.572}
+    direction: {x: 0.9688281, y: 0, z: -0.24773407}
+    perpendicular: {x: 0.24773407, y: -0, z: 0.9688281}
+  - position: {x: -49.01059, y: 0, z: 71.33463}
+    direction: {x: 0.9656158, y: 0, z: -0.2599733}
+    perpendicular: {x: 0.2599733, y: -0, z: 0.9656158}
+  - position: {x: -48.023117, y: 0, z: 71.0616}
+    direction: {x: 0.9620299, y: 0, z: -0.27294406}
+    perpendicular: {x: 0.27294406, y: -0, z: 0.9620299}
+  - position: {x: -47.034725, y: 0, z: 70.77413}
+    direction: {x: 0.9583713, y: 0, z: -0.28552508}
+    perpendicular: {x: 0.28552508, y: -0, z: 0.9583713}
+  - position: {x: -46.127968, y: 0, z: 70.49818}
+    direction: {x: 0.9549637, y: 0, z: -0.29672268}
+    perpendicular: {x: 0.29672268, y: -0, z: 0.9549637}
+  - position: {x: -45.138092, y: 0, z: 70.1838}
+    direction: {x: 0.9511981, y: 0, z: -0.30858094}
+    perpendicular: {x: 0.30858094, y: -0, z: 0.9511981}
+  - position: {x: -44.147587, y: 0, z: 69.85579}
+    direction: {x: 0.9473921, y: 0, z: -0.3200753}
+    perpendicular: {x: 0.3200753, y: -0, z: 0.9473921}
+  - position: {x: -43.239174, y: 0, z: 69.54337}
+    direction: {x: 0.943876, y: 0, z: -0.3302998}
+    perpendicular: {x: 0.3302998, y: -0, z: 0.943876}
+  - position: {x: -42.330395, y: 0, z: 69.21994}
+    direction: {x: 0.94034106, y: 0, z: -0.34023327}
+    perpendicular: {x: 0.34023327, y: -0, z: 0.94034106}
+  - position: {x: -41.338696, y: 0, z: 68.8548}
+    direction: {x: 0.9364706, y: 0, z: -0.35074612}
+    perpendicular: {x: 0.35074612, y: -0, z: 0.9364706}
+  - position: {x: -40.42943, y: 0, z: 68.509026}
+    direction: {x: 0.93291605, y: 0, z: -0.36009395}
+    perpendicular: {x: 0.36009395, y: -0, z: 0.93291605}
+  - position: {x: -39.520065, y: 0, z: 68.15289}
+    direction: {x: 0.92936087, y: 0, z: -0.36917257}
+    perpendicular: {x: 0.36917257, y: -0, z: 0.92936087}
+  - position: {x: -38.527996, y: 0, z: 67.752815}
+    direction: {x: 0.9254877, y: 0, z: -0.3787777}
+    perpendicular: {x: 0.3787777, y: -0, z: 0.9254877}
+  - position: {x: -37.618664, y: 0, z: 67.37571}
+    direction: {x: 0.92194706, y: 0, z: -0.38731596}
+    perpendicular: {x: 0.38731596, y: -0, z: 0.92194706}
+  - position: {x: -36.70947, y: 0, z: 66.9889}
+    direction: {x: 0.91842014, y: 0, z: -0.39560637}
+    perpendicular: {x: 0.39560637, y: -0, z: 0.91842014}
+  - position: {x: -35.800495, y: 0, z: 66.592606}
+    direction: {x: 0.914911, y: 0, z: -0.40365565}
+    perpendicular: {x: 0.40365565, y: -0, z: 0.914911}
+  - position: {x: -34.89182, y: 0, z: 66.18702}
+    direction: {x: 0.91142315, y: 0, z: -0.41147026}
+    perpendicular: {x: 0.41147026, y: -0, z: 0.91142315}
+  - position: {x: -33.98352, y: 0, z: 65.77237}
+    direction: {x: 0.90796006, y: 0, z: -0.41905683}
+    perpendicular: {x: 0.41905683, y: -0, z: 0.90796006}
+  - position: {x: -33.07569, y: 0, z: 65.34887}
+    direction: {x: 0.90452456, y: 0, z: -0.42642143}
+    perpendicular: {x: 0.42642143, y: -0, z: 0.90452456}
+  - position: {x: -32.1684, y: 0, z: 64.91672}
+    direction: {x: 0.90111977, y: 0, z: -0.4335703}
+    perpendicular: {x: 0.4335703, y: -0, z: 0.90111977}
+  - position: {x: -31.26172, y: 0, z: 64.47614}
+    direction: {x: 0.89774793, y: 0, z: -0.44050953}
+    perpendicular: {x: 0.44050953, y: -0, z: 0.89774793}
+  - position: {x: -30.355751, y: 0, z: 64.02734}
+    direction: {x: 0.89441156, y: 0, z: -0.44724476}
+    perpendicular: {x: 0.44724476, y: -0, z: 0.89441156}
+  - position: {x: -29.450562, y: 0, z: 63.570534}
+    direction: {x: 0.89111286, y: 0, z: -0.45378178}
+    perpendicular: {x: 0.45378178, y: -0, z: 0.89111286}
+  - position: {x: -28.546227, y: 0, z: 63.105938}
+    direction: {x: 0.88785356, y: 0, z: -0.4601261}
+    perpendicular: {x: 0.4601261, y: -0, z: 0.88785356}
+  - position: {x: -27.724926, y: 0, z: 62.676987}
+    direction: {x: 0.8849264, y: 0, z: -0.46573094}
+    perpendicular: {x: 0.46573094, y: -0, z: 0.8849264}
+  - position: {x: -26.822464, y: 0, z: 62.198093}
+    direction: {x: 0.8817473, y: 0, z: -0.47172204}
+    perpendicular: {x: 0.47172204, y: -0, z: 0.8817473}
+  - position: {x: -25.92109, y: 0, z: 61.712013}
+    direction: {x: 0.8786124, y: 0, z: -0.47753552}
+    perpendicular: {x: 0.47753552, y: -0, z: 0.8786124}
+  - position: {x: -25.020897, y: 0, z: 61.21898}
+    direction: {x: 0.8755231, y: 0, z: -0.48317626}
+    perpendicular: {x: 0.48317626, y: -0, z: 0.8755231}
+  - position: {x: -24.203625, y: 0, z: 60.764893}
+    direction: {x: 0.8727551, y: 0, z: -0.48815832}
+    perpendicular: {x: 0.48815832, y: -0, z: 0.8727551}
+  - position: {x: -23.30589, y: 0, z: 60.259132}
+    direction: {x: 0.86975586, y: 0, z: -0.49348226}
+    perpendicular: {x: 0.49348226, y: -0, z: 0.86975586}
+  - position: {x: -22.409569, y: 0, z: 59.747036}
+    direction: {x: 0.8668054, y: 0, z: -0.4986467}
+    perpendicular: {x: 0.4986467, y: -0, z: 0.8668054}
+  - position: {x: -21.59602, y: 0, z: 59.276154}
+    direction: {x: 0.8641661, y: 0, z: -0.5032068}
+    perpendicular: {x: 0.5032068, y: -0, z: 0.8641661}
+  - position: {x: -20.702602, y: 0, z: 58.752514}
+    direction: {x: 0.86131084, y: 0, z: -0.5080784}
+    perpendicular: {x: 0.5080784, y: -0, z: 0.86131084}
+  - position: {x: -19.810831, y: 0, z: 58.22315}
+    direction: {x: 0.8585066, y: 0, z: -0.5128024}
+    perpendicular: {x: 0.5128024, y: -0, z: 0.8585066}
+  - position: {x: -19.00162, y: 0, z: 57.737103}
+    direction: {x: 0.8560022, y: 0, z: -0.5169721}
+    perpendicular: {x: 0.5169721, y: -0, z: 0.8560022}
+  - position: {x: -18.113197, y: 0, z: 57.197372}
+    direction: {x: 0.8532971, y: 0, z: -0.521425}
+    perpendicular: {x: 0.521425, y: -0, z: 0.8532971}
+  - position: {x: -17.307169, y: 0, z: 56.702263}
+    direction: {x: 0.8508837, y: 0, z: -0.5253541}
+    perpendicular: {x: 0.5253541, y: -0, z: 0.8508837}
+  - position: {x: -16.4224, y: 0, z: 56.152954}
+    direction: {x: 0.84827965, y: 0, z: -0.52954847}
+    perpendicular: {x: 0.52954847, y: -0, z: 0.84827965}
+  curveLength: 86.052376
   adjustmentNodes:
   - {fileID: 582802884}
   - {fileID: 690933229}
@@ -1137,7 +1240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838864539}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.77, y: 0, z: 13.94}
+  m_LocalPosition: {x: 20.22979, y: 0, z: 16.586233}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 259662814}
@@ -1206,395 +1309,232 @@ MonoBehaviour:
   endNode: 0
   startNode: 0
   resetCurves: 0
+  connected: 0
   typeColor: {r: 0, g: 0, b: 1, a: 1}
-  adjustmentNodePrefab: {fileID: 2948931495715058067, guid: 3a8f0eaaeaa95584181ab443cb5ace8e,
-    type: 3}
   curvePoints:
   - position: {x: 11.6, y: 0, z: 7.2}
-    direction: {x: -0.09104882, y: 0, z: -0.99584645}
-    perpendicular: {x: 0.99584645, y: 0, z: -0.09104882}
-  - position: {x: 11.5143175, y: 0, z: 6.177717}
-    direction: {x: -0.07591286, y: 0, z: -0.9971144}
-    perpendicular: {x: 0.9971144, y: 0, z: -0.07591286}
-  - position: {x: 11.445301, y: 0, z: 5.168831}
-    direction: {x: -0.06049826, y: 0, z: -0.9981683}
-    perpendicular: {x: 0.9981683, y: 0, z: -0.06049826}
-  - position: {x: 11.392768, y: 0, z: 4.173282}
-    direction: {x: -0.044807285, y: 0, z: -0.99899566}
-    perpendicular: {x: 0.99899566, y: 0, z: -0.044807285}
-  - position: {x: 11.35596, y: 0, z: 3.1711023}
-    direction: {x: -0.028514389, y: 0, z: -0.9995934}
-    perpendicular: {x: 0.9995934, y: 0, z: -0.028514389}
-  - position: {x: 11.335688, y: 0, z: 2.1630561}
-    direction: {x: -0.0116068, y: 0, z: -0.99993265}
-    perpendicular: {x: 0.99993265, y: 0, z: -0.0116068}
-  - position: {x: 11.332652, y: 0, z: 1.1692616}
-    direction: {x: 0.0055870586, y: 0, z: -0.9999844}
-    perpendicular: {x: 0.9999844, y: -0, z: 0.0055870586}
-  - position: {x: 11.347088, y: 0, z: 0.17058523}
-    direction: {x: 0.02340603, y: 0, z: -0.999726}
-    perpendicular: {x: 0.999726, y: -0, z: 0.02340603}
-  - position: {x: 11.379779, y: 0, z: -0.8321943}
-    direction: {x: 0.041858435, y: 0, z: -0.9991235}
-    perpendicular: {x: 0.9991235, y: -0, z: 0.041858435}
-  - position: {x: 11.431521, y: 0, z: -1.8382921}
-    direction: {x: 0.06095061, y: 0, z: -0.9981408}
-    perpendicular: {x: 0.9981408, y: -0, z: 0.06095061}
-  - position: {x: 11.503082, y: 0, z: -2.846914}
-    direction: {x: 0.08068644, y: 0, z: -0.9967395}
-    perpendicular: {x: 0.9967395, y: -0, z: 0.08068644}
-  - position: {x: 11.593417, y: 0, z: -3.8393636}
-    direction: {x: 0.10070061, y: 0, z: -0.9949168}
-    perpendicular: {x: 0.9949168, y: -0, z: 0.10070061}
-  - position: {x: 11.704413, y: 0, z: -4.8333287}
-    direction: {x: 0.12134783, y: 0, z: -0.99261004}
-    perpendicular: {x: 0.99261004, y: -0, z: 0.12134783}
-  - position: {x: 11.836811, y: 0, z: -5.828008}
-    direction: {x: 0.1426232, y: 0, z: -0.989777}
-    perpendicular: {x: 0.989777, y: -0, z: 0.1426232}
-  - position: {x: 11.991339, y: 0, z: -6.8225894}
-    direction: {x: 0.16451779, y: 0, z: -0.9863741}
-    perpendicular: {x: 0.9863741, y: -0, z: 0.16451779}
-  - position: {x: 12.16554, y: 0, z: -7.799569}
-    direction: {x: 0.18663539, y: 0, z: -0.98242927}
-    perpendicular: {x: 0.98242927, y: -0, z: 0.18663539}
-  - position: {x: 12.36612, y: 0, z: -8.79182}
-    direction: {x: 0.20972106, y: 0, z: -0.97776127}
-    perpendicular: {x: 0.97776127, y: -0, z: 0.20972106}
-  - position: {x: 12.58708, y: 0, z: -9.765447}
-    direction: {x: 0.23298343, y: 0, z: -0.9724808}
-    perpendicular: {x: 0.9724808, y: -0, z: 0.23298343}
-  - position: {x: 12.832262, y: 0, z: -10.736321}
-    direction: {x: 0.2567788, y: 0, z: -0.9664702}
-    perpendicular: {x: 0.9664702, y: -0, z: 0.2567788}
-  - position: {x: 13.102317, y: 0, z: -11.70362}
-    direction: {x: 0.2810748, y: 0, z: -0.9596858}
-    perpendicular: {x: 0.9596858, y: -0, z: 0.2810748}
-  - position: {x: 13.393014, y: 0, z: -12.651388}
-    direction: {x: 0.30544004, y: 0, z: -0.95221126}
-    perpendicular: {x: 0.95221126, y: -0, z: 0.30544004}
-  - position: {x: 13.714344, y: 0, z: -13.609367}
-    direction: {x: 0.33061686, y: 0, z: -0.94376504}
-    perpendicular: {x: 0.94376504, y: -0, z: 0.33061686}
-  - position: {x: 14.056851, y: 0, z: -14.546794}
-    direction: {x: 0.3557702, y: 0, z: -0.9345735}
-    perpendicular: {x: 0.9345735, y: -0, z: 0.3557702}
-  - position: {x: 14.425964, y: 0, z: -15.477966}
-    direction: {x: 0.38123953, y: 0, z: -0.9244763}
-    perpendicular: {x: 0.9244763, y: -0, z: 0.38123953}
-  - position: {x: 14.822224, y: 0, z: -16.402056}
-    direction: {x: 0.40696576, y: 0, z: -0.91344345}
-    perpendicular: {x: 0.91344345, y: -0, z: 0.40696576}
-  - position: {x: 15.239661, y: 0, z: -17.304716}
-    direction: {x: 0.4324991, y: 0, z: -0.9016344}
-    perpendicular: {x: 0.9016344, y: -0, z: 0.4324991}
-  - position: {x: 15.691414, y: 0, z: -18.212465}
-    direction: {x: 0.4585446, y: 0, z: -0.88867146}
-    perpendicular: {x: 0.88867146, y: -0, z: 0.4585446}
-  - position: {x: 16.157557, y: 0, z: -19.084923}
-    direction: {x: 0.4838886, y: 0, z: -0.8751296}
-    perpendicular: {x: 0.8751296, y: -0, z: 0.4838886}
-  - position: {x: 16.65892, y: 0, z: -19.960814}
-    direction: {x: 0.50959903, y: 0, z: -0.86041206}
-    perpendicular: {x: 0.86041206, y: -0, z: 0.50959903}
-  - position: {x: 17.181393, y: 0, z: -20.813929}
-    direction: {x: 0.53485495, y: 0, z: -0.84494394}
-    perpendicular: {x: 0.84494394, y: -0, z: 0.53485495}
-  - position: {x: 17.732473, y: 0, z: -21.656305}
-    direction: {x: 0.5599555, y: 0, z: -0.82852274}
-    perpendicular: {x: 0.82852274, y: -0, z: 0.5599555}
-  - position: {x: 18.304197, y: 0, z: -22.475582}
-    direction: {x: 0.58447677, y: 0, z: -0.81141037}
-    perpendicular: {x: 0.81141037, y: -0, z: 0.58447677}
-  - position: {x: 18.904621, y: 0, z: -23.283142}
-    direction: {x: 0.6087061, y: 0, z: -0.7933957}
-    perpendicular: {x: 0.7933957, y: -0, z: 0.6087061}
-  - position: {x: 19.525154, y: 0, z: -24.067297}
-    direction: {x: 0.6322427, y: 0, z: -0.77477044}
-    perpendicular: {x: 0.77477044, y: -0, z: 0.6322427}
-  - position: {x: 20.165232, y: 0, z: -24.82823}
-    direction: {x: 0.65504616, y: 0, z: -0.7555889}
-    perpendicular: {x: 0.7555889, y: -0, z: 0.65504616}
-  - position: {x: 20.8337, y: 0, z: -25.57634}
-    direction: {x: 0.6773865, y: 0, z: -0.73562735}
-    perpendicular: {x: 0.73562735, y: -0, z: 0.6773865}
-  - position: {x: 21.530767, y: 0, z: -26.310833}
-    direction: {x: 0.69920105, y: 0, z: -0.7149251}
-    perpendicular: {x: 0.7149251, y: -0, z: 0.69920105}
-  - position: {x: 22.23674, y: 0, z: -27.01179}
-    direction: {x: 0.7198688, y: 0, z: -0.6941102}
-    perpendicular: {x: 0.6941102, y: -0, z: 0.7198688}
-  - position: {x: 22.970617, y: 0, z: -27.698858}
-    direction: {x: 0.73994666, y: 0, z: -0.6726656}
-    perpendicular: {x: 0.6726656, y: -0, z: 0.73994666}
-  - position: {x: 23.7221, y: 0, z: -28.36234}
-    direction: {x: 0.75913054, y: 0, z: -0.65093845}
-    perpendicular: {x: 0.65093845, y: -0, z: 0.75913054}
-  - position: {x: 24.490578, y: 0, z: -29.002438}
-    direction: {x: 0.7774156, y: 0, z: -0.6289874}
-    perpendicular: {x: 0.6289874, y: -0, z: 0.7774156}
-  - position: {x: 25.275434, y: 0, z: -29.619337}
-    direction: {x: 0.7948022, y: 0, z: -0.60686857}
-    perpendicular: {x: 0.60686857, y: -0, z: 0.7948022}
-  - position: {x: 26.087118, y: 0, z: -30.221212}
-    direction: {x: 0.81151617, y: 0, z: -0.5843299}
-    perpendicular: {x: 0.5843299, y: -0, z: 0.81151617}
-  - position: {x: 26.903078, y: 0, z: -30.792}
-    direction: {x: 0.8271162, y: 0, z: -0.5620309}
-    perpendicular: {x: 0.5620309, y: -0, z: 0.8271162}
-  - position: {x: 27.745024, y: 0, z: -31.347532}
-    direction: {x: 0.84204435, y: 0, z: -0.5394084}
-    perpendicular: {x: 0.5394084, y: -0, z: 0.84204435}
-  - position: {x: 28.589588, y: 0, z: -31.873}
-    direction: {x: 0.8559154, y: 0, z: -0.5171157}
-    perpendicular: {x: 0.5171157, y: -0, z: 0.8559154}
-  - position: {x: 29.459263, y: 0, z: -32.382996}
-    direction: {x: 0.86913097, y: 0, z: -0.49458203}
-    perpendicular: {x: 0.49458203, y: -0, z: 0.86913097}
-  - position: {x: 30.329922, y: 0, z: -32.863934}
-    direction: {x: 0.88135713, y: 0, z: -0.47245073}
-    perpendicular: {x: 0.47245073, y: -0, z: 0.88135713}
-  - position: {x: 31.224785, y: 0, z: -33.329193}
-    direction: {x: 0.8929547, y: 0, z: -0.45014644}
-    perpendicular: {x: 0.45014644, y: -0, z: 0.8929547}
-  - position: {x: 32.119045, y: 0, z: -33.7664}
-    direction: {x: 0.9036372, y: 0, z: -0.42829874}
-    perpendicular: {x: 0.42829874, y: -0, z: 0.9036372}
-  - position: {x: 33.036568, y: 0, z: -34.18773}
-    direction: {x: 0.9137256, y: 0, z: -0.40633184}
-    perpendicular: {x: 0.40633184, y: -0, z: 0.9137256}
-  - position: {x: 33.951923, y: 0, z: -34.58199}
-    direction: {x: 0.92297536, y: 0, z: -0.38485894}
-    perpendicular: {x: 0.38485894, y: -0, z: 0.92297536}
-  - position: {x: 34.88956, y: 0, z: -34.960186}
-    direction: {x: 0.9316694, y: 0, z: -0.3633072}
-    perpendicular: {x: 0.3633072, y: -0, z: 0.9316694}
-  - position: {x: 35.823517, y: 0, z: -35.312305}
-    direction: {x: 0.9396009, y: 0, z: -0.342272}
-    perpendicular: {x: 0.342272, y: -0, z: 0.9396009}
-  - position: {x: 36.765778, y: 0, z: -35.643787}
-    direction: {x: 0.94692004, y: 0, z: -0.32146937}
-    perpendicular: {x: 0.32146937, y: -0, z: 0.94692004}
-  - position: {x: 37.715725, y: 0, z: -35.954826}
-    direction: {x: 0.9536538, y: 0, z: -0.30090606}
-    perpendicular: {x: 0.30090606, y: -0, z: 0.9536538}
-  - position: {x: 38.685898, y: 0, z: -36.249462}
-    direction: {x: 0.9599098, y: 0, z: -0.2803092}
-    perpendicular: {x: 0.2803092, y: -0, z: 0.9599098}
-  - position: {x: 39.649452, y: 0, z: -36.519936}
-    direction: {x: 0.96554476, y: 0, z: -0.26023698}
-    perpendicular: {x: 0.26023698, y: -0, z: 0.96554476}
-  - position: {x: 40.618843, y: 0, z: -36.770557}
-    direction: {x: 0.9706717, y: 0, z: -0.24040902}
-    perpendicular: {x: 0.24040902, y: -0, z: 0.9706717}
-  - position: {x: 41.593445, y: 0, z: -37.001526}
-    direction: {x: 0.97531396, y: 0, z: -0.22082278}
-    perpendicular: {x: 0.22082278, y: -0, z: 0.97531396}
-  - position: {x: 42.57264, y: 0, z: -37.213036}
-    direction: {x: 0.9794938, y: 0, z: -0.20147398}
-    perpendicular: {x: 0.20147398, y: -0, z: 0.9794938}
-  - position: {x: 43.555817, y: 0, z: -37.405277}
-    direction: {x: 0.9832324, y: 0, z: -0.18235686}
-    perpendicular: {x: 0.18235686, y: -0, z: 0.9832324}
-  - position: {x: 44.542347, y: 0, z: -37.578453}
-    direction: {x: 0.9865493, y: 0, z: -0.16346408}
-    perpendicular: {x: 0.16346408, y: -0, z: 0.9865493}
-  - position: {x: 45.531624, y: 0, z: -37.732754}
-    direction: {x: 0.9894628, y: 0, z: -0.1447873}
-    perpendicular: {x: 0.1447873, y: -0, z: 0.9894628}
-  - position: {x: 46.523026, y: 0, z: -37.868374}
-    direction: {x: 0.99199003, y: 0, z: -0.1263167}
-    perpendicular: {x: 0.1263167, y: -0, z: 0.99199003}
-  - position: {x: 47.51595, y: 0, z: -37.98552}
-    direction: {x: 0.9941463, y: 0, z: -0.10804189}
-    perpendicular: {x: 0.10804189, y: -0, z: 0.9941463}
-  - position: {x: 48.523384, y: 0, z: -38.08561}
-    direction: {x: 0.99596846, y: 0, z: -0.089704394}
-    perpendicular: {x: 0.089704394, y: -0, z: 0.99596846}
-  - position: {x: 49.51747, y: 0, z: -38.166126}
-    direction: {x: 0.99742, y: 0, z: -0.07178725}
-    perpendicular: {x: 0.07178725, y: -0, z: 0.99742}
-  - position: {x: 50.51121, y: 0, z: -38.228756}
-    direction: {x: 0.9985393, y: 0, z: -0.054028276}
-    perpendicular: {x: 0.054028276, y: -0, z: 0.9985393}
-  - position: {x: 51.517574, y: 0, z: -38.27418}
-    direction: {x: 0.9993455, y: 0, z: -0.036173236}
-    perpendicular: {x: 0.036173236, y: -0, z: 0.9993455}
-  - position: {x: 52.52231, y: 0, z: -38.301632}
-    direction: {x: 0.9998297, y: 0, z: -0.018451251}
-    perpendicular: {x: 0.018451251, y: -0, z: 0.9998297}
-  - position: {x: 53.52476, y: 0, z: -38.3113}
-    direction: {x: 0.99999964, y: 0, z: -0.0008464243}
-    perpendicular: {x: 0.0008464243, y: -0, z: 0.99999964}
-  - position: {x: 54.524292, y: 0, z: -38.303387}
-    direction: {x: 0.9998613, y: 0, z: 0.016657561}
-    perpendicular: {x: -0.016657561, y: 0, z: 0.9998613}
-  - position: {x: 55.5337, y: 0, z: -38.27766}
-    direction: {x: 0.99941117, y: 0, z: 0.03431235}
-    perpendicular: {x: -0.03431235, y: 0, z: 0.99941117}
-  - position: {x: 56.525406, y: 0, z: -38.23499}
-    direction: {x: 0.99866444, y: 0, z: 0.05166519}
-    perpendicular: {x: -0.05166519, y: 0, z: 0.99866444}
-  - position: {x: 57.525555, y: 0, z: -38.174435}
-    direction: {x: 0.99760264, y: 0, z: 0.06920336}
-    perpendicular: {x: -0.06920336, y: 0, z: 0.99760264}
-  - position: {x: 58.533264, y: 0, z: -38.09552}
-    direction: {x: 0.99621314, y: 0, z: 0.086944744}
-    perpendicular: {x: -0.086944744, y: 0, z: 0.99621314}
-  - position: {x: 59.521347, y: 0, z: -38.000538}
-    direction: {x: 0.994531, y: 0, z: 0.10444238}
-    perpendicular: {x: -0.10444238, y: 0, z: 0.994531}
-  - position: {x: 60.515446, y: 0, z: -37.887173}
-    direction: {x: 0.99250746, y: 0, z: 0.12218395}
-    perpendicular: {x: -0.12218395, y: 0, z: 0.99250746}
-  - position: {x: 61.51458, y: 0, z: -37.754967}
-    direction: {x: 0.99012434, y: 0, z: 0.1401919}
-    perpendicular: {x: -0.1401919, y: 0, z: 0.99012434}
-  - position: {x: 62.504894, y: 0, z: -37.605526}
-    direction: {x: 0.987398, y: 0, z: 0.1582563}
-    perpendicular: {x: -0.1582563, y: 0, z: 0.987398}
-  - position: {x: 63.498337, y: 0, z: -37.436813}
-    direction: {x: 0.98427606, y: 0, z: 0.17663719}
-    perpendicular: {x: -0.17663719, y: 0, z: 0.98427606}
-  - position: {x: 64.48123, y: 0, z: -37.25089}
-    direction: {x: 0.9807782, y: 0, z: 0.19512595}
-    perpendicular: {x: -0.19512595, y: 0, z: 0.9807782}
-  - position: {x: 65.46521, y: 0, z: -37.045288}
-    direction: {x: 0.97683626, y: 0, z: 0.21398808}
-    perpendicular: {x: -0.21398808, y: 0, z: 0.97683626}
-  - position: {x: 66.43681, y: 0, z: -36.822525}
-    direction: {x: 0.9724731, y: 0, z: 0.23301516}
-    perpendicular: {x: -0.23301516, y: 0, z: 0.9724731}
-  - position: {x: 67.407295, y: 0, z: -36.57971}
-    direction: {x: 0.9676021, y: 0, z: 0.25248018}
-    perpendicular: {x: -0.25248018, y: 0, z: 0.9676021}
-  - position: {x: 68.37534, y: 0, z: -36.31645}
-    direction: {x: 0.962178, y: 0, z: 0.2724215}
-    perpendicular: {x: -0.2724215, y: 0, z: 0.962178}
-  - position: {x: 69.33954, y: 0, z: -36.032375}
-    direction: {x: 0.9561492, y: 0, z: 0.29287988}
-    perpendicular: {x: -0.29287988, y: 0, z: 0.9561492}
-  - position: {x: 70.28697, y: 0, z: -35.730896}
-    direction: {x: 0.94954056, y: 0, z: 0.31364432}
-    perpendicular: {x: -0.31364432, y: 0, z: 0.94954056}
-  - position: {x: 71.23922, y: 0, z: -35.404316}
-    direction: {x: 0.94212276, y: 0, z: 0.3352681}
-    perpendicular: {x: -0.3352681, y: 0, z: 0.94212276}
-  - position: {x: 72.183, y: 0, z: -35.055855}
-    direction: {x: 0.93389416, y: 0, z: 0.35754964}
-    perpendicular: {x: -0.35754964, y: 0, z: 0.93389416}
-  - position: {x: 73.11663, y: 0, z: -34.685204}
-    direction: {x: 0.92476386, y: 0, z: 0.38054153}
-    perpendicular: {x: -0.38054153, y: 0, z: 0.92476386}
-  - position: {x: 74.038315, y: 0, z: -34.29204}
-    direction: {x: 0.9146272, y: 0, z: 0.4042983}
-    perpendicular: {x: -0.4042983, y: 0, z: 0.9146272}
-  - position: {x: 74.94622, y: 0, z: -33.876083}
-    direction: {x: 0.9033636, y: 0, z: 0.42887554}
-    perpendicular: {x: -0.42887554, y: 0, z: 0.9033636}
-  - position: {x: 75.848274, y: 0, z: -33.432007}
-    direction: {x: 0.89068615, y: 0, z: 0.4546188}
-    perpendicular: {x: -0.4546188, y: 0, z: 0.89068615}
-  - position: {x: 76.73196, y: 0, z: -32.964176}
-    direction: {x: 0.87655187, y: 0, z: 0.48130742}
-    perpendicular: {x: -0.48130742, y: 0, z: 0.87655187}
-  - position: {x: 77.60431, y: 0, z: -32.46691}
-    direction: {x: 0.8605907, y: 0, z: 0.5092973}
-    perpendicular: {x: -0.5092973, y: 0, z: 0.8605907}
-  - position: {x: 78.45318, y: 0, z: -31.94503}
-    direction: {x: 0.84272593, y: 0, z: 0.5383428}
-    perpendicular: {x: -0.5383428, y: 0, z: 0.84272593}
-  - position: {x: 79.28463, y: 0, z: -31.392483}
-    direction: {x: 0.82247895, y: 0, z: 0.56879556}
-    perpendicular: {x: -0.56879556, y: 0, z: 0.82247895}
-  - position: {x: 80.10304, y: 0, z: -30.80243}
-    direction: {x: 0.7992345, y: 0, z: 0.6010193}
-    perpendicular: {x: -0.6010193, y: 0, z: 0.7992345}
-  - position: {x: 80.887955, y: 0, z: -30.18605}
-    direction: {x: 0.7730343, y: 0, z: 0.63436425}
-    perpendicular: {x: -0.63436425, y: 0, z: 0.7730343}
-  - position: {x: 81.65083, y: 0, z: -29.53031}
-    direction: {x: 0.74286026, y: 0, z: 0.66944647}
-    perpendicular: {x: -0.66944647, y: 0, z: 0.74286026}
-  - position: {x: 82.37917, y: 0, z: -28.840595}
-    direction: {x: 0.7083995, y: 0, z: 0.7058117}
-    perpendicular: {x: -0.7058117, y: 0, z: 0.7083995}
-  - position: {x: 83.06822, y: 0, z: -28.116287}
-    direction: {x: 0.66903573, y: 0, z: 0.7432302}
-    perpendicular: {x: -0.7432302, y: 0, z: 0.66903573}
-  - position: {x: 83.71297, y: 0, z: -27.356802}
-    direction: {x: 0.62411374, y: 0, z: 0.7813335}
-    perpendicular: {x: -0.7813335, y: 0, z: 0.62411374}
-  - position: {x: 84.313194, y: 0, z: -26.554342}
-    direction: {x: 0.57248884, y: 0, z: 0.8199125}
-    perpendicular: {x: -0.8199125, y: 0, z: 0.57248884}
-  - position: {x: 84.86153, y: 0, z: -25.707851}
-    direction: {x: 0.51339406, y: 0, z: 0.8581529}
-    perpendicular: {x: -0.8581529, y: 0, z: 0.51339406}
-  - position: {x: 85.34242, y: 0, z: -24.831633}
-    direction: {x: 0.44738695, y: 0, z: 0.8943405}
-    perpendicular: {x: -0.8943405, y: 0, z: 0.44738695}
-  - position: {x: 85.75465, y: 0, z: -23.918062}
-    direction: {x: 0.37377638, y: 0, z: 0.92751884}
-    perpendicular: {x: -0.92751884, y: 0, z: 0.37377638}
-  - position: {x: 86.08914, y: 0, z: -22.97487}
-    direction: {x: 0.293455, y: 0, z: 0.95597285}
-    perpendicular: {x: -0.95597285, y: 0, z: 0.293455}
-  - position: {x: 86.34113, y: 0, z: -22.002354}
-    direction: {x: 0.20725659, y: 0, z: 0.97828656}
-    perpendicular: {x: -0.97828656, y: 0, z: 0.20725659}
-  - position: {x: 86.50374, y: 0, z: -21.017582}
-    direction: {x: 0.118049935, y: 0, z: 0.9930077}
-    perpendicular: {x: -0.9930077, y: 0, z: 0.118049935}
-  - position: {x: 86.57674, y: 0, z: -20.01338}
-    direction: {x: 0.026923051, y: 0, z: 0.9996375}
-    perpendicular: {x: -0.9996375, y: 0, z: 0.026923051}
-  - position: {x: 86.55909, y: 0, z: -19.016611}
-    direction: {x: -0.06186045, y: 0, z: 0.9980848}
-    perpendicular: {x: -0.9980848, y: 0, z: -0.06186045}
-  - position: {x: 86.45392, y: 0, z: -18.020576}
-    direction: {x: -0.1472796, y: 0, z: 0.9890949}
-    perpendicular: {x: -0.9890949, y: 0, z: -0.1472796}
-  - position: {x: 86.26561, y: 0, z: -17.03581}
-    direction: {x: -0.22720745, y: 0, z: 0.9738464}
-    perpendicular: {x: -0.9738464, y: 0, z: -0.22720745}
-  - position: {x: 85.998955, y: 0, z: -16.064163}
-    direction: {x: -0.300786, y: 0, z: 0.95369166}
-    perpendicular: {x: -0.95369166, y: 0, z: -0.300786}
-  - position: {x: 85.66251, y: 0, z: -15.116523}
-    direction: {x: -0.36701065, y: 0, z: 0.9302167}
-    perpendicular: {x: -0.9302167, y: 0, z: -0.36701065}
-  - position: {x: 85.267975, y: 0, z: -14.204043}
-    direction: {x: -0.42544663, y: 0, z: 0.90498346}
-    perpendicular: {x: -0.90498346, y: 0, z: -0.42544663}
-  - position: {x: 84.81474, y: 0, z: -13.309996}
-    direction: {x: -0.47767445, y: 0, z: 0.87853694}
-    perpendicular: {x: -0.87853694, y: 0, z: -0.47767445}
-  - position: {x: 84.308, y: 0, z: -12.4356575}
-    direction: {x: -0.5241131, y: 0, z: 0.8516486}
-    perpendicular: {x: -0.8516486, y: 0, z: -0.5241131}
-  - position: {x: 83.76599, y: 0, z: -11.601234}
-    direction: {x: -0.5643894, y: 0, z: 0.8255087}
-    perpendicular: {x: -0.8255087, y: 0, z: -0.5643894}
-  - position: {x: 83.17654, y: 0, z: -10.779453}
-    direction: {x: -0.6004571, y: 0, z: 0.799657}
-    perpendicular: {x: -0.799657, y: 0, z: -0.6004571}
-  - position: {x: 82.55855, y: 0, z: -9.990368}
-    direction: {x: -0.6319825, y: 0, z: 0.7749827}
-    perpendicular: {x: -0.7749827, y: 0, z: -0.6319825}
-  - position: {x: 81.91067, y: 0, z: -9.225311}
-    direction: {x: -0.65987575, y: 0, z: 0.7513748}
-    perpendicular: {x: -0.7513748, y: 0, z: -0.65987575}
-  - position: {x: 81.23802, y: 0, z: -8.485058}
-    direction: {x: -0.68456864, y: 0, z: 0.72894835}
-    perpendicular: {x: -0.72894835, y: 0, z: -0.68456864}
-  - position: {x: 80.53592, y: 0, z: -7.760497}
-    direction: {x: -0.7067365, y: 0, z: 0.7074768}
-    perpendicular: {x: -0.7074768, y: 0, z: -0.7067365}
-  - position: {x: 79.81791, y: 0, z: -7.06198}
-    direction: {x: -0.7263924, y: 0, z: 0.68728024}
-    perpendicular: {x: -0.68728024, y: 0, z: -0.7263924}
-  curveLength: 128.3023
+    direction: {x: 0.80893, y: 0, z: -0.5879049}
+    perpendicular: {x: 0.5879049, y: -0, z: 0.80893}
+  - position: {x: 12.5367155, y: 0, z: 6.5207806}
+    direction: {x: 0.8102378, y: 0, z: -0.5861013}
+    perpendicular: {x: 0.5861013, y: -0, z: 0.8102378}
+  - position: {x: 13.341094, y: 0, z: 5.940217}
+    direction: {x: 0.81150466, y: 0, z: -0.584346}
+    perpendicular: {x: 0.584346, y: -0, z: 0.81150466}
+  - position: {x: 14.146797, y: 0, z: 5.361493}
+    direction: {x: 0.81290567, y: 0, z: -0.5823953}
+    perpendicular: {x: 0.5823953, y: -0, z: 0.81290567}
+  - position: {x: 14.953777, y: 0, z: 4.7849283}
+    direction: {x: 0.8144406, y: 0, z: -0.58024687}
+    perpendicular: {x: 0.58024687, y: -0, z: 0.8144406}
+  - position: {x: 15.829396, y: 0, z: 4.163128}
+    direction: {x: 0.816254, y: 0, z: -0.57769316}
+    perpendicular: {x: 0.57769316, y: -0, z: 0.816254}
+  - position: {x: 16.6389, y: 0, z: 3.5920982}
+    direction: {x: 0.8180664, y: 0, z: -0.5751237}
+    perpendicular: {x: 0.5751237, y: -0, z: 0.8180664}
+  - position: {x: 17.449541, y: 0, z: 3.0242193}
+    direction: {x: 0.82001156, y: 0, z: -0.57234704}
+    perpendicular: {x: 0.57234704, y: -0, z: 0.82001156}
+  - position: {x: 18.328972, y: 0, z: 2.4129462}
+    direction: {x: 0.82226783, y: 0, z: -0.56910074}
+    perpendicular: {x: 0.56910074, y: -0, z: 0.82226783}
+  - position: {x: 19.141853, y: 0, z: 1.8526667}
+    direction: {x: 0.82448786, y: 0, z: -0.5658797}
+    perpendicular: {x: 0.5658797, y: -0, z: 0.82448786}
+  - position: {x: 19.955738, y: 0, z: 1.2965297}
+    direction: {x: 0.8268391, y: 0, z: -0.56243855}
+    perpendicular: {x: 0.56243855, y: -0, z: 0.8268391}
+  - position: {x: 20.83853, y: 0, z: 0.69909686}
+    direction: {x: 0.8295339, y: 0, z: -0.5584564}
+    perpendicular: {x: 0.5584564, y: -0, z: 0.8295339}
+  - position: {x: 21.654367, y: 0, z: 0.15262388}
+    direction: {x: 0.8321569, y: 0, z: -0.5545403}
+    perpendicular: {x: 0.5545403, y: -0, z: 0.8321569}
+  - position: {x: 22.471071, y: 0, z: -0.3887141}
+    direction: {x: 0.83490944, y: 0, z: -0.5503874}
+    perpendicular: {x: 0.5503874, y: -0, z: 0.83490944}
+  - position: {x: 23.356762, y: 0, z: -0.96899664}
+    direction: {x: 0.8380366, y: 0, z: -0.54561394}
+    perpendicular: {x: 0.54561394, y: -0, z: 0.8380366}
+  - position: {x: 24.17514, y: 0, z: -1.4986054}
+    direction: {x: 0.84105635, y: 0, z: -0.5409476}
+    perpendicular: {x: 0.5409476, y: -0, z: 0.84105635}
+  - position: {x: 25.062538, y: 0, z: -2.0654259}
+    direction: {x: 0.8444707, y: 0, z: -0.53560185}
+    perpendicular: {x: 0.53560185, y: -0, z: 0.8444707}
+  - position: {x: 25.882387, y: 0, z: -2.5819087}
+    direction: {x: 0.84775305, y: 0, z: -0.5303912}
+    perpendicular: {x: 0.5303912, y: -0, z: 0.84775305}
+  - position: {x: 26.771282, y: 0, z: -3.1337547}
+    direction: {x: 0.8514488, y: 0, z: -0.52443767}
+    perpendicular: {x: 0.52443767, y: -0, z: 0.8514488}
+  - position: {x: 27.592417, y: 0, z: -3.6357174}
+    direction: {x: 0.8549877, y: 0, z: -0.5186483}
+    perpendicular: {x: 0.5186483, y: -0, z: 0.8549877}
+  - position: {x: 28.482594, y: 0, z: -4.1710763}
+    direction: {x: 0.8589572, y: 0, z: -0.51204735}
+    perpendicular: {x: 0.51204735, y: -0, z: 0.8589572}
+  - position: {x: 29.373367, y: 0, z: -4.6972647}
+    direction: {x: 0.8630652, y: 0, z: -0.5050926}
+    perpendicular: {x: 0.5050926, y: -0, z: 0.8630652}
+  - position: {x: 30.26467, y: 0, z: -5.213874}
+    direction: {x: 0.86730814, y: 0, z: -0.49777156}
+    perpendicular: {x: 0.49777156, y: -0, z: 0.86730814}
+  - position: {x: 31.087831, y: 0, z: -5.681887}
+    direction: {x: 0.8713414, y: 0, z: -0.49067724}
+    perpendicular: {x: 0.49067724, y: -0, z: 0.8713414}
+  - position: {x: 31.979994, y: 0, z: -6.1789265}
+    direction: {x: 0.87583303, y: 0, z: -0.48261413}
+    perpendicular: {x: 0.48261413, y: -0, z: 0.87583303}
+  - position: {x: 32.872524, y: 0, z: -6.6651907}
+    direction: {x: 0.8804471, y: 0, z: -0.47414455}
+    perpendicular: {x: 0.47414455, y: -0, z: 0.8804471}
+  - position: {x: 33.76537, y: 0, z: -7.140272}
+    direction: {x: 0.8851776, y: 0, z: -0.4652532}
+    perpendicular: {x: 0.4652532, y: -0, z: 0.8851776}
+  - position: {x: 34.658466, y: 0, z: -7.6037607}
+    direction: {x: 0.89001834, y: 0, z: -0.45592475}
+    perpendicular: {x: 0.45592475, y: -0, z: 0.89001834}
+  - position: {x: 35.551758, y: 0, z: -8.055251}
+    direction: {x: 0.89496166, y: 0, z: -0.44614303}
+    perpendicular: {x: 0.44614303, y: -0, z: 0.89496166}
+  - position: {x: 36.513927, y: 0, z: -8.527581}
+    direction: {x: 0.9003904, y: 0, z: -0.43508282}
+    perpendicular: {x: 0.43508282, y: -0, z: 0.9003904}
+  - position: {x: 37.407455, y: 0, z: -8.952839}
+    direction: {x: 0.9055189, y: 0, z: -0.4243059}
+    perpendicular: {x: 0.4243059, y: -0, z: 0.9055189}
+  - position: {x: 38.301014, y: 0, z: -9.3648405}
+    direction: {x: 0.9107206, y: 0, z: -0.413023}
+    perpendicular: {x: 0.413023, y: -0, z: 0.9107206}
+  - position: {x: 39.26326, y: 0, z: -9.793237}
+    direction: {x: 0.9163903, y: 0, z: -0.40028584}
+    perpendicular: {x: 0.40028584, y: -0, z: 0.9163903}
+  - position: {x: 40.15669, y: 0, z: -10.1763935}
+    direction: {x: 0.9217037, y: 0, z: -0.38789472}
+    perpendicular: {x: 0.38789472, y: -0, z: 0.9217037}
+  - position: {x: 41.118683, y: 0, z: -10.572781}
+    direction: {x: 0.9274602, y: 0, z: -0.3739219}
+    perpendicular: {x: 0.3739219, y: -0, z: 0.9274602}
+  - position: {x: 42.08042, y: 0, z: -10.951819}
+    direction: {x: 0.9332317, y: 0, z: -0.35927495}
+    perpendicular: {x: 0.35927495, y: -0, z: 0.9332317}
+  - position: {x: 42.973194, y: 0, z: -11.287807}
+    direction: {x: 0.9385839, y: 0, z: -0.34505108}
+    perpendicular: {x: 0.34505108, y: -0, z: 0.9385839}
+  - position: {x: 43.934284, y: 0, z: -11.631955}
+    direction: {x: 0.94431555, y: 0, z: -0.32904127}
+    perpendicular: {x: 0.32904127, y: -0, z: 0.94431555}
+  - position: {x: 44.89492, y: 0, z: -11.957259}
+    direction: {x: 0.9499856, y: 0, z: -0.31229353}
+    perpendicular: {x: 0.31229353, y: -0, z: 0.9499856}
+  - position: {x: 45.855034, y: 0, z: -12.26321}
+    direction: {x: 0.9555627, y: 0, z: -0.29478794}
+    perpendicular: {x: 0.29478794, y: -0, z: 0.9555627}
+  - position: {x: 46.814568, y: 0, z: -12.549301}
+    direction: {x: 0.9610122, y: 0, z: -0.27650616}
+    perpendicular: {x: 0.27650616, y: -0, z: 0.9610122}
+  - position: {x: 47.84191, y: 0, z: -12.833207}
+    direction: {x: 0.9666665, y: 0, z: -0.25603878}
+    perpendicular: {x: 0.25603878, y: -0, z: 0.9666665}
+  - position: {x: 48.800007, y: 0, z: -13.07653}
+    direction: {x: 0.97172856, y: 0, z: -0.23610066}
+    perpendicular: {x: 0.23610066, y: -0, z: 0.97172856}
+  - position: {x: 49.757294, y: 0, z: -13.298423}
+    direction: {x: 0.9765379, y: 0, z: -0.21534541}
+    perpendicular: {x: 0.21534541, y: -0, z: 0.9765379}
+  - position: {x: 50.78199, y: 0, z: -13.511805}
+    direction: {x: 0.981357, y: 0, z: -0.19219363}
+    perpendicular: {x: 0.19219363, y: -0, z: 0.981357}
+  - position: {x: 51.7374, y: 0, z: -13.687681}
+    direction: {x: 0.98549056, y: 0, z: -0.16973017}
+    perpendicular: {x: 0.16973017, y: -0, z: 0.98549056}
+  - position: {x: 52.75992, y: 0, z: -13.850588}
+    direction: {x: 0.98946834, y: 0, z: -0.14474998}
+    perpendicular: {x: 0.14474998, y: -0, z: 0.98946834}
+  - position: {x: 53.781174, y: 0, z: -13.986463}
+    direction: {x: 0.9929137, y: 0, z: -0.11883729}
+    perpendicular: {x: 0.11883729, y: -0, z: 0.9929137}
+  - position: {x: 54.8011, y: 0, z: -14.09468}
+    direction: {x: 0.9957578, y: 0, z: -0.09201212}
+    perpendicular: {x: 0.09201212, y: -0, z: 0.9957578}
+  - position: {x: 55.75174, y: 0, z: -14.170177}
+    direction: {x: 0.99780786, y: 0, z: -0.06617775}
+    perpendicular: {x: 0.06617775, y: -0, z: 0.99780786}
+  - position: {x: 56.76882, y: 0, z: -14.223145}
+    direction: {x: 0.9992899, y: 0, z: -0.037680283}
+    perpendicular: {x: 0.037680283, y: -0, z: 0.9992899}
+  - position: {x: 57.784313, y: 0, z: -14.246612}
+    direction: {x: 0.99996483, y: 0, z: -0.008385067}
+    perpendicular: {x: 0.008385067, y: -0, z: 0.99996483}
+  - position: {x: 58.79812, y: 0, z: -14.239951}
+    direction: {x: 0.99976563, y: 0, z: 0.021647753}
+    perpendicular: {x: -0.021647753, y: 0, z: 0.99976563}
+  - position: {x: 59.810158, y: 0, z: -14.202536}
+    direction: {x: 0.998629, y: 0, z: 0.052347284}
+    perpendicular: {x: -0.052347284, y: 0, z: 0.998629}
+  - position: {x: 60.820347, y: 0, z: -14.133738}
+    direction: {x: 0.99649674, y: 0, z: 0.083631046}
+    perpendicular: {x: -0.083631046, y: 0, z: 0.99649674}
+  - position: {x: 61.82859, y: 0, z: -14.0329275}
+    direction: {x: 0.9933183, y: 0, z: 0.11540663}
+    perpendicular: {x: -0.11540663, y: 0, z: 0.9933183}
+  - position: {x: 62.834816, y: 0, z: -13.899479}
+    direction: {x: 0.98905134, y: 0, z: 0.14757203}
+    perpendicular: {x: -0.14757203, y: 0, z: 0.98905134}
+  - position: {x: 63.83892, y: 0, z: -13.732761}
+    direction: {x: 0.9836635, y: 0, z: 0.18001677}
+    perpendicular: {x: -0.18001677, y: 0, z: 0.9836635}
+  - position: {x: 64.840836, y: 0, z: -13.532149}
+    direction: {x: 0.97713417, y: 0, z: 0.21262345}
+    perpendicular: {x: -0.21262345, y: 0, z: 0.97713417}
+  - position: {x: 65.84045, y: 0, z: -13.297014}
+    direction: {x: 0.9694549, y: 0, z: 0.24526979}
+    perpendicular: {x: -0.24526979, y: 0, z: 0.9694549}
+  - position: {x: 66.8377, y: 0, z: -13.026729}
+    direction: {x: 0.96063006, y: 0, z: 0.27783072}
+    perpendicular: {x: -0.27783072, y: 0, z: 0.96063006}
+  - position: {x: 67.76626, y: 0, z: -12.742193}
+    direction: {x: 0.9513756, y: 0, z: 0.30803308}
+    perpendicular: {x: -0.30803308, y: 0, z: 0.9513756}
+  - position: {x: 68.75868, y: 0, z: -12.402166}
+    direction: {x: 0.9403986, y: 0, z: 0.3400742}
+    perpendicular: {x: -0.3400742, y: 0, z: 0.9403986}
+  - position: {x: 69.68257, y: 0, z: -12.051445}
+    direction: {x: 0.9291997, y: 0, z: 0.36957818}
+    perpendicular: {x: -0.36957818, y: 0, z: 0.9291997}
+  - position: {x: 70.60411, y: 0, z: -11.667987}
+    direction: {x: 0.9171251, y: 0, z: 0.3985996}
+    perpendicular: {x: -0.3985996, y: 0, z: 0.9171251}
+  - position: {x: 71.523224, y: 0, z: -11.251286}
+    direction: {x: 0.90422726, y: 0, z: 0.42705154}
+    perpendicular: {x: -0.42705154, y: 0, z: 0.90422726}
+  - position: {x: 72.439835, y: 0, z: -10.800825}
+    direction: {x: 0.8905657, y: 0, z: 0.45485458}
+    perpendicular: {x: -0.45485458, y: 0, z: 0.8905657}
+  - position: {x: 73.35388, y: 0, z: -10.316096}
+    direction: {x: 0.87620574, y: 0, z: 0.48193723}
+    perpendicular: {x: -0.48193723, y: 0, z: 0.87620574}
+  - position: {x: 74.20029, y: 0, z: -9.834863}
+    direction: {x: 0.86230713, y: 0, z: 0.5063857}
+    perpendicular: {x: -0.5063857, y: 0, z: 0.86230713}
+  - position: {x: 75.10918, y: 0, z: -9.282605}
+    direction: {x: 0.8468002, y: 0, z: 0.5319111}
+    perpendicular: {x: -0.5319111, y: 0, z: 0.8468002}
+  - position: {x: 75.95067, y: 0, z: -8.737786}
+    direction: {x: 0.831964, y: 0, z: 0.55482954}
+    perpendicular: {x: -0.55482954, y: 0, z: 0.831964}
+  - position: {x: 76.78972, y: 0, z: -8.161719}
+    direction: {x: 0.8167688, y: 0, z: 0.576965}
+    perpendicular: {x: -0.576965, y: 0, z: 0.8167688}
+  - position: {x: 77.62626, y: 0, z: -7.553998}
+    direction: {x: 0.8012746, y: 0, z: 0.5982967}
+    perpendicular: {x: -0.5982967, y: 0, z: 0.8012746}
+  - position: {x: 78.39619, y: 0, z: -6.9645762}
+    direction: {x: 0.78675765, y: 0, z: 0.61726207}
+    perpendicular: {x: -0.61726207, y: 0, z: 0.78675765}
+  curveLength: 74.91057
   adjustmentNodes:
   - {fileID: 1176701177}
   - {fileID: 82037649}
@@ -1623,7 +1563,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 614366875236974516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 17.274002}
+  m_LocalPosition: {x: 0.55200195, y: 0, z: 16.592003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 614366877055197497}
@@ -1667,7 +1607,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 614366876361574478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.8, y: 0, z: 65.4}
+  m_LocalPosition: {x: -17.90966, y: 0, z: 37.85338}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 614366876844696556}
@@ -1711,7 +1651,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 614366876407612314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.32, y: 0, z: 38.01}
+  m_LocalPosition: {x: -1.1600037, y: 0, z: 21.079998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 614366876844696556}
@@ -1778,8 +1718,8 @@ MonoBehaviour:
   endNode: 1
   startNode: 0
   resetCurves: 0
+  connected: 0
   typeColor: {r: 1, g: 0, b: 0, a: 1}
-  adjustmentNodePrefab: {fileID: 0}
   curvePoints: []
   curveLength: 0
   adjustmentNodes: []
@@ -1808,7 +1748,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 614366876844696546}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -98.2, y: 0, z: -10.93}
+  m_LocalPosition: {x: -91.6, y: 0, z: 8.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 614366876407612005}
@@ -1833,248 +1773,175 @@ MonoBehaviour:
   endNode: 0
   startNode: 0
   resetCurves: 0
+  connected: 0
   typeColor: {r: 0, g: 0, b: 1, a: 1}
-  adjustmentNodePrefab: {fileID: 2948931495715058067, guid: 3a8f0eaaeaa95584181ab443cb5ace8e,
-    type: 3}
   curvePoints:
-  - position: {x: -98.2, y: 0, z: -10.93}
-    direction: {x: 0.08701414, y: 0, z: 0.9962071}
-    perpendicular: {x: -0.9962071, y: 0, z: 0.08701414}
-  - position: {x: -98.12058, y: 0, z: -9.906323}
-    direction: {x: 0.06768569, y: 0, z: 0.9977067}
-    perpendicular: {x: -0.9977067, y: 0, z: 0.06768569}
-  - position: {x: -98.06239, y: 0, z: -8.910457}
-    direction: {x: 0.049010582, y: 0, z: 0.99879825}
-    perpendicular: {x: -0.99879825, y: 0, z: 0.049010582}
-  - position: {x: -98.02259, y: 0, z: -7.9084325}
-    direction: {x: 0.030371806, y: 0, z: 0.99953866}
-    perpendicular: {x: -0.99953866, y: 0, z: 0.030371806}
-  - position: {x: -98.00135, y: 0, z: -6.9005}
-    direction: {x: 0.011800256, y: 0, z: 0.9999304}
-    perpendicular: {x: -0.9999304, y: 0, z: 0.011800256}
-  - position: {x: -97.998695, y: 0, z: -5.8980227}
-    direction: {x: -0.0064719445, y: 0, z: 0.9999791}
-    perpendicular: {x: -0.9999791, y: 0, z: -0.0064719445}
-  - position: {x: -98.0144, y: 0, z: -4.890025}
-    direction: {x: -0.02462286, y: 0, z: 0.9996968}
-    perpendicular: {x: -0.9996968, y: 0, z: -0.02462286}
-  - position: {x: -98.04803, y: 0, z: -3.8877559}
-    direction: {x: -0.04242938, y: 0, z: 0.9990995}
-    perpendicular: {x: -0.9990995, y: 0, z: -0.04242938}
-  - position: {x: -98.099754, y: 0, z: -2.8803709}
-    direction: {x: -0.060064465, y: 0, z: 0.99819446}
-    perpendicular: {x: -0.99819446, y: 0, z: -0.060064465}
-  - position: {x: -98.168724, y: 0, z: -1.8789955}
-    direction: {x: -0.07731518, y: 0, z: 0.99700665}
-    perpendicular: {x: -0.99700665, y: 0, z: -0.07731518}
-  - position: {x: -98.25543, y: 0, z: -0.87292516}
-    direction: {x: -0.094348855, y: 0, z: 0.99553925}
-    perpendicular: {x: -0.99553925, y: 0, z: -0.094348855}
-  - position: {x: -98.358635, y: 0, z: 0.12684448}
-    direction: {x: -0.110963665, y: 0, z: 0.9938244}
-    perpendicular: {x: -0.9938244, y: 0, z: -0.110963665}
-  - position: {x: -98.47779, y: 0, z: 1.1202272}
-    direction: {x: -0.12714918, y: 0, z: 0.99188364}
-    perpendicular: {x: -0.99188364, y: 0, z: -0.12714918}
-  - position: {x: -98.61383, y: 0, z: 2.1177235}
-    direction: {x: -0.14306346, y: 0, z: 0.98971355}
-    perpendicular: {x: -0.98971355, y: 0, z: -0.14306346}
-  - position: {x: -98.76501, y: 0, z: 3.1085293}
-    direction: {x: -0.15852267, y: 0, z: 0.98735535}
-    perpendicular: {x: -0.98735535, y: 0, z: -0.15852267}
-  - position: {x: -98.93255, y: 0, z: 4.1029944}
-    direction: {x: -0.17367774, y: 0, z: 0.98480254}
-    perpendicular: {x: -0.98480254, y: 0, z: -0.17367774}
-  - position: {x: -99.11434, y: 0, z: 5.090453}
-    direction: {x: -0.18835719, y: 0, z: 0.9821006}
-    perpendicular: {x: -0.9821006, y: 0, z: -0.18835719}
-  - position: {x: -99.30976, y: 0, z: 6.0708227}
-    direction: {x: -0.20255744, y: 0, z: 0.97927034}
-    perpendicular: {x: -0.97927034, y: 0, z: -0.20255744}
-  - position: {x: -99.520485, y: 0, z: 7.0542192}
-    direction: {x: -0.21641818, y: 0, z: 0.9763008}
-    perpendicular: {x: -0.9763008, y: 0, z: -0.21641818}
-  - position: {x: -99.74629, y: 0, z: 8.040324}
-    direction: {x: -0.22992256, y: 0, z: 0.97320896}
-    perpendicular: {x: -0.97320896, y: 0, z: -0.22992256}
-  - position: {x: -99.98189, y: 0, z: 9.008715}
-    direction: {x: -0.24279195, y: 0, z: 0.9700784}
-    perpendicular: {x: -0.9700784, y: 0, z: -0.24279195}
-  - position: {x: -100.23421, y: 0, z: 9.989441}
-    direction: {x: -0.25542113, y: 0, z: 0.9668299}
-    perpendicular: {x: -0.9668299, y: 0, z: -0.25542113}
-  - position: {x: -100.495, y: 0, z: 10.952269}
-    direction: {x: -0.2674169, y: 0, z: 0.96358097}
-    perpendicular: {x: -0.96358097, y: 0, z: -0.2674169}
-  - position: {x: -100.7719, y: 0, z: 11.926758}
-    direction: {x: -0.279144, y: 0, z: 0.96024925}
-    perpendicular: {x: -0.96024925, y: 0, z: -0.279144}
-  - position: {x: -101.05596, y: 0, z: 12.883157}
-    direction: {x: -0.2902416, y: 0, z: 0.9569534}
-    perpendicular: {x: -0.9569534, y: 0, z: -0.2902416}
-  - position: {x: -101.352356, y: 0, z: 13.840891}
-    direction: {x: -0.30093843, y: 0, z: 0.95364356}
-    perpendicular: {x: -0.95364356, y: 0, z: -0.30093843}
-  - position: {x: -101.66064, y: 0, z: 14.799598}
-    direction: {x: -0.31122163, y: 0, z: 0.95033735}
-    perpendicular: {x: -0.95033735, y: 0, z: -0.31122163}
-  - position: {x: -101.98038, y: 0, z: 15.758916}
-    direction: {x: -0.3210781, y: 0, z: 0.9470527}
-    perpendicular: {x: -0.9470527, y: 0, z: -0.3210781}
-  - position: {x: -102.30778, y: 0, z: 16.70911}
-    direction: {x: -0.33040512, y: 0, z: 0.9438392}
-    perpendicular: {x: -0.9438392, y: 0, z: -0.33040512}
-  - position: {x: -102.642166, y: 0, z: 17.650078}
-    direction: {x: -0.3392049, y: 0, z: 0.9407126}
-    perpendicular: {x: -0.9407126, y: 0, z: -0.3392049}
-  - position: {x: -102.98959, y: 0, z: 18.600069}
-    direction: {x: -0.34763777, y: 0, z: 0.9376289}
-    perpendicular: {x: -0.9376289, y: 0, z: -0.34763777}
-  - position: {x: -103.342705, y: 0, z: 19.540236}
-    direction: {x: -0.35552582, y: 0, z: 0.93466645}
-    perpendicular: {x: -0.93466645, y: 0, z: -0.35552582}
-  - position: {x: -103.70081, y: 0, z: 20.470482}
-    direction: {x: -0.3628695, y: 0, z: 0.93184}
-    perpendicular: {x: -0.93184, y: 0, z: -0.3628695}
-  - position: {x: -104.07013, y: 0, z: 21.408455}
-    direction: {x: -0.3697951, y: 0, z: 0.9291133}
-    perpendicular: {x: -0.9291133, y: 0, z: -0.3697951}
-  - position: {x: -104.44656, y: 0, z: 22.344667}
-    direction: {x: -0.37621102, y: 0, z: 0.926534}
-    perpendicular: {x: -0.926534, y: 0, z: -0.37621102}
-  - position: {x: -104.82575, y: 0, z: 23.270008}
-    direction: {x: -0.38204563, y: 0, z: 0.9241435}
-    perpendicular: {x: -0.9241435, y: 0, z: -0.38204563}
-  - position: {x: -105.21405, y: 0, z: 24.201502}
-    direction: {x: -0.38738775, y: 0, z: 0.9219169}
-    perpendicular: {x: -0.9219169, y: 0, z: -0.38738775}
-  - position: {x: -105.603455, y: 0, z: 25.121464}
-    direction: {x: -0.392115, y: 0, z: 0.9199162}
-    perpendicular: {x: -0.9199162, y: 0, z: -0.392115}
-  - position: {x: -106.00026, y: 0, z: 26.046469}
-    direction: {x: -0.39628845, y: 0, z: 0.91812605}
-    perpendicular: {x: -0.91812605, y: 0, z: -0.39628845}
-  - position: {x: -106.399994, y: 0, z: 26.967482}
-    direction: {x: -0.39983168, y: 0, z: 0.91658854}
-    perpendicular: {x: -0.91658854, y: 0, z: -0.39983168}
-  - position: {x: -106.80514, y: 0, z: 27.89215}
-    direction: {x: -0.40273324, y: 0, z: 0.91531736}
-    perpendicular: {x: -0.91531736, y: 0, z: -0.40273324}
-  - position: {x: -107.21109, y: 0, z: 28.81163}
-    direction: {x: -0.40491897, y: 0, z: 0.91435254}
-    perpendicular: {x: -0.91435254, y: 0, z: -0.40491897}
-  - position: {x: -107.61669, y: 0, z: 29.72541}
-    direction: {x: -0.40634394, y: 0, z: 0.91372025}
-    perpendicular: {x: -0.91372025, y: 0, z: -0.40634394}
-  - position: {x: -108.027664, y: 0, z: 30.648499}
-    direction: {x: -0.4069597, y: 0, z: 0.9134461}
-    perpendicular: {x: -0.9134461, y: 0, z: -0.4069597}
-  - position: {x: -108.435616, y: 0, z: 31.564339}
-    direction: {x: -0.40667278, y: 0, z: 0.9135739}
-    perpendicular: {x: -0.9135739, y: 0, z: -0.40667278}
-  - position: {x: -108.84249, y: 0, z: 32.479877}
-    direction: {x: -0.40539664, y: 0, z: 0.9141408}
-    perpendicular: {x: -0.9141408, y: 0, z: -0.40539664}
-  - position: {x: -109.24987, y: 0, z: 33.401505}
-    direction: {x: -0.402997, y: 0, z: 0.91520125}
-    perpendicular: {x: -0.91520125, y: 0, z: -0.402997}
-  - position: {x: -109.65256, y: 0, z: 34.3206}
-    direction: {x: -0.39934897, y: 0, z: 0.916799}
-    perpendicular: {x: -0.916799, y: 0, z: -0.39934897}
-  - position: {x: -110.05153, y: 0, z: 35.24317}
-    direction: {x: -0.39425313, y: 0, z: 0.9190018}
-    perpendicular: {x: -0.9190018, y: 0, z: -0.39425313}
-  - position: {x: -110.44431, y: 0, z: 36.167713}
-    direction: {x: -0.38749024, y: 0, z: 0.92187387}
-    perpendicular: {x: -0.92187387, y: 0, z: -0.38749024}
-  - position: {x: -110.83095, y: 0, z: 37.099403}
-    direction: {x: -0.3787257, y: 0, z: 0.925509}
-    perpendicular: {x: -0.925509, y: 0, z: -0.3787257}
-  - position: {x: -111.20535, y: 0, z: 38.02951}
-    direction: {x: -0.36768225, y: 0, z: 0.9299515}
-    perpendicular: {x: -0.9299515, y: 0, z: -0.36768225}
-  - position: {x: -111.56665, y: 0, z: 38.96274}
-    direction: {x: -0.35386074, y: 0, z: 0.93529814}
-    perpendicular: {x: -0.93529814, y: 0, z: -0.35386074}
-  - position: {x: -111.91512, y: 0, z: 39.9093}
-    direction: {x: -0.33646104, y: 0, z: 0.94169736}
-    perpendicular: {x: -0.94169736, y: 0, z: -0.33646104}
-  - position: {x: -112.24287, y: 0, z: 40.859585}
-    direction: {x: -0.3148059, y: 0, z: 0.9491561}
-    perpendicular: {x: -0.9491561, y: 0, z: -0.3148059}
-  - position: {x: -112.545715, y: 0, z: 41.816303}
-    direction: {x: -0.2877455, y: 0, z: 0.9577069}
-    perpendicular: {x: -0.9577069, y: 0, z: -0.2877455}
-  - position: {x: -112.81782, y: 0, z: 42.78118}
-    direction: {x: -0.25372672, y: 0, z: 0.9672759}
-    perpendicular: {x: -0.9672759, y: 0, z: -0.25372672}
-  - position: {x: -113.05235, y: 0, z: 43.76031}
-    direction: {x: -0.21038155, y: 0, z: 0.97761935}
-    perpendicular: {x: -0.97761935, y: 0, z: -0.21038155}
-  - position: {x: -113.23697, y: 0, z: 44.747147}
-    direction: {x: -0.1550596, y: 0, z: 0.98790514}
-    perpendicular: {x: -0.98790514, y: 0, z: -0.1550596}
-  - position: {x: -113.35848, y: 0, z: 45.74459}
-    direction: {x: -0.083680615, y: 0, z: 0.9964926}
-    perpendicular: {x: -0.9964926, y: 0, z: -0.083680615}
-  - position: {x: -113.398224, y: 0, z: 46.748177}
-    direction: {x: 0.008438268, y: 0, z: 0.99996436}
-    perpendicular: {x: -0.99996436, y: 0, z: 0.008438268}
-  - position: {x: -113.33342, y: 0, z: 47.74714}
-    direction: {x: 0.12539265, y: 0, z: 0.9921072}
-    perpendicular: {x: -0.9921072, y: 0, z: 0.12539265}
-  - position: {x: -113.13684, y: 0, z: 48.73385}
-    direction: {x: 0.26904815, y: 0, z: 0.9631268}
-    perpendicular: {x: -0.9631268, y: 0, z: 0.26904815}
-  - position: {x: -112.7875, y: 0, z: 49.67223}
-    direction: {x: 0.4293234, y: 0, z: 0.9031508}
-    perpendicular: {x: -0.9031508, y: 0, z: 0.4293234}
-  - position: {x: -112.27458, y: 0, z: 50.536907}
-    direction: {x: 0.58699447, y: 0, z: 0.809591}
-    perpendicular: {x: -0.809591, y: 0, z: 0.58699447}
-  - position: {x: -111.61583, y: 0, z: 51.2938}
-    direction: {x: 0.7187913, y: 0, z: 0.69522583}
-    perpendicular: {x: -0.69522583, y: 0, z: 0.7187913}
-  - position: {x: -110.84235, y: 0, z: 51.93322}
-    direction: {x: 0.8153644, y: 0, z: 0.5789481}
-    perpendicular: {x: -0.5789481, y: 0, z: 0.8153644}
-  - position: {x: -109.984955, y: 0, z: 52.46267}
-    direction: {x: 0.8806629, y: 0, z: 0.47374335}
-    perpendicular: {x: -0.47374335, y: 0, z: 0.8806629}
-  - position: {x: -109.07529, y: 0, z: 52.893593}
-    direction: {x: 0.92296845, y: 0, z: 0.3848757}
-    perpendicular: {x: -0.3848757, y: 0, z: 0.92296845}
-  - position: {x: -108.13583, y: 0, z: 53.24151}
-    direction: {x: 0.950107, y: 0, z: 0.3119242}
-    perpendicular: {x: -0.3119242, y: 0, z: 0.950107}
-  - position: {x: -107.16687, y: 0, z: 53.52502}
-    direction: {x: 0.96783227, y: 0, z: 0.2515961}
-    perpendicular: {x: -0.2515961, y: 0, z: 0.96783227}
-  - position: {x: -106.18671, y: 0, z: 53.752487}
-    direction: {x: 0.9793799, y: 0, z: 0.20202704}
-    perpendicular: {x: -0.20202704, y: 0, z: 0.9793799}
-  - position: {x: -105.198265, y: 0, z: 53.93421}
-    direction: {x: 0.98698586, y: 0, z: 0.16080734}
-    perpendicular: {x: -0.16080734, y: 0, z: 0.98698586}
-  - position: {x: -104.207756, y: 0, z: 54.077385}
-    direction: {x: 0.9919986, y: 0, z: 0.12624872}
-    perpendicular: {x: -0.12624872, y: 0, z: 0.9919986}
-  - position: {x: -103.20204, y: 0, z: 54.189713}
-    direction: {x: 0.9953306, y: 0, z: 0.09652483}
-    perpendicular: {x: -0.09652483, y: 0, z: 0.9953306}
-  - position: {x: -102.20678, y: 0, z: 54.27322}
-    direction: {x: 0.9974541, y: 0, z: 0.07131103}
-    perpendicular: {x: -0.07131103, y: 0, z: 0.9974541}
-  - position: {x: -101.20403, y: 0, z: 54.33355}
-    direction: {x: 0.9987843, y: 0, z: 0.049294695}
-    perpendicular: {x: -0.049294695, y: 0, z: 0.9987843}
-  - position: {x: -100.19983, y: 0, z: 54.37319}
-    direction: {x: 0.9995494, y: 0, z: 0.030016595}
-    perpendicular: {x: -0.030016595, y: 0, z: 0.9995494}
-  - position: {x: -99.1898, y: 0, z: 54.39471}
-    direction: {x: 0.9999165, y: 0, z: 0.012927313}
-    perpendicular: {x: -0.012927313, y: 0, z: 0.9999165}
-  curveLength: 79.39571
+  - position: {x: -91.6, y: 0, z: 8.2}
+    direction: {x: -0.054945514, y: 0, z: 0.9984894}
+    perpendicular: {x: -0.9984894, y: 0, z: -0.054945514}
+  - position: {x: -91.67752, y: 0, z: 9.3341465}
+    direction: {x: -0.08125163, y: 0, z: 0.9966937}
+    perpendicular: {x: -0.9966937, y: 0, z: -0.08125163}
+  - position: {x: -91.77053, y: 0, z: 10.335319}
+    direction: {x: -0.103594266, y: 0, z: 0.9946196}
+    perpendicular: {x: -0.9946196, y: 0, z: -0.103594266}
+  - position: {x: -91.884995, y: 0, z: 11.329997}
+    direction: {x: -0.12491844, y: 0, z: 0.99216706}
+    perpendicular: {x: -0.99216706, y: 0, z: -0.12491844}
+  - position: {x: -92.0198, y: 0, z: 12.318246}
+    direction: {x: -0.14519481, y: 0, z: 0.98940307}
+    perpendicular: {x: -0.98940307, y: 0, z: -0.14519481}
+  - position: {x: -92.17372, y: 0, z: 13.300118}
+    direction: {x: -0.16440119, y: 0, z: 0.9863935}
+    perpendicular: {x: -0.9863935, y: 0, z: -0.16440119}
+  - position: {x: -92.35696, y: 0, z: 14.336442}
+    direction: {x: -0.18361783, y: 0, z: 0.9829977}
+    perpendicular: {x: -0.9829977, y: 0, z: -0.18361783}
+  - position: {x: -92.5467, y: 0, z: 15.305353}
+    direction: {x: -0.20057313, y: 0, z: 0.97967875}
+    perpendicular: {x: -0.97967875, y: 0, z: -0.20057313}
+  - position: {x: -92.752045, y: 0, z: 16.268074}
+    direction: {x: -0.2164259, y: 0, z: 0.9762991}
+    perpendicular: {x: -0.9762991, y: 0, z: -0.2164259}
+  - position: {x: -92.98597, y: 0, z: 17.284239}
+    direction: {x: -0.23205924, y: 0, z: 0.97270167}
+    perpendicular: {x: -0.97270167, y: 0, z: -0.23205924}
+  - position: {x: -93.23479, y: 0, z: 18.293547}
+    direction: {x: -0.24644665, y: 0, z: 0.9691564}
+    perpendicular: {x: -0.9691564, y: 0, z: -0.24644665}
+  - position: {x: -93.48131, y: 0, z: 19.237284}
+    direction: {x: -0.25885263, y: 0, z: 0.9659168}
+    perpendicular: {x: -0.9659168, y: 0, z: -0.25885263}
+  - position: {x: -93.75503, y: 0, z: 20.233482}
+    direction: {x: -0.27083248, y: 0, z: 0.96262646}
+    perpendicular: {x: -0.96262646, y: 0, z: -0.27083248}
+  - position: {x: -94.022514, y: 0, z: 21.165007}
+    direction: {x: -0.28098145, y: 0, z: 0.95971316}
+    perpendicular: {x: -0.95971316, y: 0, z: -0.28098145}
+  - position: {x: -94.31587, y: 0, z: 22.148357}
+    direction: {x: -0.29057288, y: 0, z: 0.95685285}
+    perpendicular: {x: -0.95685285, y: 0, z: -0.29057288}
+  - position: {x: -94.617294, y: 0, z: 23.125195}
+    direction: {x: -0.2989401, y: 0, z: 0.95427185}
+    perpendicular: {x: -0.95427185, y: 0, z: -0.2989401}
+  - position: {x: -94.92541, y: 0, z: 24.09559}
+    direction: {x: -0.3060851, y: 0, z: 0.9520042}
+    perpendicular: {x: -0.9520042, y: 0, z: -0.3060851}
+  - position: {x: -95.23877, y: 0, z: 25.059612}
+    direction: {x: -0.31200752, y: 0, z: 0.9500797}
+    perpendicular: {x: -0.9500797, y: 0, z: -0.31200752}
+  - position: {x: -95.55602, y: 0, z: 26.017324}
+    direction: {x: -0.3167038, y: 0, z: 0.9485245}
+    perpendicular: {x: -0.9485245, y: 0, z: -0.3167038}
+  - position: {x: -95.87578, y: 0, z: 26.968811}
+    direction: {x: -0.3201666, y: 0, z: 0.9473613}
+    perpendicular: {x: -0.9473613, y: 0, z: -0.3201666}
+  - position: {x: -96.1966, y: 0, z: 27.91413}
+    direction: {x: -0.32238483, y: 0, z: 0.94660866}
+    perpendicular: {x: -0.94660866, y: 0, z: -0.32238483}
+  - position: {x: -96.535934, y: 0, z: 28.908413}
+    direction: {x: -0.32335916, y: 0, z: 0.9462763}
+    perpendicular: {x: -0.9462763, y: 0, z: -0.32335916}
+  - position: {x: -96.85458, y: 0, z: 29.841263}
+    direction: {x: -0.32295924, y: 0, z: 0.94641286}
+    perpendicular: {x: -0.94641286, y: 0, z: -0.32295924}
+  - position: {x: -97.18851, y: 0, z: 30.8225}
+    direction: {x: -0.32110807, y: 0, z: 0.9470425}
+    perpendicular: {x: -0.9470425, y: 0, z: -0.32110807}
+  - position: {x: -97.499115, y: 0, z: 31.74318}
+    direction: {x: -0.31797728, y: 0, z: 0.94809836}
+    perpendicular: {x: -0.94809836, y: 0, z: -0.31797728}
+  - position: {x: -97.82136, y: 0, z: 32.711693}
+    direction: {x: -0.31315482, y: 0, z: 0.9497021}
+    perpendicular: {x: -0.9497021, y: 0, z: -0.31315482}
+  - position: {x: -98.13514, y: 0, z: 33.67378}
+    direction: {x: -0.30672958, y: 0, z: 0.9517967}
+    perpendicular: {x: -0.9517967, y: 0, z: -0.30672958}
+  - position: {x: -98.43883, y: 0, z: 34.62952}
+    direction: {x: -0.29864055, y: 0, z: 0.9543657}
+    perpendicular: {x: -0.9543657, y: 0, z: -0.29864055}
+  - position: {x: -98.746605, y: 0, z: 35.631577}
+    direction: {x: -0.2882212, y: 0, z: 0.9575638}
+    perpendicular: {x: -0.9575638, y: 0, z: -0.2882212}
+  - position: {x: -99.024345, y: 0, z: 36.57455}
+    direction: {x: -0.27648854, y: 0, z: 0.9610172}
+    perpendicular: {x: -0.9610172, y: 0, z: -0.27648854}
+  - position: {x: -99.30101, y: 0, z: 37.56331}
+    direction: {x: -0.26204562, y: 0, z: 0.96505547}
+    perpendicular: {x: -0.96505547, y: 0, z: -0.26204562}
+  - position: {x: -99.55882, y: 0, z: 38.545383}
+    direction: {x: -0.24538639, y: 0, z: 0.9694254}
+    perpendicular: {x: -0.9694254, y: 0, z: -0.24538639}
+  - position: {x: -99.79585, y: 0, z: 39.520866}
+    direction: {x: -0.22640236, y: 0, z: 0.97403383}
+    perpendicular: {x: -0.97403383, y: 0, z: -0.22640236}
+  - position: {x: -100.01014, y: 0, z: 40.48987}
+    direction: {x: -0.20498374, y: 0, z: 0.97876537}
+    perpendicular: {x: -0.97876537, y: 0, z: -0.20498374}
+  - position: {x: -100.208984, y: 0, z: 41.502968}
+    direction: {x: -0.17969085, y: 0, z: 0.9837231}
+    perpendicular: {x: -0.9837231, y: 0, z: -0.17969085}
+  - position: {x: -100.37822, y: 0, z: 42.5091}
+    direction: {x: -0.15146972, y: 0, z: 0.9884619}
+    perpendicular: {x: -0.9884619, y: 0, z: -0.15146972}
+  - position: {x: -100.51553, y: 0, z: 43.508385}
+    direction: {x: -0.12022846, y: 0, z: 0.99274623}
+    perpendicular: {x: -0.99274623, y: 0, z: -0.12022846}
+  - position: {x: -100.61868, y: 0, z: 44.50093}
+    direction: {x: -0.08590817, y: 0, z: 0.996303}
+    perpendicular: {x: -0.996303, y: 0, z: -0.08590817}
+  - position: {x: -100.68771, y: 0, z: 45.535973}
+    direction: {x: -0.046545487, y: 0, z: 0.99891615}
+    perpendicular: {x: -0.99891615, y: 0, z: -0.046545487}
+  - position: {x: -100.71369, y: 0, z: 46.51506}
+    direction: {x: -0.005943608, y: 0, z: 0.99998236}
+    perpendicular: {x: -0.99998236, y: 0, z: -0.005943608}
+  - position: {x: -100.69668, y: 0, z: 47.536232}
+    direction: {x: 0.039810743, y: 0, z: 0.99920726}
+    perpendicular: {x: -0.99920726, y: 0, z: 0.039810743}
+  - position: {x: -100.631714, y: 0, z: 48.550488}
+    direction: {x: 0.08850325, y: 0, z: 0.9960759}
+    perpendicular: {x: -0.9960759, y: 0, z: 0.08850325}
+  - position: {x: -100.516174, y: 0, z: 49.55797}
+    direction: {x: 0.13974707, y: 0, z: 0.9901873}
+    perpendicular: {x: -0.9901873, y: 0, z: 0.13974707}
+  - position: {x: -100.34741, y: 0, z: 50.558792}
+    direction: {x: 0.1930274, y: 0, z: 0.98119336}
+    perpendicular: {x: -0.98119336, y: 0, z: 0.1930274}
+  - position: {x: -100.1228, y: 0, z: 51.553112}
+    direction: {x: 0.24771325, y: 0, z: 0.9688334}
+    perpendicular: {x: -0.9688334, y: 0, z: 0.24771325}
+  - position: {x: -99.85456, y: 0, z: 52.49414}
+    direction: {x: 0.30043885, y: 0, z: 0.95380104}
+    perpendicular: {x: -0.95380104, y: 0, z: 0.30043885}
+  - position: {x: -99.513336, y: 0, z: 53.47612}
+    direction: {x: 0.35572785, y: 0, z: 0.9345896}
+    perpendicular: {x: -0.9345896, y: 0, z: 0.35572785}
+  - position: {x: -99.12926, y: 0, z: 54.40564}
+    direction: {x: 0.40760377, y: 0, z: 0.9131589}
+    perpendicular: {x: -0.9131589, y: 0, z: 0.40760377}
+  - position: {x: -98.68522, y: 0, z: 55.32972}
+    direction: {x: 0.45805854, y: 0, z: 0.888922}
+    perpendicular: {x: -0.888922, y: 0, z: 0.45805854}
+  - position: {x: -98.20575, y: 0, z: 56.20266}
+    direction: {x: 0.5041463, y: 0, z: 0.86361825}
+    perpendicular: {x: -0.86361825, y: 0, z: 0.5041463}
+  - position: {x: -97.66816, y: 0, z: 57.070892}
+    direction: {x: 0.548015, y: 0, z: 0.8364685}
+    perpendicular: {x: -0.8364685, y: 0, z: 0.548015}
+  - position: {x: -97.103485, y: 0, z: 57.889168}
+    direction: {x: 0.58723885, y: 0, z: 0.8094137}
+    perpendicular: {x: -0.8094137, y: 0, z: 0.58723885}
+  - position: {x: -96.48323, y: 0, z: 58.70339}
+    direction: {x: 0.623998, y: 0, z: 0.78142595}
+    perpendicular: {x: -0.78142595, y: 0, z: 0.623998}
+  - position: {x: -95.84492, y: 0, z: 59.468727}
+    direction: {x: 0.65635353, y: 0, z: 0.7544535}
+    perpendicular: {x: -0.7544535, y: 0, z: 0.65635353}
+  - position: {x: -95.15416, y: 0, z: 60.230595}
+    direction: {x: 0.6863818, y: 0, z: 0.7272414}
+    perpendicular: {x: -0.7272414, y: 0, z: 0.6863818}
+  curveLength: 55.66897
   adjustmentNodes:
   - {fileID: 614366876407612004}
   - {fileID: 614366876361574472}
@@ -2103,7 +1970,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 614366876990183522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 24}
+  m_LocalPosition: {x: -1.0442123, y: 0, z: 25.056778}
   m_LocalScale: {x: 3.1694, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 614366877055197497}
@@ -2172,134 +2039,133 @@ MonoBehaviour:
   endNode: 0
   startNode: 1
   resetCurves: 0
+  connected: 0
   typeColor: {r: 0, g: 1, b: 0, a: 1}
-  adjustmentNodePrefab: {fileID: 2948931495715058067, guid: 3a8f0eaaeaa95584181ab443cb5ace8e,
-    type: 3}
   curvePoints:
   - position: {x: -110, y: 0, z: -97.3}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -96.28617}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110.00001, y: 0, z: -95.28134}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -109.999985, y: 0, z: -94.27593}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -93.27532}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -92.27048}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -91.26217}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110.00001, y: 0, z: -90.25971}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -109.99999, y: 0, z: -89.25434}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -109.99999, y: 0, z: -88.25047}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110.00001, y: 0, z: -87.24375}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -86.24204}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -85.23654}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -109.99999, y: 0, z: -84.23051}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -109.99999, y: 0, z: -83.22664}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -109.999985, y: 0, z: -82.21968}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -81.21551}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110.000015, y: 0, z: -80.21202}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -109.999985, y: 0, z: -79.20699}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110.000015, y: 0, z: -78.20171}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110.00001, y: 0, z: -77.19714}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -76.19057}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -75.186455}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -74.18208}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -73.17845}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -72.173065}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -109.99999, y: 0, z: -71.16731}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -70.16288}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -69.15801}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -68.15119}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -67.14905}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -66.14277}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -65.135574}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -64.13125}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -63.125416}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -62.12245}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -61.118153}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -60.112755}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -59.10664}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -58.100307}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -110, y: 0, z: -57.099445}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  curveLength: 41.200005
+    direction: {x: 0.03325076, y: 0, z: 0.99944705}
+    perpendicular: {x: -0.99944705, y: 0, z: 0.03325076}
+  - position: {x: -109.96662, y: 0, z: -96.21656}
+    direction: {x: 0.028338613, y: 0, z: 0.9995984}
+    perpendicular: {x: -0.9995984, y: 0, z: 0.028338613}
+  - position: {x: -109.94022, y: 0, z: -95.203445}
+    direction: {x: 0.023774339, y: 0, z: 0.99971735}
+    perpendicular: {x: -0.99971735, y: 0, z: 0.023774339}
+  - position: {x: -109.918785, y: 0, z: -94.209984}
+    direction: {x: 0.019352542, y: 0, z: 0.99981266}
+    perpendicular: {x: -0.99981266, y: 0, z: 0.019352542}
+  - position: {x: -109.90132, y: 0, z: -93.189354}
+    direction: {x: 0.014896191, y: 0, z: 0.9998891}
+    perpendicular: {x: -0.9998891, y: 0, z: 0.014896191}
+  - position: {x: -109.888565, y: 0, z: -92.18833}
+    direction: {x: 0.010644811, y: 0, z: 0.9999434}
+    perpendicular: {x: -0.9999434, y: 0, z: 0.010644811}
+  - position: {x: -109.8798, y: 0, z: -91.1616}
+    direction: {x: 0.0064474666, y: 0, z: 0.9999792}
+    perpendicular: {x: -0.9999792, y: 0, z: 0.0064474666}
+  - position: {x: -109.87528, y: 0, z: -90.153984}
+    direction: {x: 0.002532548, y: 0, z: 0.99999684}
+    perpendicular: {x: -0.99999684, y: 0, z: 0.002532548}
+  - position: {x: -109.87464, y: 0, z: -89.12167}
+    direction: {x: -0.0012187044, y: 0, z: 0.9999993}
+    perpendicular: {x: -0.9999993, y: 0, z: -0.0012187044}
+  - position: {x: -109.8776, y: 0, z: -88.10753}
+    direction: {x: -0.0045951814, y: 0, z: 0.99998945}
+    perpendicular: {x: -0.99998945, y: 0, z: -0.0045951814}
+  - position: {x: -109.883705, y: 0, z: -87.11025}
+    direction: {x: -0.007563225, y: 0, z: 0.9999714}
+    perpendicular: {x: -0.9999714, y: 0, z: -0.007563225}
+  - position: {x: -109.892815, y: 0, z: -86.08792}
+    direction: {x: -0.010185536, y: 0, z: 0.9999481}
+    perpendicular: {x: -0.9999481, y: 0, z: -0.010185536}
+  - position: {x: -109.904175, y: 0, z: -85.08092}
+    direction: {x: -0.012294447, y: 0, z: 0.9999245}
+    perpendicular: {x: -0.9999245, y: 0, z: -0.012294447}
+  - position: {x: -109.91775, y: 0, z: -84.048294}
+    direction: {x: -0.013908367, y: 0, z: 0.9999033}
+    perpendicular: {x: -0.9999033, y: 0, z: -0.013908367}
+  - position: {x: -109.93191, y: 0, z: -83.0679}
+    direction: {x: -0.014873144, y: 0, z: 0.9998894}
+    perpendicular: {x: -0.9998894, y: 0, z: -0.014873144}
+  - position: {x: -109.94715, y: 0, z: -82.05969}
+    direction: {x: -0.015238666, y: 0, z: 0.9998839}
+    perpendicular: {x: -0.9998839, y: 0, z: -0.015238666}
+  - position: {x: -109.962845, y: 0, z: -81.023186}
+    direction: {x: -0.014905671, y: 0, z: 0.9998889}
+    perpendicular: {x: -0.9998889, y: 0, z: -0.014905671}
+  - position: {x: -109.977135, y: 0, z: -80.03341}
+    direction: {x: -0.013881377, y: 0, z: 0.9999037}
+    perpendicular: {x: -0.9999037, y: 0, z: -0.013881377}
+  - position: {x: -109.99047, y: 0, z: -79.01242}
+    direction: {x: -0.012075863, y: 0, z: 0.99992704}
+    perpendicular: {x: -0.99992704, y: 0, z: -0.012075863}
+  - position: {x: -110.00149, y: 0, z: -77.996475}
+    direction: {x: -0.009511175, y: 0, z: 0.9999548}
+    perpendicular: {x: -0.9999548, y: 0, z: -0.009511175}
+  - position: {x: -110.009514, y: 0, z: -76.98375}
+    direction: {x: -0.006192327, y: 0, z: 0.99998087}
+    perpendicular: {x: -0.99998087, y: 0, z: -0.006192327}
+  - position: {x: -110.01378, y: 0, z: -75.9723}
+    direction: {x: -0.002132963, y: 0, z: 0.99999774}
+    perpendicular: {x: -0.99999774, y: 0, z: -0.002132963}
+  - position: {x: -110.01359, y: 0, z: -74.96023}
+    direction: {x: 0.0026447133, y: 0, z: 0.99999654}
+    perpendicular: {x: -0.99999654, y: 0, z: 0.0026447133}
+  - position: {x: -110.00818, y: 0, z: -73.94564}
+    direction: {x: 0.008110252, y: 0, z: 0.9999671}
+    perpendicular: {x: -0.9999671, y: 0, z: 0.008110252}
+  - position: {x: -109.99685, y: 0, z: -72.926636}
+    direction: {x: 0.014225494, y: 0, z: 0.9998988}
+    perpendicular: {x: -0.9998988, y: 0, z: 0.014225494}
+  - position: {x: -109.97887, y: 0, z: -71.90132}
+    direction: {x: 0.020945314, y: 0, z: 0.99978065}
+    perpendicular: {x: -0.99978065, y: 0, z: 0.020945314}
+  - position: {x: -109.954575, y: 0, z: -70.906235}
+    direction: {x: 0.027939977, y: 0, z: 0.99960953}
+    perpendicular: {x: -0.99960953, y: 0, z: 0.027939977}
+  - position: {x: -109.92139, y: 0, z: -69.863}
+    direction: {x: 0.035693258, y: 0, z: 0.9993628}
+    perpendicular: {x: -0.9993628, y: 0, z: 0.035693258}
+  - position: {x: -109.882835, y: 0, z: -68.88643}
+    direction: {x: 0.043265697, y: 0, z: 0.9990636}
+    perpendicular: {x: -0.9990636, y: 0, z: 0.043265697}
+  - position: {x: -109.83408, y: 0, z: -67.85832}
+    direction: {x: 0.051487952, y: 0, z: 0.9986736}
+    perpendicular: {x: -0.9986736, y: 0, z: 0.051487952}
+  - position: {x: -109.778305, y: 0, z: -66.856186}
+    direction: {x: 0.059675395, y: 0, z: 0.9982178}
+    perpendicular: {x: -0.9982178, y: 0, z: 0.059675395}
+  - position: {x: -109.71322, y: 0, z: -65.83923}
+    direction: {x: 0.06808755, y: 0, z: 0.99767935}
+    perpendicular: {x: -0.99767935, y: 0, z: 0.06808755}
+  - position: {x: -109.63823, y: 0, z: -64.80594}
+    direction: {x: 0.07667442, y: 0, z: 0.9970562}
+    perpendicular: {x: -0.9970562, y: 0, z: 0.07667442}
+  - position: {x: -109.5564, y: 0, z: -63.79722}
+    direction: {x: 0.08503709, y: 0, z: 0.99637777}
+    perpendicular: {x: -0.99637777, y: 0, z: 0.08503709}
+  - position: {x: -109.468445, y: 0, z: -62.813866}
+    direction: {x: 0.09312222, y: 0, z: 0.99565464}
+    perpendicular: {x: -0.99565464, y: 0, z: 0.09312222}
+  - position: {x: -109.36623, y: 0, z: -61.769077}
+    direction: {x: 0.10159504, y: 0, z: 0.99482584}
+    perpendicular: {x: -0.99482584, y: 0, z: 0.10159504}
+  - position: {x: -109.26273, y: 0, z: -60.79348}
+    direction: {x: 0.109363236, y: 0, z: 0.99400187}
+    perpendicular: {x: -0.99400187, y: 0, z: 0.109363236}
+  - position: {x: -109.144066, y: 0, z: -59.754105}
+    direction: {x: 0.117456615, y: 0, z: 0.99307805}
+    perpendicular: {x: -0.99307805, y: 0, z: 0.117456615}
+  - position: {x: -109.02016, y: 0, z: -58.740257}
+    direction: {x: 0.12514634, y: 0, z: 0.99213827}
+    perpendicular: {x: -0.99213827, y: 0, z: 0.12514634}
+  - position: {x: -108.892006, y: 0, z: -57.753616}
+    direction: {x: 0.13241872, y: 0, z: 0.99119383}
+    perpendicular: {x: -0.99119383, y: 0, z: 0.13241872}
+  - position: {x: -108.75387, y: 0, z: -56.747616}
+    direction: {x: 0.1396074, y: 0, z: 0.9902069}
+    perpendicular: {x: -0.9902069, y: 0, z: 0.1396074}
+  curveLength: 41.550934
   adjustmentNodes:
   - {fileID: 614366875236974518}
   - {fileID: 614366876990183532}
@@ -2328,11 +2194,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876874242885073023}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -110, y: 0, z: -56.1}
+  m_LocalPosition: {x: -108.62, y: 0, z: -55.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8807938737444632294}
-  - {fileID: 4193815192140833895}
+  - {fileID: 1261875549}
+  - {fileID: 227806559}
   m_Father: {fileID: 6853513952964438102}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2353,196 +2219,211 @@ MonoBehaviour:
   endNode: 0
   startNode: 0
   resetCurves: 0
+  connected: 0
   typeColor: {r: 0, g: 0, b: 1, a: 1}
-  adjustmentNodePrefab: {fileID: 2948931495715058067, guid: 3a8f0eaaeaa95584181ab443cb5ace8e,
-    type: 3}
   curvePoints:
-  - position: {x: -110, y: 0, z: -56.1}
-    direction: {x: 0, y: 0, z: 1}
-    perpendicular: {x: -1, y: 0, z: 0}
-  - position: {x: -109.97672, y: 0, z: -55.073112}
-    direction: {x: 0.04553431, y: 0, z: 0.9989627}
-    perpendicular: {x: -0.9989627, y: 0, z: 0.04553431}
-  - position: {x: -109.90699, y: 0, z: -54.057625}
-    direction: {x: 0.09155438, y: 0, z: 0.99580014}
-    perpendicular: {x: -0.99580014, y: 0, z: 0.09155438}
-  - position: {x: -109.78961, y: 0, z: -53.040516}
-    direction: {x: 0.13755882, y: 0, z: 0.9904936}
-    perpendicular: {x: -0.9904936, y: 0, z: 0.13755882}
-  - position: {x: -109.62678, y: 0, z: -52.03495}
-    direction: {x: 0.18176307, y: 0, z: 0.9833423}
-    perpendicular: {x: -0.9833423, y: 0, z: 0.18176307}
-  - position: {x: -109.41928, y: 0, z: -51.03329}
-    direction: {x: 0.22333871, y: 0, z: 0.97474086}
-    perpendicular: {x: -0.97474086, y: 0, z: 0.22333871}
-  - position: {x: -109.171844, y: 0, z: -50.043533}
-    direction: {x: 0.26095483, y: 0, z: 0.96535105}
-    perpendicular: {x: -0.96535105, y: 0, z: 0.26095483}
-  - position: {x: -108.88838, y: 0, z: -49.06362}
-    direction: {x: 0.29397988, y: 0, z: 0.9558116}
-    perpendicular: {x: -0.9558116, y: 0, z: 0.29397988}
-  - position: {x: -108.57316, y: 0, z: -48.09151}
-    direction: {x: 0.3220571, y: 0, z: 0.9467203}
-    perpendicular: {x: -0.9467203, y: 0, z: 0.3220571}
-  - position: {x: -108.23313, y: 0, z: -47.13168}
-    direction: {x: 0.34495023, y: 0, z: 0.9386209}
-    perpendicular: {x: -0.9386209, y: 0, z: 0.34495023}
-  - position: {x: -107.87111, y: 0, z: -46.176376}
-    direction: {x: 0.3629671, y: 0, z: 0.9318019}
-    perpendicular: {x: -0.9318019, y: 0, z: 0.3629671}
-  - position: {x: -107.493324, y: 0, z: -45.227913}
-    direction: {x: 0.37633875, y: 0, z: 0.9264821}
-    perpendicular: {x: -0.9264821, y: 0, z: 0.37633875}
-  - position: {x: -107.10357, y: 0, z: -44.282818}
-    direction: {x: 0.3855095, y: 0, z: 0.92270386}
-    perpendicular: {x: -0.92270386, y: 0, z: 0.3855095}
-  - position: {x: -106.70668, y: 0, z: -43.34149}
-    direction: {x: 0.39092356, y: 0, z: 0.92042315}
-    perpendicular: {x: -0.92042315, y: 0, z: 0.39092356}
-  - position: {x: -106.30593, y: 0, z: -42.401688}
-    direction: {x: 0.3930627, y: 0, z: 0.9195116}
-    perpendicular: {x: -0.9195116, y: 0, z: 0.3930627}
-  - position: {x: -105.90578, y: 0, z: -41.46526}
-    direction: {x: 0.39238825, y: 0, z: 0.91979975}
-    perpendicular: {x: -0.91979975, y: 0, z: 0.39238825}
-  - position: {x: -105.50582, y: 0, z: -40.523895}
-    direction: {x: 0.38931358, y: 0, z: 0.92110527}
-    perpendicular: {x: -0.92110527, y: 0, z: 0.38931358}
-  - position: {x: -105.11145, y: 0, z: -39.58407}
-    direction: {x: 0.38424322, y: 0, z: 0.9232319}
-    perpendicular: {x: -0.9232319, y: 0, z: 0.38424322}
-  - position: {x: -104.72158, y: 0, z: -38.637924}
-    direction: {x: 0.37748224, y: 0, z: 0.92601687}
-    perpendicular: {x: -0.92601687, y: 0, z: 0.37748224}
-  - position: {x: -104.34112, y: 0, z: -37.693134}
-    direction: {x: 0.36939454, y: 0, z: 0.92927265}
-    perpendicular: {x: -0.92927265, y: 0, z: 0.36939454}
-  - position: {x: -103.96843, y: 0, z: -36.7421}
-    direction: {x: 0.36018863, y: 0, z: 0.93287945}
-    perpendicular: {x: -0.93287945, y: 0, z: 0.36018863}
-  - position: {x: -103.60475, y: 0, z: -35.785065}
-    direction: {x: 0.35009405, y: 0, z: 0.9367146}
-    perpendicular: {x: -0.9367146, y: 0, z: 0.35009405}
-  - position: {x: -103.25285, y: 0, z: -34.82697}
-    direction: {x: 0.33936593, y: 0, z: 0.94065446}
-    perpendicular: {x: -0.94065446, y: 0, z: 0.33936593}
-  - position: {x: -102.91202, y: 0, z: -33.86443}
-    direction: {x: 0.32814083, y: 0, z: 0.9446288}
-    perpendicular: {x: -0.9446288, y: 0, z: 0.32814083}
-  - position: {x: -102.583015, y: 0, z: -32.89839}
-    direction: {x: 0.31657568, y: 0, z: 0.9485673}
-    perpendicular: {x: -0.9485673, y: 0, z: 0.31657568}
-  - position: {x: -102.26648, y: 0, z: -31.930044}
-    direction: {x: 0.30480742, y: 0, z: 0.952414}
-    perpendicular: {x: -0.952414, y: 0, z: 0.30480742}
-  - position: {x: -101.96133, y: 0, z: -30.955679}
-    direction: {x: 0.29289275, y: 0, z: 0.9561453}
-    perpendicular: {x: -0.9561453, y: 0, z: 0.29289275}
-  - position: {x: -101.668015, y: 0, z: -29.976322}
-    direction: {x: 0.2809281, y: 0, z: 0.9597288}
-    perpendicular: {x: -0.9597288, y: 0, z: 0.2809281}
-  - position: {x: -101.38684, y: 0, z: -28.993149}
-    direction: {x: 0.2689969, y: 0, z: 0.963141}
-    perpendicular: {x: -0.963141, y: 0, z: 0.2689969}
-  - position: {x: -101.11806, y: 0, z: -28.007439}
-    direction: {x: 0.25717035, y: 0, z: 0.9663661}
-    perpendicular: {x: -0.9663661, y: 0, z: 0.25717035}
-  - position: {x: -100.86182, y: 0, z: -27.020592}
-    direction: {x: 0.24550882, y: 0, z: 0.9693944}
-    perpendicular: {x: -0.9693944, y: 0, z: 0.24550882}
-  - position: {x: -100.61676, y: 0, z: -26.02824}
-    direction: {x: 0.23399562, y: 0, z: 0.97223765}
-    perpendicular: {x: -0.97223765, y: 0, z: 0.23399562}
-  - position: {x: -100.384384, y: 0, z: -25.037493}
-    direction: {x: 0.22273909, y: 0, z: 0.9748781}
-    perpendicular: {x: -0.9748781, y: 0, z: 0.22273909}
-  - position: {x: -100.16194, y: 0, z: -24.037628}
-    direction: {x: 0.21163823, y: 0, z: 0.9773481}
-    perpendicular: {x: -0.9773481, y: 0, z: 0.21163823}
-  - position: {x: -99.95081, y: 0, z: -23.035732}
-    direction: {x: 0.20078841, y: 0, z: 0.9796347}
-    perpendicular: {x: -0.9796347, y: 0, z: 0.20078841}
-  - position: {x: -99.75222, y: 0, z: -22.039589}
-    direction: {x: 0.19028011, y: 0, z: 0.98172987}
-    perpendicular: {x: -0.98172987, y: 0, z: 0.19028011}
-  - position: {x: -99.56227, y: 0, z: -21.03101}
-    direction: {x: 0.17992821, y: 0, z: 0.9836797}
-    perpendicular: {x: -0.9836797, y: 0, z: 0.17992821}
-  - position: {x: -99.38459, y: 0, z: -20.030895}
-    direction: {x: 0.16995, y: 0, z: 0.98545265}
-    perpendicular: {x: -0.98545265, y: 0, z: 0.16995}
-  - position: {x: -99.21547, y: 0, z: -19.02015}
-    direction: {x: 0.16015439, y: 0, z: 0.987092}
-    perpendicular: {x: -0.987092, y: 0, z: 0.16015439}
-  - position: {x: -99.05713, y: 0, z: -18.013586}
-    direction: {x: 0.15068437, y: 0, z: 0.9885819}
-    perpendicular: {x: -0.9885819, y: 0, z: 0.15068437}
-  - position: {x: -98.908264, y: 0, z: -17.005356}
-    direction: {x: 0.14147905, y: 0, z: 0.98994124}
-    perpendicular: {x: -0.98994124, y: 0, z: 0.14147905}
-  - position: {x: -98.767746, y: 0, z: -15.988974}
-    direction: {x: 0.13247745, y: 0, z: 0.99118596}
-    perpendicular: {x: -0.99118596, y: 0, z: 0.13247745}
-  - position: {x: -98.63744, y: 0, z: -14.980337}
-    direction: {x: 0.123813696, y: 0, z: 0.99230546}
-    perpendicular: {x: -0.99230546, y: 0, z: 0.123813696}
-  - position: {x: -98.515205, y: 0, z: -13.965345}
-    direction: {x: 0.11535873, y: 0, z: 0.9933239}
-    perpendicular: {x: -0.9933239, y: 0, z: 0.11535873}
-  - position: {x: -98.40183, y: 0, z: -12.952604}
-    direction: {x: 0.10717808, y: 0, z: 0.9942398}
-    perpendicular: {x: -0.9942398, y: 0, z: 0.10717808}
-  - position: {x: -98.296295, y: 0, z: -11.935062}
-    direction: {x: 0.09920764, y: 0, z: 0.99506676}
-    perpendicular: {x: -0.99506676, y: 0, z: 0.09920764}
-  curveLength: 46.9616
+  - position: {x: -108.62, y: 0, z: -55.82}
+    direction: {x: 0.14602646, y: 0, z: 0.9892807}
+    perpendicular: {x: -0.9892807, y: 0, z: 0.14602646}
+  - position: {x: -108.45322, y: 0, z: -54.730453}
+    direction: {x: 0.15666142, y: 0, z: 0.98765236}
+    perpendicular: {x: -0.98765236, y: 0, z: 0.15666142}
+  - position: {x: -108.29082, y: 0, z: -53.73876}
+    direction: {x: 0.16657165, y: 0, z: 0.9860293}
+    perpendicular: {x: -0.9860293, y: 0, z: 0.16657165}
+  - position: {x: -108.10809, y: 0, z: -52.691673}
+    direction: {x: 0.1772618, y: 0, z: 0.98416376}
+    perpendicular: {x: -0.98416376, y: 0, z: 0.1772618}
+  - position: {x: -107.93139, y: 0, z: -51.738144}
+    direction: {x: 0.18718542, y: 0, z: 0.9823246}
+    perpendicular: {x: -0.9823246, y: 0, z: 0.18718542}
+  - position: {x: -107.73377, y: 0, z: -50.730793}
+    direction: {x: 0.19784668, y: 0, z: 0.98023295}
+    perpendicular: {x: -0.98023295, y: 0, z: 0.19784668}
+  - position: {x: -107.52884, y: 0, z: -49.742992}
+    direction: {x: 0.2084568, y: 0, z: 0.9780316}
+    perpendicular: {x: -0.9780316, y: 0, z: 0.2084568}
+  - position: {x: -107.31685, y: 0, z: -48.774}
+    direction: {x: 0.21898939, y: 0, z: 0.97572726}
+    perpendicular: {x: -0.97572726, y: 0, z: 0.21898939}
+  - position: {x: -107.09808, y: 0, z: -47.823093}
+    direction: {x: 0.22941728, y: 0, z: 0.9733282}
+    perpendicular: {x: -0.9733282, y: 0, z: 0.22941728}
+  - position: {x: -106.85651, y: 0, z: -46.823513}
+    direction: {x: 0.24044164, y: 0, z: 0.9706636}
+    perpendicular: {x: -0.9706636, y: 0, z: 0.24044164}
+  - position: {x: -106.60777, y: 0, z: -45.842953}
+    direction: {x: 0.25127783, y: 0, z: 0.96791506}
+    perpendicular: {x: -0.96791506, y: 0, z: 0.25127783}
+  - position: {x: -106.35229, y: 0, z: -44.880524}
+    direction: {x: 0.26188952, y: 0, z: 0.96509784}
+    perpendicular: {x: -0.96509784, y: 0, z: 0.26188952}
+  - position: {x: -106.07264, y: 0, z: -43.87291}
+    direction: {x: 0.27291983, y: 0, z: 0.9620367}
+    perpendicular: {x: -0.9620367, y: 0, z: 0.27291983}
+  - position: {x: -105.804184, y: 0, z: -42.945114}
+    direction: {x: 0.28295115, y: 0, z: 0.9591343}
+    perpendicular: {x: -0.9591343, y: 0, z: 0.28295115}
+  - position: {x: -105.51149, y: 0, z: -41.97239}
+    direction: {x: 0.29327855, y: 0, z: 0.9560271}
+    perpendicular: {x: -0.9560271, y: 0, z: 0.29327855}
+  - position: {x: -105.21266, y: 0, z: -41.01609}
+    direction: {x: 0.3031784, y: 0, z: 0.95293385}
+    perpendicular: {x: -0.95293385, y: 0, z: 0.3031784}
+  - position: {x: -104.90812, y: 0, z: -40.07512}
+    direction: {x: 0.31260765, y: 0, z: 0.9498823}
+    perpendicular: {x: -0.9498823, y: 0, z: 0.31260765}
+  - position: {x: -104.57871, y: 0, z: -39.0909}
+    direction: {x: 0.3220642, y: 0, z: 0.94671786}
+    perpendicular: {x: -0.94671786, y: 0, z: 0.3220642}
+  - position: {x: -104.243805, y: 0, z: -38.121456}
+    direction: {x: 0.33089486, y: 0, z: 0.94366765}
+    perpendicular: {x: -0.94366765, y: 0, z: 0.33089486}
+  - position: {x: -103.9039, y: 0, z: -37.165485}
+    direction: {x: 0.33905447, y: 0, z: 0.94076675}
+    perpendicular: {x: -0.94076675, y: 0, z: 0.33905447}
+  - position: {x: -103.55944, y: 0, z: -36.221664}
+    direction: {x: 0.34650117, y: 0, z: 0.93804955}
+    perpendicular: {x: -0.93804955, y: 0, z: 0.34650117}
+  - position: {x: -103.21096, y: 0, z: -35.288704}
+    direction: {x: 0.35319638, y: 0, z: 0.9355492}
+    perpendicular: {x: -0.9355492, y: 0, z: 0.35319638}
+  - position: {x: -102.85895, y: 0, z: -34.365295}
+    direction: {x: 0.35910526, y: 0, z: 0.9332971}
+    perpendicular: {x: -0.9332971, y: 0, z: 0.35910526}
+  - position: {x: -102.4829, y: 0, z: -33.39653}
+    direction: {x: 0.36447057, y: 0, z: 0.93121487}
+    perpendicular: {x: -0.93121487, y: 0, z: 0.36447057}
+  - position: {x: -102.12512, y: 0, z: -32.488667}
+    direction: {x: 0.36866835, y: 0, z: 0.929561}
+    perpendicular: {x: -0.929561, y: 0, z: 0.36866835}
+  - position: {x: -101.744095, y: 0, z: -31.533442}
+    direction: {x: 0.3721675, y: 0, z: 0.92816556}
+    perpendicular: {x: -0.92816556, y: 0, z: 0.3721675}
+  - position: {x: -101.36137, y: 0, z: -30.582895}
+    direction: {x: 0.37467417, y: 0, z: 0.92715657}
+    perpendicular: {x: -0.92715657, y: 0, z: 0.37467417}
+  - position: {x: -100.99885, y: 0, z: -29.688065}
+    direction: {x: 0.3761167, y: 0, z: 0.9265723}
+    perpendicular: {x: -0.9265723, y: 0, z: 0.3761167}
+  - position: {x: -100.61448, y: 0, z: -28.742199}
+    direction: {x: 0.37665617, y: 0, z: 0.92635316}
+    perpendicular: {x: -0.92635316, y: 0, z: 0.37665617}
+  - position: {x: -100.230125, y: 0, z: -27.796453}
+    direction: {x: 0.37617627, y: 0, z: 0.9265481}
+    perpendicular: {x: -0.9265481, y: 0, z: 0.37617627}
+  - position: {x: -99.84638, y: 0, z: -26.849289}
+    direction: {x: 0.37467954, y: 0, z: 0.92715436}
+    perpendicular: {x: -0.92715436, y: 0, z: 0.37467954}
+  - position: {x: -99.48501, y: 0, z: -25.952036}
+    direction: {x: 0.37233976, y: 0, z: 0.9280965}
+    perpendicular: {x: -0.9280965, y: 0, z: 0.37233976}
+  - position: {x: -99.10409, y: 0, z: -24.997663}
+    direction: {x: 0.36889523, y: 0, z: 0.929471}
+    perpendicular: {x: -0.929471, y: 0, z: 0.36889523}
+  - position: {x: -98.72547, y: 0, z: -24.037306}
+    direction: {x: 0.36447537, y: 0, z: 0.931213}
+    perpendicular: {x: -0.931213, y: 0, z: 0.36447537}
+  - position: {x: -98.37055, y: 0, z: -23.123415}
+    direction: {x: 0.3594285, y: 0, z: 0.93317264}
+    perpendicular: {x: -0.93317264, y: 0, z: 0.3594285}
+  - position: {x: -98.018715, y: 0, z: -22.201492}
+    direction: {x: 0.35356033, y: 0, z: 0.9354117}
+    perpendicular: {x: -0.9354117, y: 0, z: 0.35356033}
+  - position: {x: -97.65008, y: 0, z: -21.215145}
+    direction: {x: 0.34648556, y: 0, z: 0.9380553}
+    perpendicular: {x: -0.9380553, y: 0, z: 0.34648556}
+  - position: {x: -97.30611, y: 0, z: -20.272596}
+    direction: {x: 0.33902645, y: 0, z: 0.9407768}
+    perpendicular: {x: -0.9407768, y: 0, z: 0.33902645}
+  - position: {x: -96.966736, y: 0, z: -19.318033}
+    direction: {x: 0.33085126, y: 0, z: 0.9436829}
+    perpendicular: {x: -0.9436829, y: 0, z: 0.33085126}
+  - position: {x: -96.63243, y: 0, z: -18.35015}
+    direction: {x: 0.32200176, y: 0, z: 0.9467391}
+    perpendicular: {x: -0.9467391, y: 0, z: 0.32200176}
+  - position: {x: -96.32286, y: 0, z: -17.425863}
+    direction: {x: 0.3130972, y: 0, z: 0.9497211}
+    perpendicular: {x: -0.9497211, y: 0, z: 0.3130972}
+  - position: {x: -96.01863, y: 0, z: -16.487532}
+    direction: {x: 0.30367494, y: 0, z: 0.9527757}
+    perpendicular: {x: -0.9527757, y: 0, z: 0.30367494}
+  - position: {x: -95.70169, y: 0, z: -15.473952}
+    direction: {x: 0.2931431, y: 0, z: 0.9560686}
+    perpendicular: {x: -0.9560686, y: 0, z: 0.2931431}
+  - position: {x: -95.40977, y: 0, z: -14.503227}
+    direction: {x: 0.28278598, y: 0, z: 0.95918304}
+    perpendicular: {x: -0.95918304, y: 0, z: 0.28278598}
+  - position: {x: -95.14207, y: 0, z: -13.577413}
+    direction: {x: 0.27272442, y: 0, z: 0.9620922}
+    perpendicular: {x: -0.9620922, y: 0, z: 0.27272442}
+  - position: {x: -94.86329, y: 0, z: -12.572035}
+    direction: {x: 0.26165935, y: 0, z: 0.9651603}
+    perpendicular: {x: -0.9651603, y: 0, z: 0.26165935}
+  - position: {x: -94.608635, y: 0, z: -11.611822}
+    direction: {x: 0.251013, y: 0, z: 0.9679838}
+    perpendicular: {x: -0.9679838, y: 0, z: 0.251013}
+  - position: {x: -94.36081, y: 0, z: -10.633592}
+    direction: {x: 0.24014024, y: 0, z: 0.97073823}
+    perpendicular: {x: -0.97073823, y: 0, z: 0.24014024}
+  - position: {x: -94.12015, y: 0, z: -9.636446}
+    direction: {x: 0.22907767, y: 0, z: 0.9734081}
+    perpendicular: {x: -0.9734081, y: 0, z: 0.22907767}
+  - position: {x: -93.902306, y: 0, z: -8.68792}
+    direction: {x: 0.2186129, y: 0, z: 0.97581166}
+    perpendicular: {x: -0.97581166, y: 0, z: 0.2186129}
+  - position: {x: -93.67647, y: 0, z: -7.65166}
+    direction: {x: 0.20728396, y: 0, z: 0.97828084}
+    perpendicular: {x: -0.97828084, y: 0, z: 0.20728396}
+  - position: {x: -93.47304, y: 0, z: -6.6650677}
+    direction: {x: 0.19663052, y: 0, z: 0.9804777}
+    perpendicular: {x: -0.9804777, y: 0, z: 0.19663052}
+  - position: {x: -93.29073, y: 0, z: -5.7315083}
+    direction: {x: 0.18669273, y: 0, z: 0.9824183}
+    perpendicular: {x: -0.9824183, y: 0, z: 0.18669273}
+  - position: {x: -93.10178, y: 0, z: -4.7066607}
+    direction: {x: 0.1759655, y: 0, z: 0.98439634}
+    perpendicular: {x: -0.98439634, y: 0, z: 0.1759655}
+  - position: {x: -92.93341, y: 0, z: -3.7363238}
+    direction: {x: 0.16600186, y: 0, z: 0.98612547}
+    perpendicular: {x: -0.98612547, y: 0, z: 0.16600186}
+  - position: {x: -92.77207, y: 0, z: -2.7473774}
+    direction: {x: 0.15605432, y: 0, z: 0.98774844}
+    perpendicular: {x: -0.98774844, y: 0, z: 0.15605432}
+  - position: {x: -92.61799, y: 0, z: -1.7392411}
+    direction: {x: 0.14614008, y: 0, z: 0.98926395}
+    perpendicular: {x: -0.98926395, y: 0, z: 0.14614008}
+  - position: {x: -92.4714, y: 0, z: -0.71133375}
+    direction: {x: 0.13627519, y: 0, z: 0.990671}
+    perpendicular: {x: -0.990671, y: 0, z: 0.13627519}
+  - position: {x: -92.3429, y: 0, z: 0.2555542}
+    direction: {x: 0.12722595, y: 0, z: 0.9918738}
+    perpendicular: {x: -0.9918738, y: 0, z: 0.12722595}
+  - position: {x: -92.2113, y: 0, z: 1.3231258}
+    direction: {x: 0.117497094, y: 0, z: 0.9930733}
+    perpendicular: {x: -0.9930733, y: 0, z: 0.117497094}
+  - position: {x: -92.09704, y: 0, z: 2.3276267}
+    direction: {x: 0.10859612, y: 0, z: 0.99408597}
+    perpendicular: {x: -0.99408597, y: 0, z: 0.10859612}
+  - position: {x: -91.99852, y: 0, z: 3.2648842}
+    direction: {x: 0.10051215, y: 0, z: 0.9949358}
+    perpendicular: {x: -0.9949358, y: 0, z: 0.10051215}
+  - position: {x: -91.897995, y: 0, z: 4.305744}
+    direction: {x: 0.09178316, y: 0, z: 0.995779}
+    perpendicular: {x: -0.995779, y: 0, z: 0.09178316}
+  - position: {x: -91.81238, y: 0, z: 5.277103}
+    direction: {x: 0.083870456, y: 0, z: 0.9964767}
+    perpendicular: {x: -0.9964767, y: 0, z: 0.083870456}
+  - position: {x: -91.726234, y: 0, z: 6.3560076}
+    direction: {x: 0.07534174, y: 0, z: 0.99715775}
+    perpendicular: {x: -0.99715775, y: 0, z: 0.07534174}
+  - position: {x: -91.65409, y: 0, z: 7.3630133}
+    direction: {x: 0.06762375, y: 0, z: 0.9977109}
+    perpendicular: {x: -0.9977109, y: 0, z: 0.06762375}
+  curveLength: 66.55687
   adjustmentNodes:
-  - {fileID: 9095703237883685688}
-  - {fileID: 8342735452531805590}
---- !u!1 &5073038714134556409
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4193815192140833895}
-  - component: {fileID: 8342735452531805590}
-  m_Layer: 0
-  m_Name: AdjustmentNode(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4193815192140833895
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5073038714134556409}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.25, y: 0, z: 17.44}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6477259906966708998}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8342735452531805590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5073038714134556409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d06411262a5469240a0cdaa7edad3e5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentNode: {fileID: 614366876844696557}
+  - {fileID: 1261875548}
+  - {fileID: 227806560}
 --- !u!1 &5571454143107570339
 GameObject:
   m_ObjectHideFlags: 0
@@ -2581,47 +2462,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6585579172491844708
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8807938737444632294}
-  - component: {fileID: 9095703237883685688}
-  m_Layer: 0
-  m_Name: AdjustmentNode(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8807938737444632294
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6585579172491844708}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 11.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6477259906966708998}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9095703237883685688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6585579172491844708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d06411262a5469240a0cdaa7edad3e5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentNode: {fileID: 1630193047843946524}

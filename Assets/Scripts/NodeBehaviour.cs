@@ -1,18 +1,21 @@
 ﻿using UnityEngine;
 
+[ExecuteInEditMode]
 public class NodeBehaviour : MonoBehaviour
 {
+    private Vector3 position; // Position is used to check if the realtime manager should execute
+
     public NodeBehaviour nextNode, prevNode;
     public bool endNode;
-    public bool startNode;
     public bool resetCurves = true;
 
+    public bool connected;
+
     [SerializeField] private Color typeColor;
-    [SerializeField] private GameObject adjustmentNodePrefab;
 
     // Curve info
-    [SerializeField] public CurvePoint[] curvePoints;
-    [SerializeField] public float curveLength;
+    public CurvePoint[] curvePoints;
+    public float curveLength;
     [SerializeField] private CurveAdjustmentNode[] adjustmentNodes;
     
     [System.Serializable]
@@ -31,70 +34,62 @@ public class NodeBehaviour : MonoBehaviour
         }
     }
 
-    #region CreateConnection
     public bool InitNode()
     {
         SetAdjustmentNodes();
+
+        resetCurves = false;
+
         return CreateCurvePoints();
     }
-    
+
+    #region Tools
+
     // Set the color of this node
     public void SetType()
     {
-        typeColor = startNode ? Color.green : Color.blue;
-        if (endNode)
-            typeColor = Color.red;
+        typeColor = endNode ? Color.red : Color.green;
     }
 
     /// <summary>
     /// Function for adding and deleting the adjustment nodes for this nodes curves
+    /// A node should have 2 adjustment nodes
     /// </summary>
     private void SetAdjustmentNodes()
     {
-        adjustmentNodes = GetComponentsInChildren<CurveAdjustmentNode>();
-        adjustmentNodePrefab = Resources.Load<GameObject>("AdjustmentNode");
-        int amount = adjustmentNodes.Length; // Amount of nodes
-        Transform thisTrans = transform; // Parent for new nodes
+        adjustmentNodes = DataTools.GetCurveAdjustmentNodes(this);
+        int amount = adjustmentNodes.Length;
 
-        if (!endNode && resetCurves)
+        // Place new or delete nodes
+        if (!endNode && amount != 2)
         {
-            if (amount != 2)
-            {
-                Debug.LogWarning(name + " Does not contain two adjustment nodes, nodes will be deleted or created");
-
-                // Create and get the nodes
-                if (amount < 2)
-                {
-                    adjustmentNodes = new CurveAdjustmentNode[2];
-                    for (int i = 0; i < 2; i++) // Add if there are less than 2 nodes
-                    {
-                        GameObject adjustmentNode = Instantiate(adjustmentNodePrefab);
-                        adjustmentNodes[i] = adjustmentNode.GetComponent<CurveAdjustmentNode>();
-
-                        adjustmentNode.transform.SetParent(thisTrans);
-                    }
-                }
-                // Delete node overflow
-                else if (amount > 2)
-                {
-                    for (int i = 0; i < 2; i++) // Get the first two of the already present nodes
-                        adjustmentNodes[i] = transform.GetChild(i).GetComponent<CurveAdjustmentNode>();
-                    for (int i = transform.childCount - 1; i >= 2; i--) // Delete the remaining children
-                        DestroyImmediate(transform.GetChild(i).gameObject);
-                }
-            }
-
-            // Position the nodes
-            for (int i = 0; i < 2; i++)
-                adjustmentNodes[i].transform.position = Vector3.Lerp(transform.position, nextNode.transform.position, i == 0 ? 0.2f : 0.8f);
+            Debug.LogWarning(name + " Does not contain two adjustment nodes, nodes will be deleted or created");
+            RemoveAdjustmentNodes();
+            CreateAdjustmentNodes();
         }
         else if (endNode) // Delete the remaining children when this node is an end node
-            for (int i = 0; i < transform.childCount; i++) // Delete the remaining children
-                DestroyImmediate(transform.GetChild(i).gameObject);
+            RemoveAdjustmentNodes();
 
         // Assign the line parents 
         for (int i = 0; i < adjustmentNodes.Length; i++)
             adjustmentNodes[i].AssignParentNode(i == 0 ? this : nextNode);
+
+        if (resetCurves)
+        {
+            // Position the first adjustment node of this node
+            if (!endNode && nextNode)
+            {
+                float distanceScale = Vector3.Distance(nextNode.transform.position, transform.position) * 0.4f;
+                adjustmentNodes[0].transform.position = transform.position + SetAdjustmentNodeDirection() * distanceScale;
+            }
+
+            // Position the second adjustment node of the previous node
+            if (prevNode)
+            {
+                float distanceScale = Vector3.Distance(transform.position, prevNode.transform.position) * 0.4f;
+                prevNode.adjustmentNodes[1].transform.position = transform.position - SetAdjustmentNodeDirection() * distanceScale;
+            }
+        }
     }
 
     /// <summary>
@@ -107,7 +102,7 @@ public class NodeBehaviour : MonoBehaviour
         // Error when there is no nextnode
         if (!nextNode)
         {
-            NodeEditor.editor.RecieveMessage("Curve points could not be baked! There was no next node connected! Try connecting first!", WarningStatus.Warning);
+            NodeEditor.editor.RecieveMessage("Curve points could not be baked! There was no next node connected! Try connecting first! " + this, WarningStatus.Warning);
             return false;
         }
 
@@ -174,10 +169,43 @@ public class NodeBehaviour : MonoBehaviour
 
         return true; // Return if it was succesfull
     }
+
+    private void RemoveAdjustmentNodes()
+    {
+        // Delete the remaining children
+        for (int i = 0; i < transform.childCount; i++) 
+            DestroyImmediate(transform.GetChild(i).gameObject);
+    }
+
+    private void CreateAdjustmentNodes()
+    {
+        adjustmentNodes = new CurveAdjustmentNode[2];
+        for (int i = 0; i < 2; i++) // Add if there are less than 2 nodes
+        {
+            GameObject adjustmentNode = Instantiate(DataTools.LoadAdjustmentNode());
+            adjustmentNodes[i] = adjustmentNode.GetComponent<CurveAdjustmentNode>();
+
+            adjustmentNode.transform.SetParent(transform);
+        }
+    }
+
     #endregion
 
-    #region Tools
-    private Vector3 GetCurvePoint(float time)
+    #region Calculation Tools
+
+    private Vector3 SetAdjustmentNodeDirection()
+    {
+        Vector3 direction = Vector3.zero;
+
+        if (prevNode)
+            direction = (transform.position - prevNode.transform.position).normalized;
+        if (nextNode)
+            direction += (nextNode.transform.position - transform.position).normalized;
+
+        return direction.normalized;
+    }
+
+    public Vector3 GetCurvePoint(float time)
     {
         if (nextNode)
         {
@@ -197,7 +225,7 @@ public class NodeBehaviour : MonoBehaviour
         return Vector3.zero;
     }
 
-    private Vector3 GetCurveDirection(float time)
+    public Vector3 GetCurveDirection(float time)
     {
         if (nextNode)
         {
@@ -243,6 +271,15 @@ public class NodeBehaviour : MonoBehaviour
                 DrawCurve();
             }
         }
+    }
+
+    private void Update()
+    {
+        // Check if position changed
+        if (position != transform.position)
+            DataTools.realtimeManager.Execute();
+
+        position = transform.position;
     }
 
     private void DrawCurvePreview()

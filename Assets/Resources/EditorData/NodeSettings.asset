@@ -13,22 +13,22 @@ MonoBehaviour:
   m_Name: NodeSettings
   m_EditorClassIdentifier: 
   renderNodes: 1
-  renderLines: 1
+  renderLines: 0
   renderCurves: 1
   renderCurveAdjustmentNodes: 1
-  curveAccuracy: 1000
+  curveAccuracy: 1044
   curveResolution: 1
   curvePreviewResolution: 10
-  adjustmentNodePrefab: {fileID: 2948931495715058067, guid: 3a8f0eaaeaa95584181ab443cb5ace8e,
-    type: 3}
+  renderRealtime: 0
   curvePointMesh: {fileID: -5495902117074765545, guid: 466b809559bd08a48b7c831474de7d68,
     type: 3}
-  nodeSize: 0.5
+  nodeSize: 0.21
   adjustmentNodeSize: 0.2
   selectedTab: 0
   tabStatus: 00000000000000000000000000000000
   nodeInfo:
-    completionTime: 0
-    nodeCount: 3
-    pointCount: 70
-    totalLength: 71.03739
+    lastAction: Hard Reset
+    completionTime: 5988
+    nodeCount: 5
+    pointCount: 1304
+    totalLength: 1304.9597

@@ -4,10 +4,12 @@ using UnityEngine;
 public class MeshTools
 {
     private MeshSettingsContainer m; // Currently set container
+    private int indexOffsetForSymmetry; // Calculate the offset for when the mesh uses symmetry mode
 
     public void InitData(MeshSettingsContainer m)
     {
         this.m = m;
+        indexOffsetForSymmetry = m.vertices.Length / 2;
     }
 
     #region Creation Tools
@@ -52,11 +54,12 @@ public class MeshTools
         // Index for the generated mesh array of vertices
         int newIndex = meshIndex + (pointIndex * m.amountVertex);
 
+        // Add index offset for the symmetry part of the mesh
         if (!left)
-            // Add index offset for the symmetry part of the mesh
-            newIndex += m.vertices.Length / 2;
+            newIndex += indexOffsetForSymmetry;
 
-        m.vertices[newIndex] = vertexPos + DataTools.curvePoints[pointIndex].position; // Set the global position of the vertex in the array
+        // Set the global position of the vertex in the array
+        m.vertices[newIndex] = vertexPos + DataTools.curvePoints[pointIndex].position; 
     }
 
     public void SetTriangles()
@@ -64,7 +67,7 @@ public class MeshTools
         for (int iVert = 0, iTriangle = 0; iVert < m.vertices.Length - m.amountVertex; iVert++)
         {
             // Prevent the two ends of the symmetry mode connecting, creating a wierd mesh (the last m.amountVertex of the first part of the symmetry)
-            if (iVert >= m.vertices.Length / 2 - m.amountVertex && iVert < m.vertices.Length / 2 && m.symmetry)
+            if (iVert >= indexOffsetForSymmetry - m.amountVertex && iVert < indexOffsetForSymmetry && m.symmetry)
                 continue;
 
             // Connect the two ends of the mesh when it is needed (if index == lastindex of usedMesh)
@@ -103,14 +106,29 @@ public class MeshTools
 
     public void SetUVs()
     {
-        for (int i = 0, iUV = 0; i < DataTools.curvePoints.Count; i++)
-        {
-            float yValue = i / (float)DataTools.curvePoints.Count;
+        // Get the circumference of the mesh 
+        float totalLength = CalculateCircumference(); 
 
+        // For each curve point
+        for (int iPoint = 0, iUV = 0; iPoint < DataTools.curvePoints.Count; iPoint++)
+        {
+            // Tracks the distance the vertex is from the first vertex
+            float vertDistance = 0;
+
+            // For each vertex in the used mesh
             for (int iLocal = 0; iLocal < m.amountVertex; iLocal++, iUV++)
             {
-                float xValue = iLocal / (float)(m.amountVertex - 1);
-                m.UVs[iUV] = new Vector2(iLocal / (float)(m.amountVertex - 1), i);
+                float xValue = vertDistance / totalLength; // Value should be between 0 and 1 on the x axis of the UV map
+                float yValue = iPoint / totalLength / m.localSizeOfMeshX / NodeEditor.settings.curveResolution; // Scale the y value to that of the length and the size of the mesh. (value exceeds 1)
+
+                // Locate the UV's in the array
+                m.UVs[iUV] = new Vector2(xValue, yValue);
+                if (m.symmetry)
+                    m.UVs[iUV + indexOffsetForSymmetry] = new Vector2(xValue, yValue);
+
+                // Add the distance to the next vert
+                if (iLocal < m.amountVertex - 1) // Do not do this at the last index
+                    vertDistance += Vector3.Distance(m.newVerticeOrder[iLocal], m.newVerticeOrder[iLocal + 1]); // Distance this vertex is from next vertex
             }
         }
     }
@@ -134,6 +152,7 @@ public class MeshTools
             for (int iNormal = 0; iNormal < m.amountVertex; iNormal++)
                 m.normals[m.amountVertex * i + iNormal] = m.localNormalData[iNormal];
 
+            // UV's cannot be mapped
             if (m.localUVData.Length == 0)
                 MeshEditor.editor.RecieveMessage("There were no available UV's to map onto: " + m.usedMesh.name +" Aborting!", WarningStatus.Error);
 
@@ -157,6 +176,21 @@ public class MeshTools
 
     #endregion
 
+    #region Calculation Tools
+    
+    // Calculate the length of the mesh
+    public float CalculateCircumference()
+    {
+        float totalLength = 0;
+        for(int iVert = 0; iVert < m.newVerticeOrder.Length - 1; iVert++)
+        {
+            totalLength += Vector3.Distance(m.newVerticeOrder[iVert], m.newVerticeOrder[iVert + 1]);
+        }
+        return totalLength;
+    }
+
+    #endregion
+
     #region Clean Tool
 
     /// <summary>
@@ -164,30 +198,34 @@ public class MeshTools
     /// This will assume that the vertices are placed ontop of each other in the y-axis
     /// It will also assume that when the vertices need to come down it will be in the negative x-axis
     /// </summary>
-    public void CleanMesh()
+    public void CleanMesh(MeshSettingsContainer mesh)
     {
-        m.localVerticeData = null; // Reset local vertex data
+        // Reset local mesh data
+        mesh.localVerticeData = null;
+        mesh.localTriangleData = null;
+        mesh.localUVData = null;
+        mesh.localNormalData = null;
 
         // The code will use the reordered vertices. If those are not available because the mesh already has faces and a order, it will set this reference
-        if (m.isSeperateObj) { m.newVerticeOrder = m.localVerticeData; return; }
+        if (mesh.isSeperateObj) { mesh.newVerticeOrder = mesh.localVerticeData; return; }
 
-        m.newVerticeOrder = new Vector3[m.amountVertex];
+        mesh.newVerticeOrder = new Vector3[mesh.amountVertex];
 
 
-        for (int iVert = 0; iVert < m.amountVertex; iVert++)
+        for (int iVert = 0; iVert < mesh.amountVertex; iVert++)
         {
             // Start at the highest index possible
-            int newIndex = (m.localVerticeData[iVert].x < 0) ? m.amountVertex / 2 : m.amountVertex / 2 - 1;
+            int newIndex = (mesh.localVerticeData[iVert].x < 0) ? mesh.amountVertex / 2 : mesh.amountVertex / 2 - 1;
 
-            for (int otherVert = 0; otherVert < m.amountVertex; otherVert++)
+            for (int otherVert = 0; otherVert < mesh.amountVertex; otherVert++)
             {
                 if (otherVert == iVert) // Skip if same
                     continue;
 
-                float vertDataX = m.localVerticeData[iVert].x;
-                float vertDataY = m.localVerticeData[iVert].y;
-                float otherVertDataX = m.localVerticeData[otherVert].x;
-                float otherVertDataY = m.localVerticeData[otherVert].y;
+                float vertDataX = mesh.localVerticeData[iVert].x;
+                float vertDataY = mesh.localVerticeData[iVert].y;
+                float otherVertDataX = mesh.localVerticeData[otherVert].x;
+                float otherVertDataY = mesh.localVerticeData[otherVert].y;
 
                 // Vertices need to be ordered by going up on the positive side and down the negative side
                 if (vertDataX < 0 && otherVertDataX < 0) // Check if both vertices are on the negative sides
@@ -202,7 +240,7 @@ public class MeshTools
                 }
             }
 
-            m.newVerticeOrder[newIndex] = m.localVerticeData[iVert];
+            mesh.newVerticeOrder[newIndex] = mesh.localVerticeData[iVert];
         }
     }
 

@@ -7,6 +7,7 @@ public class MeshSettings : ScriptableObject
     public List<MeshSettingsContainer> container = new List<MeshSettingsContainer>();
 
     public bool showInfo = true;
+    public bool renderRealtime = false;
 
     // Mesh editor settings
     [Space(20)]
@@ -36,6 +37,8 @@ public class MeshSettingsContainer
     public float localSizeOfMeshX = 1;
     public float localSizeOfMeshY = 1;
     public float localSizeOfMeshZ = 1; // Only available when seperate obj
+
+    public Material materialInput;
     // </User Input>   
 
     // <Generated Data>  
@@ -63,15 +66,24 @@ public class MeshSettingsContainer
 
     // Only available when seperate obj
     private int[] _localTriangleData;
-    public int[] localTriangleData { get { return (_localTriangleData == null || _localTriangleData.Length == 0) ? _localTriangleData = usedMesh.triangles : _localTriangleData; } }
+    public int[] localTriangleData {
+        get { return (_localTriangleData == null || _localTriangleData.Length == 0) ? _localTriangleData = usedMesh.triangles : _localTriangleData; }
+        set { _localTriangleData = value; }
+    }
 
     // Only available when seperate obj
     private Vector3[] _localNormalData;
-    public Vector3[] localNormalData { get { return (_localNormalData == null || _localNormalData.Length == 0) ? _localNormalData = usedMesh.normals : _localNormalData; } }
+    public Vector3[] localNormalData {
+        get { return (_localNormalData == null || _localNormalData.Length == 0) ? _localNormalData = usedMesh.normals : _localNormalData; }
+        set { _localNormalData = value; }
+    }
 
     // Only available when seperate obj
     private Vector2[] _localUVData;
-    public Vector2[] localUVData { get { return (_localUVData == null || _localUVData.Length == 0) ? _localUVData = usedMesh.uv : _localUVData; } }
+    public Vector2[] localUVData {
+        get { return (_localUVData == null || _localUVData.Length == 0) ? _localUVData = usedMesh.uv : _localUVData; }
+        set { _localUVData = value; }
+    }
 
     // Only available when seperate obj
     public int amountTriangle { get { return usedMesh.triangles.Length; } }

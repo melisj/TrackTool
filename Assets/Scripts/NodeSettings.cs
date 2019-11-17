@@ -12,6 +12,7 @@ public class NodeSettings : ScriptableObject
     public int curveAccuracy = 1000; // The amount of nodes created before the equal spacing
     public float curveResolution = 1; // Amount of nodes per meter
     public int curvePreviewResolution = 10; // Amount of segements for the preview
+    public bool renderRealtime = false;
 
     [Space(20)]
     [SerializeField] public Mesh curvePointMesh;

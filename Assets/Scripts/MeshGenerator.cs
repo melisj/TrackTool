@@ -63,8 +63,6 @@ public class MeshGenerator
 
     private void CreateMesh()
     {
-        TrackManager.meshTools.CleanMesh(); // Clean the input mesh, when possible
-
         if (!m.isSeperateObj)
         {
             TrackManager.meshTools.SetVertices();
@@ -145,12 +143,10 @@ public class MeshGenerator
 
     private void FinalizeGeneration()
     {
-        Transform parent = GameObject.FindGameObjectWithTag("Mesh Storage").transform;
-
         // Clear children from parent
-        for (int iChild = parent.childCount - 1; iChild >= 0; iChild--)
+        for (int iChild = DataTools.meshParent.childCount - 1; iChild >= 0; iChild--)
         {
-            Object.DestroyImmediate(parent.GetChild(iChild).gameObject);
+            Object.DestroyImmediate(DataTools.meshParent.GetChild(iChild).gameObject);
         }
 
         int meshCount = 0;
@@ -163,7 +159,7 @@ public class MeshGenerator
                 MeshFilter filter = newMeshObj.GetComponent<MeshFilter>();
                 MeshRenderer renderer = newMeshObj.GetComponent<MeshRenderer>();
 
-                newMeshObj.transform.parent = parent;
+                newMeshObj.transform.parent = DataTools.meshParent;
 
                 Mesh generatedMesh = new Mesh
                 {
@@ -177,21 +173,18 @@ public class MeshGenerator
 
                 generatedMesh.RecalculateNormals();
                 filter.mesh = generatedMesh;
+                renderer.material = mesh.materialInput;
 
                 meshCount++;
             }
         }
-
-
-        // ToDo save the mesh
-        //PrefabUtility.SaveAsPrefabAsset(filter.gameObject, "Assets/Resources/GeneratedMesh.prefab");
-
-
+       
         timer.Stop();
         MeshEditor.settings.meshInfo = new GeneratedMeshInfo((int)timer.ElapsedMilliseconds, totalAmountVertex, totalAmountTriangle, meshCount);
         timer.Reset();
 
-        MeshEditor.editor.RecieveMessage("Mesh succesfully generated!", WarningStatus.None);
+        if (!MeshEditor.settings.renderRealtime)
+            MeshEditor.editor.RecieveMessage("Mesh succesfully generated!", WarningStatus.None);
     }
 
     #endregion

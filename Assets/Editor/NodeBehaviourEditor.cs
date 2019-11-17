@@ -8,6 +8,7 @@ public class NodeBehaviourEditor : Editor
     {
         NodeBehaviour node = target as NodeBehaviour;
 
+        EditorGUI.BeginChangeCheck();
         GUILayout.BeginVertical(GUIStyleManager.style.basicStyle);
 
         GUILayout.Label("References (non adjustable)", GUIStyleManager.style.titleStyle);
@@ -18,7 +19,6 @@ public class NodeBehaviourEditor : Editor
         GUILayout.Space(10);
         GUILayout.Label("Node options", GUIStyleManager.style.titleStyle);
 
-        GUIStyleManager.style.DrawToggle("Start node", ref node.startNode);
         GUIStyleManager.style.DrawToggle("End node", ref node.endNode);
         GUIStyleManager.style.DrawToggle("Reset curve", ref node.resetCurves);
 

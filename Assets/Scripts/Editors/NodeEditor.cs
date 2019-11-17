@@ -25,12 +25,8 @@ public class NodeEditor : EditorWindow
         get
         {
             if (_settings == null)
-                _settings = LoadData();
+                _settings = DataTools.LoadData<NodeSettings>("NodeSettings");
             return _settings;
-        }
-        set
-        {
-            _settings = value;
         }
     }
 
@@ -41,8 +37,6 @@ public class NodeEditor : EditorWindow
 
     private void OnEnable()
     {
-        LoadData();
-
         GUIStyleManager.style.RefreshStyle();
 
         // Copy the global reference
@@ -59,7 +53,7 @@ public class NodeEditor : EditorWindow
 
     private void OnDisable()
     {
-        SaveData();
+        DataTools.SaveData(settings, "NodeSettings.asset");
     }
 
     [MenuItem("Track Editor/Node Editor #q")]
@@ -94,8 +88,10 @@ public class NodeEditor : EditorWindow
         settings.selectedTab = GUILayout.Toolbar(settings.selectedTab, tabList, style.buttonStyle);
         GUILayout.Space(10);
 
-        settings.currentTabStatus = WarningStatus.None; // Reset tab errors
+        // Reset tab errors
+        settings.currentTabStatus = WarningStatus.None; 
 
+        EditorGUI.BeginChangeCheck();
         // Draw the selected tab
         switch (settings.selectedTab)
         {
@@ -113,7 +109,12 @@ public class NodeEditor : EditorWindow
                 break;
         }
 
-        DrawErrors(); // Draw errors under each tab
+        // Execute realtime when something was edited
+        if (EditorGUI.EndChangeCheck())
+            DataTools.realtimeManager.Execute();
+
+        // Draw errors under each tab
+        DrawErrors(); 
 
         GUILayout.EndArea();
     }
@@ -159,10 +160,14 @@ public class NodeEditor : EditorWindow
             SendMessageRequest("It is advised to not use less than 1000. Recommended amount: 2000", WarningStatus.Warning);
 
         GUILayout.Label("X amount of points placed per meter.", style.textStyle);
-        style.DrawFloatField("Curve Resolution", ref settings.curveResolution, 0.1f, 50);
+        style.DrawFloatField("Curve Resolution", ref settings.curveResolution, 0.1f, 10);
 
         GUILayout.Label("Amount of segments for the Preview line.", style.textStyle);
         style.DrawIntField("Curve Preview Resolution", ref settings.curvePreviewResolution, 1, 1000);
+
+        // Check for realtime rendering
+        GUILayout.Label("Realtime curve baking settings", style.textStyle);
+        style.DrawToggle("Realtime Baking", ref settings.renderRealtime);
     }
 
     // Draw the options in the functions tab
@@ -246,30 +251,11 @@ public class NodeEditor : EditorWindow
         timer = 0;
 
         if (status == WarningStatus.Error)
+        {
             settings.nodeInfo = new GeneratedNodeSystem();
+            settings.renderRealtime = false; // Stop realtime render when an error occured
+        }
 
         Debug.Log(status.ToString() + " - " + message);
     }
-
-    #region FileManagement
-    private static NodeSettings LoadData()
-    {
-        NodeSettings tempSettings;
-        tempSettings = (NodeSettings)Resources.Load("EditorData/NodeSettings");
-
-        if (tempSettings == null)
-            tempSettings = (NodeSettings)CreateInstance(typeof(NodeSettings));
-
-        return tempSettings;
-    }
-
-    private void SaveData()
-    {
-        if (!AssetDatabase.Contains(settings))
-            AssetDatabase.CreateAsset(settings, "Assets/Resources/EditorData/NodeSettings.asset");
-
-        AssetDatabase.SaveAssets();
-        AssetDatabase.Refresh();
-    }
-    #endregion
 }

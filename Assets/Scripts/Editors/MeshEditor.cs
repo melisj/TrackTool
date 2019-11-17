@@ -26,12 +26,8 @@ public class MeshEditor : EditorWindow
         get
         {
             if (_settings == null)
-                _settings = LoadData();
+                _settings = DataTools.LoadData<MeshSettings>("MeshSettings");
             return _settings;
-        }
-        set
-        {
-            _settings = value;
         }
     }
 
@@ -43,7 +39,7 @@ public class MeshEditor : EditorWindow
     private void OnEnable()
     {
         // Init the foldoutgroups
-        if(settings.foldoutGroups.Count == 0)
+        if (settings.foldoutGroups.Count == 0)
             for (int i = 0; i < settings.container.Count; i++)
                 settings.foldoutGroups.Add(false);
 
@@ -64,7 +60,7 @@ public class MeshEditor : EditorWindow
 
     private void OnDisable()
     {
-        SaveData();
+        DataTools.SaveData(settings, "MeshSettings.asset");
     }
 
     [MenuItem("Track Editor/Mesh Editor #w")]
@@ -78,25 +74,27 @@ public class MeshEditor : EditorWindow
 
     private void OnGUI()
     {
-            GUILayout.BeginArea(settingsMenu);
+        GUILayout.BeginArea(settingsMenu);
 
-            settings.selectedTab = GUILayout.Toolbar(settings.selectedTab, tabList, style.buttonStyle);
-            GUILayout.Space(10);
+        settings.selectedTab = GUILayout.Toolbar(settings.selectedTab, tabList, style.buttonStyle);
+        GUILayout.Space(10);
 
-            switch (settings.selectedTab)
-            {
-                case 0:
-                    DrawButtons();
-                    break;
-                case 1:
-                    DrawSettings();
-                    break;
-                case 2:
-                    DrawMetaSettings();
-                    break;
-            }
+        EditorGUI.BeginChangeCheck();
 
-            GUILayout.EndArea();
+        switch (settings.selectedTab)
+        {
+            case 0:
+                DrawButtons();
+                break;
+            case 1:
+                DrawSettings();
+                break;
+            case 2:
+                DrawMetaSettings();
+                break;
+        }
+
+        GUILayout.EndArea();
     }
 
     #region DrawSettings
@@ -125,11 +123,14 @@ public class MeshEditor : EditorWindow
             GUILayout.EndHorizontal();
 
             // Draw all the settings
-            if (settings.foldoutGroups[meshIndex]) 
+            if (settings.foldoutGroups[meshIndex])
             {
                 settings.tabStatus[meshIndex] = WarningStatus.None; // Reset tab errors
 
+                EditorGUI.BeginChangeCheck();
                 DrawMeshSettings(mesh, meshIndex);
+                if (EditorGUI.EndChangeCheck()) // Execute realtime when something changed
+                    DataTools.realtimeManager.Execute();
 
                 GUILayout.Space(20);
             }
@@ -151,7 +152,12 @@ public class MeshEditor : EditorWindow
         GUILayout.Label("Settings", style.titleStyle);
 
         // Mesh reference
+        EditorGUI.BeginChangeCheck();
         style.DrawObjectField("Mesh Object", ref mesh.usedMesh);
+
+        // Clean the mesh when it changed
+        if (EditorGUI.EndChangeCheck())
+            TrackManager.meshTools.CleanMesh(mesh);
 
         if (mesh.usedMesh)
         {
@@ -167,9 +173,6 @@ public class MeshEditor : EditorWindow
                     GUILayout.Label("Mesh Settings", style.textStyle);
                     style.DrawToggle("Symmetry Mode", ref mesh.symmetry);
 
-                    // Draw flip normal setting
-                    style.DrawToggle("Flip Normals", ref mesh.flipNormals);
-
                     // Draw loop mesh setting
                     style.DrawToggle("Loop Mesh Around", ref mesh.loopMesh);
                 }
@@ -178,8 +181,10 @@ public class MeshEditor : EditorWindow
                 {
                     mesh.symmetry = false;
                     mesh.loopMesh = false;
-                    style.DrawInfo("Loop Mesh and symmetry is not available when the mesh has faces.");
+                    style.DrawInfo("Loop Mesh and symmetry modes are not available when the mesh has faces.");
                 }
+                // Draw flip normal setting
+                style.DrawToggle("Flip Normals", ref mesh.flipNormals);
 
                 // Draw offset settings
                 GUILayout.Label("Offset of the mesh", style.textStyle);
@@ -196,12 +201,17 @@ public class MeshEditor : EditorWindow
                 else if (settings.showInfo)
                 {
                     mesh.localSizeOfMeshZ = 0;
-                    style.DrawInfo("The size of the mesh in the Z axis is unavailable when the mesh has faces.");
+                    style.DrawInfo("The size of the mesh in the Z axis is unavailable when the mesh does not have faces.");
                 }
 
                 // Check if mesh size is not too small
                 if (mesh.localSizeOfMeshX < 0.1f || mesh.localSizeOfMeshY < 0.1f || (mesh.isSeperateObj && mesh.localSizeOfMeshZ < 0.1f))
                     SendMessageRequest("Size of the mesh is really small! Mesh might not be visible.", meshIndex, WarningStatus.Warning);
+
+                GUILayout.Label("Materials", style.textStyle);
+                style.DrawObjectField("Main Material", ref mesh.materialInput);
+                if (!mesh.materialInput)
+                    SendMessageRequest("Material is not assigned, mesh will display as error material.", meshIndex, WarningStatus.Warning);
             }
             else if (settings.showInfo)
                 style.DrawInfo("This mesh will not be generated.");
@@ -237,6 +247,8 @@ public class MeshEditor : EditorWindow
         GUILayout.Label("Settings for info within the editor", style.titleStyle);
 
         style.DrawToggle("Show Info", ref settings.showInfo);
+
+        style.DrawToggle("Realtime Mesh Baking", ref settings.renderRealtime);
     }
 
     // Draw an error image next to the mesh button
@@ -292,26 +304,6 @@ public class MeshEditor : EditorWindow
     }
 
     #region FileManagement
-    private static MeshSettings LoadData()
-    {
-        MeshSettings tempSettings;
-        tempSettings = (MeshSettings)Resources.Load("EditorData/MeshSettings");
-
-        if (tempSettings == null)
-            tempSettings = (MeshSettings)CreateInstance(typeof(MeshSettings));
-
-        return tempSettings;
-    }
-
-    private void SaveData()
-    {
-        if (!AssetDatabase.Contains(settings))
-            AssetDatabase.CreateAsset(settings, "Assets/Resources/EditorData/MeshSettings.asset");
-
-        AssetDatabase.SaveAssets();
-        AssetDatabase.Refresh();
-    }
-
     // Add an extra mesh to the array
     private void AddExtraMesh()
     {

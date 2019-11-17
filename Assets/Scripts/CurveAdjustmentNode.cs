@@ -3,7 +3,7 @@
 [System.Serializable]
 public class CurveAdjustmentNode : MonoBehaviour
 {
-    [SerializeField] private NodeBehaviour parentNode;
+    public NodeBehaviour parentNode;
 
     private void OnDrawGizmos()
     {
