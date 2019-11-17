@@ -27,8 +27,8 @@ MonoBehaviour:
   selectedTab: 0
   tabStatus: 00000000000000000000000000000000
   nodeInfo:
-    lastAction: Hard Reset
-    completionTime: 5988
+    lastAction: Bake Curves
+    completionTime: 6
     nodeCount: 5
-    pointCount: 1304
-    totalLength: 1304.9597
+    pointCount: 611
+    totalLength: 612.4914
