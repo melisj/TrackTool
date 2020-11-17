@@ -6,9 +6,9 @@ public class RealtimeManager
 {
     public void Execute()
     {
-        if (NodeEditor.settings.renderRealtime)
+        if (DataTools.NodeSetting.renderRealtime)
             TrackManager.nodeManager.SetupNetwork(true, true);
-        if (MeshEditor.settings.renderRealtime)
+        if (DataTools.MeshSetting.renderRealtime)
             TrackManager.generator.StartGenerating();
     }
 }

@@ -85,9 +85,10 @@ Material:
     - _Glossiness1: 0.224
     - _Glossiness2: 0.61
     - _GlossyReflections: 1
+    - _LerpNoise: 1
     - _Metallic: 0
     - _Metallic1: 0.229
-    - _Metallic2: 0.4
+    - _Metallic2: 0.44
     - _Mode: 0
     - _NormalScale1: 1
     - _NormalScale2: 1

@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class GUIStyleManager
 {
+    public static CustomEditorWindow CurrentEditorBeingDrawnFor { get; private set; }
+    public static void SetCurrentEditor(CustomEditorWindow editor)
+    {
+        CurrentEditorBeingDrawnFor = editor;
+    }
+
     private static GUIStyleContainer _style;
     public static GUIStyleContainer style
     {

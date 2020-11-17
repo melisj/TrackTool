@@ -91,10 +91,11 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.658
     - _Glossiness1: 0.397
-    - _Glossiness2: 0.49
+    - _Glossiness2: 0.877
     - _GlossyReflections: 1
+    - _LerpNoise: 1
     - _Metallic: 0.773
-    - _Metallic1: 0.375
+    - _Metallic1: 0.384
     - _Metallic2: 0.428
     - _Mode: 0
     - _NormalScale: 1

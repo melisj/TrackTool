@@ -53,7 +53,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _NormalTex1:
         m_Texture: {fileID: 2800000, guid: 198bdab3d21d7e94fbe03ea11ee4cdd3, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _NormalTex2:
         m_Texture: {fileID: 2800000, guid: 903eb380d56fbd2479024cca7662600b, type: 3}
@@ -69,7 +69,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Tex1:
         m_Texture: {fileID: 2800000, guid: 898985657c8949549a5eb3c43a1bc840, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _Tex2:
         m_Texture: {fileID: 2800000, guid: 7a5cf95bcd55d774faa609d712cd77d9, type: 3}
@@ -85,6 +85,7 @@ Material:
     - _Glossiness1: 0.224
     - _Glossiness2: 0.115
     - _GlossyReflections: 1
+    - _LerpNoise: 1
     - _Metallic: 0
     - _Metallic1: 0.105
     - _Metallic2: 0.086

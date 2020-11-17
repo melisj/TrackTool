@@ -1,43 +1,28 @@
-﻿using System.Collections;
+﻿using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class MeshEditor : EditorWindow
+public class MeshEditor : CustomEditorWindow
 {
-    // Rectangles for the editors to use
-    public Rect settingsMenu;
-
+    // Tabs in the settings to organise them
     private static string[] tabList = new string[] { "Functions", "Settings", "Meta Settings" };
     private static Vector2 windowSize { get { return new Vector2(tabList.Length * 100 + 100, 400); } }
 
     // Scrollbar for the mesh setting window
     private Vector2 scrollPos;
 
-    // Message for function button
-    private string actionMessage = "";
-    private WarningStatus actionStatus;
-    private float timer;
-
-    // Refereces to the Settings and the Manager (used by every script)
-    private static MeshSettings _settings;
-    public static MeshSettings settings
-    {
-        get
-        {
-            if (_settings == null)
-                _settings = DataTools.LoadData<MeshSettings>("MeshSettings");
-            return _settings;
-        }
-    }
+    // Referece to the settings
+    private MeshSettings settings;
 
     public static MeshEditor editor { get { return (MeshEditor)GetWindow(typeof(MeshEditor)); } }
 
-    // Reference from the global style manager
-    private GUIStyleContainer style;
-
-    private void OnEnable()
+    protected override void OnEnable()
     {
+        base.OnEnable();
+
+        settings = DataTools.MeshSetting;
+
         // Init the foldoutgroups
         if (settings.foldoutGroups.Count == 0)
             for (int i = 0; i < settings.container.Count; i++)
@@ -51,30 +36,29 @@ public class MeshEditor : EditorWindow
                 settings.tabStatus.Add(WarningStatus.None);
         }
 
-        // Get the gui style
-        GUIStyleManager.style.RefreshStyle();
-        style = GUIStyleManager.style;
-
         settingsMenu = new Rect(new Vector2(10, 10), windowSize);
     }
 
-    private void OnDisable()
+    protected override void OnDisable()
     {
-        DataTools.SaveData(settings, "MeshSettings.asset");
+        if (IsEditorDirty)
+            DataTools.SaveData(settings, "MeshSettings.asset");
+
+        base.OnDisable();
     }
 
-    [MenuItem("Track Editor/Mesh Editor #w")]
+    [MenuItem("Track Editor/Mesh Editor &w")]
     static void OpenWindow()
     {
-        MeshEditor window = (MeshEditor)GetWindow(typeof(MeshEditor));
+        MeshEditor window = editor;
         window.titleContent.text = "Mesh Editor";
         window.minSize = windowSize + new Vector2(20, 0);
         window.Show();
     }
 
-    private void OnGUI()
+    protected override void OnGUI()
     {
-        GUILayout.BeginArea(settingsMenu);
+        base.OnGUI();
 
         settings.selectedTab = GUILayout.Toolbar(settings.selectedTab, tabList, style.buttonStyle);
         GUILayout.Space(10);
@@ -156,13 +140,16 @@ public class MeshEditor : EditorWindow
         style.DrawObjectField("Mesh Object", ref mesh.usedMesh);
 
         // Clean the mesh when it changed
-        if (EditorGUI.EndChangeCheck())
+        if (EditorGUI.EndChangeCheck()) {
             TrackManager.meshTools.CleanMesh(mesh);
+            SetNodeMeshSettings();
+        }
 
         if (mesh.usedMesh)
         {
             // Draw this mesh y/n
-            style.DrawToggle("Create Mesh", ref mesh.createMesh);
+            if (style.DrawToggle("Create Mesh", ref mesh.createMesh))
+                SetNodeMeshSettings();
 
             if (mesh.createMesh)
             {
@@ -206,18 +193,18 @@ public class MeshEditor : EditorWindow
 
                 // Check if mesh size is not too small
                 if (mesh.localSizeOfMeshX < 0.1f || mesh.localSizeOfMeshY < 0.1f || (mesh.isSeperateObj && mesh.localSizeOfMeshZ < 0.1f))
-                    SendMessageRequest("Size of the mesh is really small! Mesh might not be visible.", meshIndex, WarningStatus.Warning);
+                    SendMessageRequest("Size of the mesh is really small! Mesh might not be visible.", WarningStatus.Warning, meshIndex);
 
                 GUILayout.Label("Materials", style.textStyle);
                 style.DrawObjectField("Main Material", ref mesh.materialInput);
                 if (!mesh.materialInput)
-                    SendMessageRequest("Material is not assigned, mesh will display as error material.", meshIndex, WarningStatus.Warning);
+                    SendMessageRequest("Material is not assigned, mesh will display as error material.", WarningStatus.Warning, meshIndex);
             }
             else if (settings.showInfo)
                 style.DrawInfo("This mesh will not be generated.");
         }
         else
-            SendMessageRequest("The settings need a mesh to operate!", meshIndex, WarningStatus.Error);
+            SendMessageRequest("The settings need a mesh to operate!", WarningStatus.Error, meshIndex);
     }
 
     private void DrawButtons()
@@ -227,7 +214,7 @@ public class MeshEditor : EditorWindow
 
         DrawMeshGeneratorInfo();
         DrawActionError();
-        }
+    }
 
     private void DrawMeshGeneratorInfo()
     {
@@ -263,44 +250,45 @@ public class MeshEditor : EditorWindow
     {
         if (actionMessage != "")
         {
-            SendMessageRequest(actionMessage, -1, actionStatus);
+            SendMessageRequest(actionMessage, actionStatus, -1);
             if (timer >= 50) // Remove message when it is over the time limit 
                 actionMessage = "";
         }
     }
 
-    private void OnInspectorUpdate()
-    {
-        timer++;
-    }
-
     #endregion
 
     // Send a request for a message in the layout
-    private void SendMessageRequest(string message, int index, WarningStatus status)
+    protected void SendMessageRequest(string message, WarningStatus status, int index = -1)
     {
-        if (status == WarningStatus.Warning)
-            style.DrawWarning(message);
-        else if (status == WarningStatus.Error)
-            style.DrawError(message);
-        else
-            style.DrawInfo(message);
+        base.SendMessageRequest(message, status);
 
         if (index != -1)
             settings.tabStatus[index] = status;
     }
 
     // Recieve a message from an action being completed for feedback
-    public void RecieveMessage(string message, WarningStatus status)
+    public override void RecieveMessage(string message, WarningStatus status)
     {
-        actionMessage = message;
-        actionStatus = status;
-        timer = 0;
+        base.RecieveMessage(message, status);
 
         if (status == WarningStatus.Error)
+        {
             settings.meshInfo = new GeneratedMeshInfo();
+            settings.renderRealtime = false; // Stop realtime render when an error occured
+        }
+    }
 
-        Debug.Log(status.ToString() + " - " + message);
+    public void SetNodeMeshSettings() {
+        bool[] listOfMeshes = new bool[settings.container.Count];
+        foreach (MeshSettingsContainer mesh in settings.container) {
+            if(mesh.usedMesh != null)
+                listOfMeshes[settings.container.IndexOf(mesh)] = mesh.createMesh;
+        }
+
+        foreach(NodeBehaviour node in DataTools.allNodes) {
+            node.createMeshForNode = listOfMeshes.ToList();
+        }
     }
 
     #region FileManagement
@@ -318,6 +306,7 @@ public class MeshEditor : EditorWindow
         settings.container.RemoveAt(index);
         settings.foldoutGroups.RemoveAt(index);
         settings.tabStatus.RemoveAt(index);
+        SetNodeMeshSettings();
     }
     #endregion
 }

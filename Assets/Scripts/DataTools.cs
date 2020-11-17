@@ -6,58 +6,16 @@ public class DataTools
 {
     #region Node Info
 
-    private static List<NodeBehaviour.CurvePoint> _curvePoints;
-    public static List<NodeBehaviour.CurvePoint> curvePoints {
-        get { return (_curvePoints == null) ? SetAllDataPoint() : _curvePoints; }
-        private set { _curvePoints = value; } } // Current Set of curve data points
-
     public static float totalLength;
 
-    public static List<NodeBehaviour.CurvePoint> SetAllDataPoint()
-    {
-        // Return when there are no nodes
-        if (allNodes.Length == 0) return null;
-
-        List<NodeBehaviour.CurvePoint> tempPoints = new List<NodeBehaviour.CurvePoint>();
-        NodeBehaviour currentNode = allNodes[0]; // Get the first node
-
-        totalLength = 0;
-
-        // Get all the connected nodes with all the data points in them
-        while (currentNode.nextNode != null) // Check if there is a nextnode connected
-        {
-            if (currentNode.curvePoints != null) // Check if the curves have been baked
-            {
-                foreach (NodeBehaviour.CurvePoint point in currentNode.curvePoints) // Get all the curve data
-                {
-                    tempPoints.Add(point); // Store data
-                }
-
-                totalLength += currentNode.curveLength; // Calculate the total length
-            }
-
-            // Check next node
-            currentNode = currentNode.nextNode;
-
-            // Stop the loop when it looped around the whole circle
-            if (currentNode == allNodes[0])
-                break;
-        }
-
-        curvePoints = tempPoints;
-        return tempPoints;
-    }
-
-    public static CurveAdjustmentNode[] GetCurveAdjustmentNodes(NodeBehaviour parent)
-    {
+    public static CurveAdjustmentNode[] GetCurveAdjustmentNodes(NodeBehaviour parent) {
         return parent.transform.GetComponentsInChildren<CurveAdjustmentNode>();
     }
 
     #endregion
 
     #region FileManagement
-    public static T LoadData<T>(string dataName)
-    {
+    public static T LoadData<T>(string dataName) {
         T tempSettings = (T)System.Convert.ChangeType(Resources.Load("EditorData/" + dataName), typeof(T));
 
         if (tempSettings == null)
@@ -66,8 +24,7 @@ public class DataTools
         return tempSettings;
     }
 
-    public static void SaveData(Object settings, string dataName)
-    {
+    public static void SaveData(Object settings, string dataName) {
         if (!UnityEditor.AssetDatabase.Contains(settings))
             UnityEditor.AssetDatabase.CreateAsset(settings, "Assets/Resources/EditorData/" + dataName);
 
@@ -85,7 +42,7 @@ public class DataTools
         get
         {
             if (_allNodes == null)
-                _allNodes = nodeParent.GetComponentsInChildren<NodeBehaviour>();
+                _allNodes = NodeParent.GetComponentsInChildren<NodeBehaviour>();
             return _allNodes;
         }
         set
@@ -95,7 +52,7 @@ public class DataTools
     }
 
     private static Transform _nodeParent;
-    public static Transform nodeParent
+    public static Transform NodeParent
     {
         get
         {
@@ -107,7 +64,7 @@ public class DataTools
     }
 
     private static Transform _meshParent;
-    public static Transform meshParent
+    public static Transform MeshParent
     {
         get
         {
@@ -135,9 +92,36 @@ public class DataTools
     #region ResourceManagement
 
     private static GameObject adjustmentNodePrefab;
-    public static GameObject LoadAdjustmentNode()
-    {
+    public static GameObject LoadAdjustmentNode() {
         return adjustmentNodePrefab = adjustmentNodePrefab ?? Resources.Load<GameObject>("AdjustmentNode");
+    }
+
+    #endregion
+
+    #region Settings
+
+    // Load and store the settings for the node editor
+    private static NodeSettings _nodeSetting;
+    public static NodeSettings NodeSetting
+    {
+        get
+        {
+            if (_nodeSetting == null)
+                _nodeSetting = LoadData<NodeSettings>("NodeSettings");
+            return _nodeSetting;
+        }
+    }
+
+    // Load and store the settings for the mesh editor
+    private static MeshSettings _meshSetting;
+    public static MeshSettings MeshSetting
+    {
+        get
+        {
+            if (_meshSetting == null)
+                _meshSetting = LoadData<MeshSettings>("MeshSettings");
+            return _meshSetting;
+        }
     }
 
     #endregion

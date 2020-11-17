@@ -25,7 +25,7 @@ public class GUIStyleContainer
     public GUIStyle errorStyle; // Style error titles
     public GUIStyle textStyle; // Style for explanation text
     public GUIStyle smallErrorImage;
-   
+
 
     private Texture2D backgroundTexture;
 
@@ -246,13 +246,22 @@ public class GUIStyleContainer
         GUILayout.EndHorizontal();
     }
 
-    public void DrawToggle(string name, ref bool output)
+    // Return if changed
+    public bool DrawToggle(string name, ref bool output)
     {
+        bool oldValue = output;
         output = EditorGUILayout.Toggle(name, output, toggleStyle);
+
+        if (oldValue != output) {
+            GUIStyleManager.CurrentEditorBeingDrawnFor.IsEditorDirty = true;
+            return true;
+        }
+        return false;
     }
 
     public void DrawObjectField<T>(string name, ref T output, bool editable = true) where T : Object
     {
+        Object oldValue = output;
         GUILayout.BeginHorizontal();
         GUILayout.Label(name);
         if (editable)
@@ -261,6 +270,9 @@ public class GUIStyleContainer
             EditorGUILayout.ObjectField(output, typeof(T), true);
 
         GUILayout.EndHorizontal();
+
+        if (oldValue != output)
+            GUIStyleManager.CurrentEditorBeingDrawnFor.IsEditorDirty = true;
     }
 
     public bool DrawButton(string name, string explanation, System.Action function = null, GUIStyle styleOverride = null)
@@ -289,21 +301,29 @@ public class GUIStyleContainer
 
     public void DrawIntField(string name, ref int output, int min = 0, int max = int.MaxValue)
     {
+        int oldValue = output;
         output = EditorGUILayout.IntField(name, output);
         if (output < min)
             output = min;
         else if (output > max)
             output = max;
+
+        if (oldValue != output)
+            GUIStyleManager.CurrentEditorBeingDrawnFor.IsEditorDirty = true;
     }
 
     public void DrawFloatField(string name, ref float output, float min = 0, float max = float.MaxValue)
     {
+        float oldValue = output;
         output = EditorGUILayout.FloatField(name, output);
 
         if (output < min)
             output = min;
         else if (output > max)
             output = max;
+
+        if (oldValue != output)
+            GUIStyleManager.CurrentEditorBeingDrawnFor.IsEditorDirty = true;
     }
 
     #endregion

@@ -17,6 +17,7 @@
         _Metallic2 ("Metallic 2", Range(0,1)) = 0.0
 
 		_NoiseTex ("Noise", 2D) = "white" {}
+		_LerpNoise("Noise amount", Range(0,1)) = 1
     }
     SubShader
     {
@@ -48,6 +49,7 @@
         half _Metallic2;
         half _NormalScale1;
         half _NormalScale2;
+        half _LerpNoise;
 
         fixed4 _Color1;
         fixed4 _Color2;
@@ -58,19 +60,20 @@
 			fixed4 color1 = tex2D (_Tex1, IN.uv_Tex1) * _Color1;
 			fixed4 color2 = tex2D (_Tex2, IN.uv_Tex2) * _Color2;
 			fixed noise = tex2D (_NoiseTex, IN.uv_NoiseTex);
+			fixed noiseLevel = lerp(0, noise, _LerpNoise);
 
 			// Merge the textures
-			o.Albedo = lerp(color1, color2, noise);
-            o.Alpha = lerp(color1, color2, noise);
+			o.Albedo = lerp(color1, color2, noiseLevel);
+            o.Alpha = lerp(color1, color2, noiseLevel);
 
 			// Set the normal textures
 			fixed3 normal1 = lerp(UnpackNormal(tex2D(_NormalTex1, IN.uv_NormalTex1)), fixed3(0, 0, 1), -_NormalScale1 + 1);
 			fixed3 normal2 = lerp(UnpackNormal(tex2D(_NormalTex2, IN.uv_NormalTex2)), fixed3(0, 0, 1), -_NormalScale2 + 1);
-			o.Normal = lerp(normal1, normal2, noise);
+			o.Normal = lerp(normal1, normal2, noiseLevel);
 
 			// Set other values
-			o.Metallic = lerp(_Metallic1, _Metallic2, noise);
-            o.Smoothness = lerp(_Glossiness1, _Glossiness2, noise);
+			o.Metallic = lerp(_Metallic1, _Metallic2, noiseLevel);
+            o.Smoothness = lerp(_Glossiness1, _Glossiness2, noiseLevel);
         }
         ENDCG
     }

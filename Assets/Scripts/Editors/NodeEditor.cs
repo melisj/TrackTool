@@ -1,11 +1,8 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-public class NodeEditor : EditorWindow
+public class NodeEditor : CustomEditorWindow
 {
-    // Rectangles for the editors to use
-    public Rect settingsMenu;
-
     // Tabs in the settings to organise them
     private static string[] tabList = new string[] { "Functions", "Rendering", "Curves", "Visuals" };
     private static Vector2 windowSize { get { return new Vector2(tabList.Length * 100, 400); } }
@@ -13,34 +10,16 @@ public class NodeEditor : EditorWindow
     // Tab rectangles
     private Rect[] tabErrors = new Rect[tabList.Length];
 
-    // Message for function
-    private string actionMessage = "";
-    private WarningStatus actionStatus;
-    private float timer;
-
-    // Refereces to the Settings and the Manager (used by every script)
-    private static NodeSettings _settings;
-    public static NodeSettings settings
-    {
-        get
-        {
-            if (_settings == null)
-                _settings = DataTools.LoadData<NodeSettings>("NodeSettings");
-            return _settings;
-        }
-    }
+    // Referece to the settings
+    private NodeSettings settings;
 
     public static NodeEditor editor { get { return (NodeEditor)GetWindow(typeof(NodeEditor)); } }
 
-    // Reference from the global style manager
-    private GUIStyleContainer style; 
-
-    private void OnEnable()
+    protected override void OnEnable()
     {
-        GUIStyleManager.style.RefreshStyle();
+        base.OnEnable();
 
-        // Copy the global reference
-        style = GUIStyleManager.style;
+        settings = DataTools.NodeSetting;
 
         for (int iRect = 0; iRect < tabErrors.Length; iRect++)
             tabErrors[iRect] = new Rect(80 + iRect * 100, 0,20,20);
@@ -51,32 +30,30 @@ public class NodeEditor : EditorWindow
         settingsMenu = new Rect(new Vector2(10, 10), windowSize);
     }
 
-    private void OnDisable()
+    protected override void OnDisable()
     {
-        DataTools.SaveData(settings, "NodeSettings.asset");
+        if (IsEditorDirty)
+            DataTools.SaveData(settings, "NodeSettings.asset");
+
+        base.OnDisable();
     }
 
-    [MenuItem("Track Editor/Node Editor #q")]
+    [MenuItem("Track Editor/Node Editor &q")]
     static void OpenWindow()
     {
-        NodeEditor window = (NodeEditor)GetWindow(typeof(NodeEditor));
+        NodeEditor window = editor;
         window.titleContent.text = "Node Editor";
         window.minSize = windowSize + new Vector2(20, 0);
         window.Show();
     }
 
-    private void OnGUI()
+    protected override void OnGUI()
     {
-            // Draw all the settings
-            GUILayout.BeginArea(Screen.safeArea, style.basicStyle);
-            DrawSettings();
-            GUILayout.EndArea();
+        base.OnGUI();
+        DrawSettings();
+        GUILayout.EndArea();
     }
 
-    private void OnInspectorUpdate()
-    {
-        timer++;
-    }
 
 
     #region DrawSettings
@@ -199,7 +176,6 @@ public class NodeEditor : EditorWindow
 
         GUILayout.Label("Last Action: \t | " + settings.nodeInfo.lastAction, style.titleStyle);
         GUILayout.Label("Completion Time: \t | " + settings.nodeInfo.completionTime / 1000 + " Sec");
-        GUILayout.Label("Nodes: \t\t | " + settings.nodeInfo.nodeCount);
         GUILayout.Label("Curve Points: \t | " + settings.nodeInfo.pointCount);
         GUILayout.Label("Curve Length: \t | " + settings.nodeInfo.totalLength + " m");
 
@@ -230,32 +206,23 @@ public class NodeEditor : EditorWindow
     #endregion
 
     // Send a request for a message in the layout
-    private void SendMessageRequest(string message, WarningStatus status)
+    protected override void SendMessageRequest(string message, WarningStatus status)
     {
-        if (status == WarningStatus.Warning)
-            style.DrawWarning(message);
-        else if (status == WarningStatus.Error)
-            style.DrawError(message);
-        else
-            style.DrawInfo(message);
+        base.SendMessageRequest(message, status);
 
-        if(status != WarningStatus.None)
+        if (status != WarningStatus.None)
             settings.currentTabStatus = status;
     }
 
     // Recieve a message from an action being completed for feedback
-    public void RecieveMessage(string message, WarningStatus status)
+    public override void RecieveMessage(string message, WarningStatus status)
     {
-        actionMessage = message;
-        actionStatus = status;
-        timer = 0;
+        base.RecieveMessage(message, status);
 
         if (status == WarningStatus.Error)
         {
             settings.nodeInfo = new GeneratedNodeSystem();
             settings.renderRealtime = false; // Stop realtime render when an error occured
         }
-
-        Debug.Log(status.ToString() + " - " + message);
     }
 }
